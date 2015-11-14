@@ -40,7 +40,7 @@ erikaburdonApp.config(function ($stateProvider) {
     })
     .state('eb.contact', {
         url: 'contact',
-        template: '<p>Email me anytime at <a href="mailto:erika@erikaburdon.ca">erika@erikaburdon.ca</a></p>',
+        template: '<p>Email me anytime at <a href="mailto:erika@erikaburdon.ca">erika@erikaburdon.ca</a>!</p>',
     });
 });
 
@@ -49,20 +49,27 @@ erikaburdonApp.config(function ($stateProvider) {
 erikaburdonApp.config(function ($stateProvider, $urlRouterProvider) {
 
     // Handle garbage URLs
-    $urlRouterProvider.otherwise(function ($injector) {
+    $urlRouterProvider.otherwise(function ($injector, $location) {
         var $state = $injector.get('$state');
+        var string = $location.path();
 
-        $state.go('error-404');
+        // handle empty hashbang
+        if (string === '') {
+            $state.go('eb.home');
+        } else {
+            $state.go('eb.error-404');
+        }
+
     });
 
-    $stateProvider.state('error-404', {
-        url: '/404',
+    $stateProvider.state('eb.error-404', {
+        url: '404',
         template: '<p>Bad Page!</p>'
     });
 
     // Todo: add nav to this page on a bad API response
-    $stateProvider.state('error-server', {
-        url: '/oops',
+    $stateProvider.state('eg.error-server', {
+        url: 'oops',
         template: '<p>Oops, something went wrong!</p>'
     });
 });
