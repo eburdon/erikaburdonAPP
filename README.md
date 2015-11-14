@@ -1,7 +1,13 @@
 # erikaburdon.ca
-Personal page/portfolio hosted on my own domain. Built as a single page angular web app that uses AWS services.
 
-This won't strictly be a professional site, it'll also be my experimental grounds on a live website. I hope to move forward with learning Amazon Lambda and other technologies, as well as try to include other languages and tools such as Haskell.
+I've decided to build a bona-fide website! This will be a single-page Angular web app, hosted on its own domain that uses AWS services such as: S3, Route53, IAM, Elastic Beanstalk. I hope to use it as part of my portfolio - it will link to another things I've done, as well as being my live experiment grounds for... well anything, really.
+
+## How is this different from that other site you've got?
+
+[web.uvic.ca/~eburdon/](http://web.uvic.ca/~eburdon/)  is a purely static webpage, hosted by the University of Victoria within the space they give all students. That page is managed via FTP, and uses only HTML, CSS, and Javascript.
+
+With [erikaburdon.ca](http://erikaburdon.ca) , I hope to build a backend API as well to have my own server code, as well as expand on the front end by using, for example, Foundation for Apps. Eventually, I hope to incorporate little pieces of Haskell, Amazon Lambda, and other neat-o things.
+
 
 
 ## Technology stack
@@ -13,7 +19,7 @@ This won't strictly be a professional site, it'll also be my experimental ground
 
 ## Contributing Code
 
-This is a both a personal project and page, but if you're wanting to contribute, here's the steps:
+This is a personal portfolio space, but if you're wanting to contribute or try something new, here are the steps:
 
 * Contributions are made by forking the development branch and making pull requests
 
@@ -25,7 +31,7 @@ This is a both a personal project and page, but if you're wanting to contribute,
 
 > git commit -m "LASTNAME I added a puppy gif to the contact form"
 
-* Branche scope should be limited to one feature
+* Branch scope should be limited to one feature
 
 * Code reviews will be done within the week
 
@@ -34,12 +40,10 @@ This is a both a personal project and page, but if you're wanting to contribute,
 
 > grunt serve
 
-* There is no backend at the moment, but that may change. When that happens, front end functionality will be limited unless the API is also running.
-
 
 ## Deploying
 
-> grunt
+> grunt build
 
 * This will run all neccessary grunt tasks to prepare the application for deployment.
 
