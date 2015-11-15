@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('home-parallax', [])
+angular.module('home-parallax', ['helper.factory'])
 .config(function ($stateProvider) {
     $stateProvider
     .state('eb.home', {

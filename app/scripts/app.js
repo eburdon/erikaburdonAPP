@@ -1,7 +1,6 @@
 'use strict';
 
 var erikaburdonApp = angular.module('erikaburdonApp', [
-    'ngAnimate',
     'ngAria',
     'ngCookies',
     'ngMessages',
@@ -10,8 +9,8 @@ var erikaburdonApp = angular.module('erikaburdonApp', [
     'ngTouch',
     'ui.router',
     'home-parallax',
+    'error-notBuilt',
 ]);
-
 
 
 // Analytics
@@ -28,12 +27,6 @@ erikaburdonApp.config(function ($stateProvider) {
         url: '/',
         template: '<div class="container"><div ui-view></div></div>'
     })
-    // Todo: Move these out
-    // .state('eb.home', {
-    //     url: '',
-    //     controller: 'MainCtrl',
-    //     templateUrl: 'views/main.html',
-    // })
     .state('eb.about', {
         url: 'about',
         controller: 'AboutCtrl',
@@ -41,7 +34,7 @@ erikaburdonApp.config(function ($stateProvider) {
     })
     .state('eb.contact', {
         url: 'contact',
-        template: '<p>Email me anytime at <a href="mailto:erika@erikaburdon.ca">erika@erikaburdon.ca</a>!</p>',
+        template: '<p>Email me anytime at <a href="mailto:erika@erikaburdon.ca">erika@erikaburdon.ca</a>!</p><p>This isnt the final page (it\'s not finished yet), but don\'t worry, it\'ll be all fixed up soon.</p><button ui-sref="eb.home">Return Home</button>',
     });
 });
 

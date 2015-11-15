@@ -1,28 +1,126 @@
+@import 'variables';
+
 .home-page {
 
     .header {
-        border-bottom: 1px solid black;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        margin: 0;
+
+        background-color: #F0FFF0;
+        text-align: center;
+
+        h1 {
+            font-family: $header-home-font-family;
+        }
+
+        .name {
+            display: inline-block;
+            padding-right: 2em;
+            padding-left: 2em;
+            text-align: center;
+            border-bottom: 4px solid black;
+        }
     }
 
     .quick-connect {
-        border-bottom: 1px solid black;
+        background-color: #F0F0F0;
+        padding: 0.5em 4em 0.5em 4em;
+
+        .info {
+            float: left;
+        }
+
+        .connect {
+            float: right;
+        }
+
+        p {
+            display: inline;
+            margin: 0;
+            font-family: $quick-connect-home-font-family;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        i {
+            font-size: 16px;
+            padding-right: 0.3em;
+        }
+
+        .faint {
+            display: inline-block;
+            padding-left: 1em;
+            font-weight: 100;
+            margin: 0;
+            a {
+                color: inherit;
+            }
+        }
     }
 
-    .marketing {
-        height: 600px;
-        border-bottom: 1px solid black;
+    .tagline {
+        height: 500px;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-image: url('https://source.unsplash.com/vJbz-O1NvSc');
+
+        color: white;
+        display: table;
+        width: 100%;
+        .tagline-container {
+            font-family: $header-home-font-family;
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 9em;
+
+            p {
+                font-size: 46px;
+                i {
+                    padding-left: 0.5em;
+                }
+            }
+        }
     }
 
     .content {
         border-bottom: 1px solid black;
     }
 
+    .about {
+        height: 500px;
+
+        .about-container {
+            padding-top: 3em;
+
+            img {
+                height: 250px;
+                width: 250px;
+                border-radius: 10%;
+            }
+
+            button {
+                margin-top: 1em;
+                width: 250px;
+            }
+        }
+    }
+
     .footer {
-        margin-top: 50px;
-        background-color: grey;
+        background-color: #F0FFF0;
+
+        .reserved {
+            margin-left: 1.1rem
+        }
+
+        p, li {
+            font-family: $quick-connect-home-font-family;
+            font-size: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
     }
 }

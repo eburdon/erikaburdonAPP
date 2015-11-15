@@ -4,6 +4,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "foundation/scss/foundation.scss";
 // endbower
 
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -25,8 +26,6 @@ body {
 
 /* Custom page header */
 .header {
-    margin-bottom: 10px;
-
     /* Make the masthead heading the same height as the navigation */
     h3 {
         margin-top: 0;
@@ -48,15 +47,6 @@ body {
     .btn {
         font-size: 21px;
         padding: 14px 24px;
-    }
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-
-    p + h4 {
-        margin-top: 28px;
     }
 }
 
