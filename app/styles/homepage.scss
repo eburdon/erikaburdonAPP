@@ -1,0 +1,28 @@
+.home-page {
+
+    .header {
+        border-bottom: 1px solid black;
+    }
+
+    .quick-connect {
+        border-bottom: 1px solid black;
+    }
+
+    .marketing {
+        height: 600px;
+        border-bottom: 1px solid black;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-image: url('https://source.unsplash.com/vJbz-O1NvSc');
+    }
+
+    .content {
+        border-bottom: 1px solid black;
+    }
+
+    .footer {
+        margin-top: 50px;
+        background-color: grey;
+    }
+}

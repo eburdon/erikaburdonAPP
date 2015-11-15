@@ -9,6 +9,7 @@ var erikaburdonApp = angular.module('erikaburdonApp', [
     'ngSanitize',
     'ngTouch',
     'ui.router',
+    'home-parallax',
 ]);
 
 
@@ -28,11 +29,11 @@ erikaburdonApp.config(function ($stateProvider) {
         template: '<div class="container"><div ui-view></div></div>'
     })
     // Todo: Move these out
-    .state('eb.home', {
-        url: '',
-        controller: 'MainCtrl',
-        templateUrl: 'views/main.html',
-    })
+    // .state('eb.home', {
+    //     url: '',
+    //     controller: 'MainCtrl',
+    //     templateUrl: 'views/main.html',
+    // })
     .state('eb.about', {
         url: 'about',
         controller: 'AboutCtrl',
