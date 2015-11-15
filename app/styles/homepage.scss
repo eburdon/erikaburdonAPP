@@ -2,6 +2,10 @@
 
 .home-page {
 
+    h1, h2 {
+       font-family: $header-home-font-family;
+    }
+
     .header {
         padding-top: 4em;
         padding-bottom: 4em;
@@ -9,10 +13,6 @@
 
         background-color: #F0FFF0;
         text-align: center;
-
-        h1 {
-            font-family: $header-home-font-family;
-        }
 
         .name {
             display: inline-block;
@@ -56,6 +56,9 @@
             a {
                 color: inherit;
             }
+            .city {
+                padding-left:0.2em;
+            }
         }
     }
 
@@ -89,20 +92,80 @@
     }
 
     .about {
-        height: 500px;
-
         .about-container {
             padding-top: 3em;
+
+            .soundclip {
+                font-size: 0.9rem;
+            }
+
+            p {
+                font-family: $about-home-font-family;
+            }
 
             img {
                 height: 250px;
                 width: 250px;
-                border-radius: 10%;
+                border: 3px solid black;
             }
 
             button {
                 margin-top: 1em;
                 width: 250px;
+            }
+        }
+    }
+
+    .work-history {
+        .wh-item {
+            margin-bottom: 2em;
+        }
+
+        img {
+            max-width: 180px;
+            margin-bottom: 1em;
+        }
+
+        button {
+            padding: 0.5em;
+            color: black;
+            border-color: black;
+            width: 180px;
+        }
+    }
+
+    .education {
+        .edu-item {
+            padding-bottom: 2em;
+        }
+
+        .edu-headline {
+            p {
+                margin: 0;
+            }
+        }
+
+        .education-container {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .school-info {
+            img {
+                width: 50px;
+            }
+
+            p {
+                margin-left: 2em;
+            }
+        }
+
+        .edu-involvement {
+            img {
+                width: 100px;
+                height: 100px;
+                margin-right: 2em;
+                border:1px solid black
             }
         }
     }

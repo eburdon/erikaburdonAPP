@@ -16,6 +16,8 @@ angular.module('home-parallax')
         'MUSIC',
         'SOFTWARE ENGINEERING',
         'CAMPING',
+        'SCALABILITY',
+        'CLUSTER COMPUTING',
         'DESIGN',
     ];
 

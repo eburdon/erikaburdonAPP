@@ -5,7 +5,10 @@
         </div>
     </div>
     <div class="quick-connect clearfix">
-        <p class="info">QUICK INFORMATION<span class="faint">  erika@erikaburdon.ca | Vancouver, CANADA</span></p>
+        <p class="info">QUICK INFORMATION<span class="faint">
+            <a href="mailto:erika@erikaburdon.ca"><i class="fa fa-envelope-o"></i>erika@erikaburdon.ca</a>
+            <i class="fa fa-building-o city"></i>Vancouver, CANADA
+        </span></p>
         <p class="connect">CONNECT <span class="faint">
             <a href="https://github.com/eburdon" target="__blank"><i class="fa fa-github"></i></a>
             <a href="https://www.linkedin.com/in/eburdon" target="__blank"><i class="fa fa-linkedin"></i></a>
@@ -18,31 +21,111 @@
             <button class="button-glass" ui-sref="eb.not-built">Past Projects</button>
         </div>
     </div>
-    <div class="content about">
+    <div class="about">
         <div class="about-container grid-block vertical medium-horizontal">
-            <div class="grid-block vertical medium-7">
-                <h2>About</h2>
+            <div class="grid-block vertical medium-1"></div>
+            <div class="grid-block vertical medium-6">
+                <h2>On the Topic of Me</h2>
+                <p class="soundclip">Design | Implementation | Support</p>
                 <p>
-                    My name is Erika Burdon, and I'm a 4th year Software Engineering student from the University of Victoria. Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.
+                    My name is Erika Burdon, and I'm a 4th year Software Engineering student from the University of Victoria. I'm currently working at an innovative, industry-changing, high-paced startup in Vancouver, B.C. I'm also hard of hearing, so face-to-face or email are my preferred ways to chat.
+                </p>
+                <p>
+                    I really enjoy sitting on the edge of my skill set and taking on new projects. If you're looking for a solution, someone to help you polish off a feature or finish up that odd job, feel free to get in touch! I'm also looking for volunteer opportunities. If you're looking for help with encouraging young students to enter the STEM fields or teaching others about coding and technology, I'd be thrilled to help.
                 </p>
             </div>
             <div class="grid-block vertical medium-1"></div>
             <div class="grid-block vertical medium-4">
                 <img ng-if="githubImage" src="{{githubImage}}"/>
                 <p>
-                    <button class="button-glass" ui-sref="eb.not-built" style="color:black; border-color:black;">Around the Web</button>
+                    <button class="button-glass" ui-sref="eb.not-built" style="color:black; border-color:black;">Connect With Me Online</button>
                 </p>
+            </div>
+            <div class="grid-block vertical medium-1"></div>
+            <div class="grid-block vertical medium-10">
+                <h2>About This Site</h2>
+                <p>
+                    This is my full-stack experimental playground. For the front end, I've tried to focus on good design and awesome user interfaces. I've done that by implementing every page completely differently to see what does and doesn't work. The backend / API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon.
+                </p>
+            </div>
+            <div class="grid-block vertical medium-1"></div>
+        </div>
+    </div>
+    <div class="work-history vertical grid-block">
+        <h2>WORK HISTORY</h2>
+        <div class="grid-block wk-item">
+            <div class="grid-block vertical medium-5">
+                <div><img src="images/icons/skio-music-logo.png" /></div>
+                <div>
+                    <button class="button-glass" style="color:black;border-color:black">Visit the platform</button>
+                </div>
+                <div>
+                    <button class="button-glass" style="color:black;border-color:black">Visit website</button>
+                </div>
+            </div>
+            <div class="grid-block vertical medium-6">
+                <p>SKIO Music</p>
+                <p>Text text text text text text text</p>
+            </div>
+        </div>
+        <div class="grid-block wk-item">
+            <div class="grid-block vertical medium-5">
+                <div><img src="images/icons/tud-logo.png" /></div>
+                <div>
+                    <button class="button-glass">Visit eMoflon</button>
+                </div>
+                <div>
+                    <button class="button-glass" style="color:black;border-color:black">Visit TUD</button>
+                </div>
+            </div>
+            <div class="grid-block vertical medium-6">
+                <p>Technische Universitate Darmstadt</p>
+                <p>Text text text text text text text</p>
             </div>
         </div>
     </div>
-    <div class="content">
-        <h4>Work</h4>
+    <div class="vertical grid-block">
+        <h2>VOLUNTEERING</h2>
+        <div class="grid-block">
+            <div class="grid-block vertical medium-6">
+                <p>Girl Guides of Canada</p>
+                <p>Text text text text text text text</p>
+            </div>
+            <div class="grid-block medium-5" style="height:200px;border:1px solid black"></div>
+        </div>
+            <div class="grid-container">
+                <div class="grid-block">
+                    <button>Looking for a Volunteer?</button>
+                </div>
+        </div>
     </div>
-    <div class="content">
-        <h4>Volunteering</h4>
-    </div>
-    <div class="content">
-        <h4>Education</h4>
+    <div class="education vertical grid-block">
+        <h2>EDUCATION</h2>
+        <div class="education-container">
+            <div class="grid-block vertical edu-item edu-headline">
+                <p>University of Victoria</p>
+                <p>Faculty of Engineering | August 2017</p>
+            </div>
+            <div class="grid-block edu-item school-info">
+                <a href="www.uvic.ca" target="_blank"><img src="images/icons/uvic-logo.png" /></a>
+                <p>Text text text text text text text</p>
+            </div>
+            <div class="grid-block vertical edu-item">
+                COURSES
+                <div class="grid-block">
+                    <div class="grid-block">Courses 1</div>
+                    <div class="grid-block">Courses 2</div>
+                    <div class="grid-block">Courses 3</div>
+                </div>
+            </div>
+            <div class="grid-block vertical edu-item">
+                INVOLVEMENT
+                <div class="grid-block edu-involvement">
+                    <img src="images/icons/uvic-logo.png" /></img>
+                    <img src="images/icons/uvic-logo.png" /></img>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer grid-block">
         <div class="grid-block medium-12 reserved">
