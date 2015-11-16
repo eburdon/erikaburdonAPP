@@ -126,6 +126,8 @@
 
     .work-history {
         margin-top: 3em;
+        margin-left: 2em;
+        margin-right: 2em;
 
         .wh-item {
             margin-top: 1.5em;
@@ -155,6 +157,8 @@
 
     .volunteering {
         margin-top: 3em;
+        margin-left: 2em;
+        margin-right: 2em;
 
         .v-item {
             p {
@@ -172,6 +176,8 @@
     .education {
         margin-top: 3em;
         margin-bottom: 3em;
+        margin-left: 2em;
+        margin-right: 2em;
 
         .edu-item {
             margin-top: 2em;
@@ -191,6 +197,7 @@
     }
 
     .footer {
+        // Todo: move color into variable
         background-color: #F0FFF0;
 
         .reserved {

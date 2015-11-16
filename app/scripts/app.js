@@ -1,15 +1,16 @@
 'use strict';
 
 var erikaburdonApp = angular.module('erikaburdonApp', [
+    'ui.router',
     'ngAria',
     'ngCookies',
     'ngMessages',
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router',
-    'home-parallax',
-    'error-notBuilt',
+    'home',
+    'connect',
+    'past-projects',
 ]);
 
 
@@ -25,16 +26,7 @@ erikaburdonApp.config(function ($stateProvider) {
     .state('eb', {
         abstract: true,
         url: '/',
-        template: '<div class="container"><div ui-view></div></div>'
-    })
-    .state('eb.about', {
-        url: 'about',
-        controller: 'AboutCtrl',
-        templateUrl: 'views/about.html',
-    })
-    .state('eb.contact', {
-        url: 'contact',
-        template: '<p>Email me anytime at <a href="mailto:erika@erikaburdon.ca">erika@erikaburdon.ca</a>!</p><p>This isnt the final page (it\'s not finished yet), but don\'t worry, it\'ll be all fixed up soon.</p><button ui-sref="eb.home">Return Home</button>',
+        template: '<div ui-view></div>'
     });
 });
 
@@ -58,7 +50,7 @@ erikaburdonApp.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('eb.error-404', {
         url: '404',
-        template: '<p>Bad Page!</p>'
+        template: '<p>Oops! Page not found.</p><p><button ui-sref="eb.home">Return to home</button></p>'
     });
 
     // Todo: add nav to this page on a bad API response
@@ -73,4 +65,14 @@ erikaburdonApp.config(function ($stateProvider, $urlRouterProvider) {
 erikaburdonApp.run( function ($rootScope) {
     // Dump template errors
     $rootScope.$on('$stateChangeError', console.log.bind(console));
+
+    $rootScope.$on('$stateChangeError',
+    function(event, toState, toParams, fromState, fromParams, error){
+      console.log('$stateChangeError', error);
+    });
+
+    $rootScope.$on('$stateNotFound',
+    function(event, unfoundState, unfoundStateParams, fromState, fromParams, error){
+      console.log('$stateNotFound', unfoundState, unfoundStateParams, fromState, fromParams);
+    });
 });

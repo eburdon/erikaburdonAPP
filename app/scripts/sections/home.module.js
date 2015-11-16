@@ -1,11 +1,11 @@
 'use strict';
-
-angular.module('home-parallax', ['helper.factory'])
+/* Todo: Modify templateUrl so it's referencing correct place */
+angular.module('home', ['helper.factory'])
 .config(function ($stateProvider) {
     $stateProvider
     .state('eb.home', {
+        templateUrl: 'home.html',
         url: '',
-        templateUrl: 'scripts/sections/home/home.html',
-        controller: 'EbHomeController'
+        controller: 'EbHomeController',
     });
 });

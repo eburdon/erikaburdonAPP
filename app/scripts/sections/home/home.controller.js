@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('home-parallax')
+angular.module('home')
 .controller('EbHomeController', function (
     $scope,
     helperFactory
@@ -8,18 +8,17 @@ angular.module('home-parallax')
 
     $scope.githubImage = '';
 
-    $scope.tagline = 'BIG IDEAS';
-    var offset = 0;
-
     $scope.taglines = [
         'BIG IDEAS',
         'MUSIC',
         'SOFTWARE ENGINEERING',
         'CAMPING',
         'SCALABILITY',
-        'CLUSTER COMPUTING',
         'DESIGN',
     ];
+
+    var offset = 0;
+    $scope.tagline = $scope.taglines[offset];
 
     $scope.exchangeTagline = function() {
         offset += 1;
@@ -31,7 +30,6 @@ angular.module('home-parallax')
     }
 
     var item = helperFactory.getGitHubInformation().then(function (githubInfo) {
-        console.log(githubInfo);
         $scope.githubImage = githubInfo.avatar_url;
     });
 });
