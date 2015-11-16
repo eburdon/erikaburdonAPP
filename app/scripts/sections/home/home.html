@@ -28,7 +28,7 @@
                 <h2>On the Topic of Me</h2>
                 <p class="soundclip">Design | Implementation | Support</p>
                 <p>
-                    My name is Erika Burdon, and I'm a 4th year Software Engineering student from the University of Victoria. I'm currently working at an innovative, industry-changing, high-paced startup in Vancouver, B.C. I'm also hard of hearing, so face-to-face or email are my preferred ways to chat.
+                    I'm a 4th year Software Engineering student from the University of Victoria currently working at an innovative, industry-changing, high-paced startup in Vancouver, B.C. I'm also hard of hearing, so face-to-face or email are my preferred ways to chat.
                 </p>
                 <p>
                     I really enjoy sitting on the edge of my skill set and taking on new projects. If you're looking for a solution, someone to help you polish off a feature or finish up that odd job, feel free to get in touch! I'm also looking for volunteer opportunities. If you're looking for help with encouraging young students to enter the STEM fields or teaching others about coding and technology, I'd be thrilled to help.
@@ -38,7 +38,7 @@
             <div class="grid-block vertical medium-4">
                 <img ng-if="githubImage" src="{{githubImage}}"/>
                 <p>
-                    <button class="button-glass" ui-sref="eb.not-built" style="color:black; border-color:black;">Connect With Me Online</button>
+                    <button class="button-glass about-button" ui-sref="eb.not-built">Connect With Me Online</button>
                 </p>
             </div>
             <div class="grid-block vertical medium-1"></div>
@@ -53,77 +53,83 @@
     </div>
     <div class="work-history vertical grid-block">
         <h2>WORK HISTORY</h2>
-        <div class="grid-block wk-item">
-            <div class="grid-block vertical medium-5">
-                <div><img src="images/icons/skio-music-logo.png" /></div>
-                <div>
-                    <button class="button-glass" style="color:black;border-color:black">Visit the platform</button>
+        <div class="grid-block wh-item wh-skio">
+            <div class="grid-block vertical medium-3">
+                <div class="grid-container"><img src="images/icons/skio-music-logo.png" /></div>
+                <div class="grid-container"><img src="images/icons/skio-rising-tier.png" /></div>
+                <div class="grid-container">
+                    <a class="button button-glass about-button" href="https://app.skiomusic.com/" target="_blank">Visit Platform</a>
                 </div>
-                <div>
-                    <button class="button-glass" style="color:black;border-color:black">Visit website</button>
+                <div class="grid-container">
+                    <a class="button button-glass about-button" href="https://skiomusic.com/" target="_blank">Visit Website</a>
                 </div>
             </div>
-            <div class="grid-block vertical medium-6">
-                <p>SKIO Music</p>
-                <p>Text text text text text text text</p>
+
+            <div class="grid-block vertical medium-9">
+                <p class="wh-title">SKIO Music | <b>Software Developer</b></p>
+                <p class="wh-dates">April 2015 - Present<p>
+                <p>
+                    <i class="fa fa-quote-left"></i> At SKIO we believe in simplicity and creativity. So, we’ve made it easier to collaborate with anyone, anywhere, and anytime you like. Share music with artists and producers from around the world; find inspiration in their sounds and let them bring yours to new markets and genres. <i class="fa fa-quote-right"></i>
+                </p>
+                <p>
+                    At SKIO, I took on a full-stack software development role with tasks such as data mangement (with AWS, Postgres, and scalability considerations), unit testing and continuous integration, and contributing to a robust transactional email framework. I started here as a co-op student, but was brought on full time while finishing my degree in Software Engineering.
+                </p>
             </div>
         </div>
-        <div class="grid-block wk-item">
-            <div class="grid-block vertical medium-5">
-                <div><img src="images/icons/tud-logo.png" /></div>
-                <div>
-                    <button class="button-glass">Visit eMoflon</button>
+        <div class="grid-block wh-item wh-tud">
+            <div class="grid-block vertical medium-3">
+                <div class="grid-container"><img src="images/icons/tud-logo.png" /></div>
+                <div class="grid-container"><img src="images/icons/emoflon-logo.png" /></div>
+                <div class="grid-container">
+                    <a class="button button-glass about-button" href="http://www.emoflon.org/emoflon/" target="_blank">Visit eMoflon</a>
                 </div>
-                <div>
-                    <button class="button-glass" style="color:black;border-color:black">Visit TUD</button>
+                <div class="grid-container">
+                    <a class="button button-glass about-button" href="http://www.tu-darmstadt.de/" target="_blank">Visit TUD</a>
                 </div>
             </div>
-            <div class="grid-block vertical medium-6">
-                <p>Technische Universitate Darmstadt</p>
-                <p>Text text text text text text text</p>
+            <div class="grid-block vertical medium-9">
+                <p class="wh-title">Technische Universitaet Darmstadt | <b>Junior Developer</b></p>
+                <p class="wh-dates">October 2013 - April 2014<p>
+                <p>
+                    <i class="fa fa-quote-left"></i>  <b>eMoflon</b> is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating  EMF-compliant Java code from your model. <i class="fa fa-quote-right"></i>
+                </p>
+                <p>
+                    TUD offered me my first international experience, and I was brought on as a co-op student to assist a team of graduate students on their research project. I de- and re-constructed the documentation for their modeling tool including their PDF tutorial, and extended their Eclipse plug-in for using the tool. Everything's published online, and you can find my work on their research page.
+                </p>
             </div>
         </div>
     </div>
-    <div class="vertical grid-block">
+    <div class="volunteering vertical grid-block">
         <h2>VOLUNTEERING</h2>
-        <div class="grid-block">
-            <div class="grid-block vertical medium-6">
-                <p>Girl Guides of Canada</p>
-                <p>Text text text text text text text</p>
+        <div class="grid-block v-item">
+            <div class="grid-block vertical medium-9">
+                <p class="v-title">Uvic Women in Engineering and Computer Science <b>and</b> Girl Guides of Canada</p>
+                <p class="v-dates">February - March 2015</p>
+                <p>This was a series of events co-hosted by UVic's Women in Engineering and Computer Science and Girl Guides of Canada. Over two months, I visited a number of different Brownies, Guides, and Pathfinder groups. We taught them binary "magic" with a fun card game and challenged them to build a tower out of paper that could support the weight of their leader. We ended the nights with round-table talks about what they know about computers, why they're interested in technology, and what we'd all like to be when we grow up.</p>
             </div>
-            <div class="grid-block medium-5" style="height:200px;border:1px solid black"></div>
+            <div class="grid-block medium-3">
+                <div class="grid-container"><img src="images/icons/girl-guides-logo.jpg" /></div></div>
         </div>
             <div class="grid-container">
                 <div class="grid-block">
-                    <button>Looking for a Volunteer?</button>
+                    <button class="button-glass about-button" ui-sref="eb.contact">Looking for a Volunteer?</button>
                 </div>
         </div>
     </div>
     <div class="education vertical grid-block">
         <h2>EDUCATION</h2>
-        <div class="education-container">
-            <div class="grid-block vertical edu-item edu-headline">
-                <p>University of Victoria</p>
-                <p>Faculty of Engineering | August 2017</p>
-            </div>
-            <div class="grid-block edu-item school-info">
+        <div class="grid-block edu-item">
+            <div class=" medium-1">
                 <a href="www.uvic.ca" target="_blank"><img src="images/icons/uvic-logo.png" /></a>
-                <p>Text text text text text text text</p>
             </div>
-            <div class="grid-block vertical edu-item">
-                COURSES
-                <div class="grid-block">
-                    <div class="grid-block">Courses 1</div>
-                    <div class="grid-block">Courses 2</div>
-                    <div class="grid-block">Courses 3</div>
-                </div>
-            </div>
-            <div class="grid-block vertical edu-item">
-                INVOLVEMENT
-                <div class="grid-block edu-involvement">
-                    <img src="images/icons/uvic-logo.png" /></img>
-                    <img src="images/icons/uvic-logo.png" /></img>
-                </div>
+            <div class="vertical">
+                <p class="edu-title"><b>University of Victoria</b></p>
+                <p class="edu-dates">
+                    Faculty of Engineering | Bachelor of Software Engineering | August 2017
+                </p>
+                <p>
+                    I'm currently a 4th year Software Engineering student, and I intend to finish my degree while working at SKIO Music. My best courses have consistently been those with a long-term project or deep research. Past courses have included Control Systems and Security Engineering. Upcoming courses include Data Mining, Cluster Computing, and directed studies.
+                </p>
             </div>
         </div>
     </div>
