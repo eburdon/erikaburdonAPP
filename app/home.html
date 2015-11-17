@@ -4,27 +4,39 @@
             <h1>ERIKA<br>BURDON</h1>
         </div>
     </div>
-    <div class="quick-connect clearfix">
-        <p class="info">QUICK INFORMATION<span class="faint">
-            <a href="mailto:erika@erikaburdon.ca"><i class="fa fa-envelope-o"></i>erika@erikaburdon.ca</a>
-            <i class="fa fa-building-o city"></i>Vancouver, CANADA
-        </span></p>
-        <p class="connect">CONNECT <span class="faint">
-            <a href="https://github.com/eburdon" target="__blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/eburdon" target="__blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/OneEaredMusic" target="__blank"><i class="fa fa-twitter"></i></a>
-        </span></p>
-    </div>
-    <div class="tagline">
-        <div class="tagline-container">
-            <p>I LOVE <u>{{tagline}}</u><i class="fa fa-chevron-down" ng-click="exchangeTagline()"></i></p>
-            <button class="button-glass" ui-sref="eb.past-projects">Past Projects</button>
+    <div class="quick-connect grid-block medium-horizontal small-vertical">
+        <div class="grid-block medium-6 small-12">
+            <div class="grid-block medium-horizontal small-vertical align-center connect-info">
+                QUICK INFORMATION
+                <a class="grid-block align-center shrink" href="mailto:erika@erikaburdon.ca"><i class="fa fa-envelope-o"></i>erika@erikaburdon.ca</a>
+                <div class="grid-block align-center shrink horizontal">
+                    <i class="fa fa-building-o city"></i>Vancouver, CANADA
+                </div>
+            </div>
+        </div>
+        <div class="grid-block medium-6 small-12">
+            <div class="grid-block medium-horizontal small-vertical connect-social">
+                <div class="grid-block align-center">
+                    <span class="align-center">CONNECT</span>
+                        <a class="grid-block shrink" href="https://github.com/eburdon" target="__blank"><i class="fa fa-github"></i></a>
+                        <a class="grid-block shrink" href="https://www.linkedin.com/in/eburdon" target="__blank"><i class="fa fa-linkedin"></i></a>
+                        <a class="grid-block shrink" href="https://twitter.com/OneEaredMusic" target="__blank"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="about">
+    <div class="tagline grid-block">
+        <div class="tagline-container grid-container vertical">
+            <div class="tagline-content">
+                <p>I LOVE <u>{{tagline}}</u><i class="fa fa-chevron-down" ng-click="exchangeTagline()"></i></p>
+                <button class="button-glass" ui-sref="eb.past-projects">Past Projects</button>
+            </div>
+        </div>
+    </div>
+    <div class="about home-content-block">
         <div class="about-container grid-block vertical medium-horizontal">
-            <div class="grid-block vertical medium-1"></div>
-            <div class="grid-block vertical medium-6">
+            <div class="grid-block vertical medium-9">
                 <h2>On the Topic of Me</h2>
                 <p class="soundclip">Design | Implementation | Support</p>
                 <p>
@@ -34,34 +46,36 @@
                     I really enjoy sitting on the edge of my skill set and taking on new projects. If you're looking for a solution, someone to help you polish off a feature or finish up that odd job, feel free to get in touch! I'm also looking for volunteer opportunities. If you're looking for help with encouraging young students to enter the STEM fields or teaching others about coding and technology, I'd be thrilled to help.
                 </p>
             </div>
-            <div class="grid-block vertical medium-1"></div>
-            <div class="grid-block vertical medium-4">
+            <div class="about-connect-image grid-block vertical medium-3">
                 <img ng-if="githubImage" src="{{githubImage}}"/>
-                <p>
-                    <button class="button-glass about-button" ui-sref="eb.connect">Connect With Me Online</button>
-                </p>
+                <button class="button-glass about-button-primary" ui-sref="eb.connect">Connect With Me Online</button>
             </div>
-            <div class="grid-block vertical medium-1"></div>
-            <div class="grid-block vertical medium-10">
+            <div class="grid-block vertical medium-12">
                 <h2>About This Site</h2>
                 <p>
-                    This is my full-stack experimental playground. For the front end, I've tried to focus on good design and awesome user interfaces. I've done that by implementing every page completely differently to see what does and doesn't work. The backend / API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon.
+                    This is my full-stack experimental playground. For the front end, I've tried to focus on good design, awesome user interfaces, and appealing visuals. I've done that by implementing every page completely differently to see what does and doesn't work. The backend / API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon.
                 </p>
             </div>
-            <div class="grid-block vertical medium-1"></div>
         </div>
     </div>
-    <div class="work-history vertical grid-block">
+    <div class="separator">
+        <div class="separator-right" style="opacity: 1.0;"></div>
+        <div class="separator-right" style="opacity: 0.7;"></div>
+        <div class="separator-right" style="opacity: 0.5;"></div>
+        <div class="separator-right" style="opacity: 0.3;"></div>
+        <div class="separator-right" style="opacity: 0.1;"></div>
+    </div>
+    <div class="work-history home-content-block vertical grid-block">
         <h2>WORK HISTORY</h2>
-        <div class="grid-block wh-item wh-skio">
+        <div class="grid-block wh-item wh-skio medium-horizontal small-vertical">
             <div class="grid-block vertical medium-3">
                 <div class="grid-container"><img src="images/icons/skio-music-logo.png" /></div>
                 <div class="grid-container"><img src="images/icons/skio-rising-tier.png" /></div>
                 <div class="grid-container">
-                    <a class="button button-glass about-button" href="https://app.skiomusic.com/" target="_blank">Visit Platform</a>
+                    <a class="button button-glass about-button-secondary" href="https://app.skiomusic.com/" target="_blank">Visit Platform</a>
                 </div>
                 <div class="grid-container">
-                    <a class="button button-glass about-button" href="https://skiomusic.com/" target="_blank">Visit Website</a>
+                    <a class="button button-glass about-button-secondary" href="https://skiomusic.com/" target="_blank">Visit Website</a>
                 </div>
             </div>
 
@@ -76,22 +90,22 @@
                 </p>
             </div>
         </div>
-        <div class="grid-block wh-item wh-tud">
+        <div class="grid-block wh-item wh-tud medium-horizontal small-vertical">
             <div class="grid-block vertical medium-3">
                 <div class="grid-container"><img src="images/icons/tud-logo.png" /></div>
                 <div class="grid-container"><img src="images/icons/emoflon-logo.png" /></div>
                 <div class="grid-container">
-                    <a class="button button-glass about-button" href="http://www.emoflon.org/emoflon/" target="_blank">Visit eMoflon</a>
+                    <a class="button button-glass about-button-secondary" href="http://www.emoflon.org/emoflon/" target="_blank">Visit eMoflon</a>
                 </div>
                 <div class="grid-container">
-                    <a class="button button-glass about-button" href="http://www.tu-darmstadt.de/" target="_blank">Visit TUD</a>
+                    <a class="button button-glass about-button-secondary" href="http://www.tu-darmstadt.de/" target="_blank">Visit TUD</a>
                 </div>
             </div>
             <div class="grid-block vertical medium-9">
                 <p class="wh-title">Technische Universitaet Darmstadt | <b>Junior Developer</b></p>
                 <p class="wh-dates">October 2013 - April 2014<p>
                 <p>
-                    <i class="fa fa-quote-left"></i>  <b>eMoflon</b> is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating  EMF-compliant Java code from your model. <i class="fa fa-quote-right"></i>
+                    <i class="fa fa-quote-left"></i>  eMoflon is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating  EMF-compliant Java code from your model. <i class="fa fa-quote-right"></i>
                 </p>
                 <p>
                     TUD offered me my first international experience, and I was brought on as a co-op student to assist a team of graduate students on their research project. I de- and re-constructed the documentation for their modeling tool including their PDF tutorial, and extended their Eclipse plug-in for using the tool. Everything's published online, and you can find my work on their research page.
@@ -99,30 +113,45 @@
             </div>
         </div>
     </div>
-    <div class="volunteering vertical grid-block">
+    <div class="separator">
+        <div class="separator-left" style="opacity: 1.0;"></div>
+        <div class="separator-left" style="opacity: 0.7;"></div>
+        <div class="separator-left" style="opacity: 0.5;"></div>
+        <div class="separator-left" style="opacity: 0.3;"></div>
+        <div class="separator-left" style="opacity: 0.1;"></div>
+    </div>
+    <div class="volunteering home-content-block vertical grid-block">
         <h2>VOLUNTEERING</h2>
-        <div class="grid-block v-item">
-            <div class="grid-block vertical medium-9">
+        <div class="v-item grid-block medium-horizontal small-vertical">
+            <div class="grid-block medium-9 small-12 vertical">
                 <p class="v-title">Uvic Women in Engineering and Computer Science <b>and</b> Girl Guides of Canada</p>
                 <p class="v-dates">February - March 2015</p>
                 <p>This was a series of events co-hosted by UVic's Women in Engineering and Computer Science and Girl Guides of Canada. Over two months, I visited a number of different Brownies, Guides, and Pathfinder groups. We taught them binary "magic" with a fun card game and challenged them to build a tower out of paper that could support the weight of their leader. We ended the nights with round-table talks about what they know about computers, why they're interested in technology, and what we'd all like to be when we grow up.</p>
             </div>
-            <div class="grid-block medium-3">
-                <div class="grid-container"><img src="images/icons/girl-guides-logo.jpg" /></div></div>
+            <div class="grid-block medium-3 small-12">
+                <div class="grid-container"><img src="images/icons/girl-guides-logo.jpg" /></div>
+            </div>
         </div>
-            <div class="grid-container">
-                <div class="grid-block">
-                    <button class="button-glass about-button" ui-sref="eb.connect">Looking for a Volunteer?</button>
-                </div>
+        <div class="grid-container volunteering-CTA">
+            <div class="grid-block">
+                <button class="button-glass about-button-primary" ui-sref="eb.connect">Looking for a Volunteer?</button>
+            </div>
         </div>
     </div>
-    <div class="education vertical grid-block">
+    <div class="separator">
+        <div class="separator-right" style="opacity: 1.0;"></div>
+        <div class="separator-right" style="opacity: 0.7;"></div>
+        <div class="separator-right" style="opacity: 0.5;"></div>
+        <div class="separator-right" style="opacity: 0.3;"></div>
+        <div class="separator-right" style="opacity: 0.1;"></div>
+    </div>
+    <div class="education home-content-block vertical grid-block">
         <h2>EDUCATION</h2>
-        <div class="grid-block edu-item">
-            <div class=" medium-1">
+        <div class="grid-block edu-item medium-horizontal small-vertical">
+            <div class="medium-1 small-12">
                 <a href="https://www.uvic.ca" target="_blank"><img src="images/icons/uvic-logo.png" /></a>
             </div>
-            <div class="vertical">
+            <div class="vertical medium-11 small-12">
                 <p class="edu-title"><b>University of Victoria</b></p>
                 <p class="edu-dates">
                     Faculty of Engineering | Bachelor of Software Engineering | August 2017

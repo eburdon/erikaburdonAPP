@@ -2,33 +2,85 @@
 
 .home-page {
 
+    /* Components */
+
     h1, h2 {
        font-family: $header-home-font-family;
     }
 
     p {
         font-family: $about-home-font-family;
-        font-size: 1.1rem;
     }
 
-    .about-button {
-        // TODO: move this color into variable
-        border-color: #007acc;
-        color: #007acc;
-        &:hover, &:link{
-            color: black;
-            border-color: black;
-            background: none;
-            text-decoration: none;
+    .fa-quote-left, .fa-quote-right {
+        font-size: 1.5rem;
+    }
+
+    .fa-quote-left {
+        margin-right: 0.2em;
+    }
+
+    .fa-quote-right {
+        margin-left: 0.2em;
+    }
+
+    .separator {
+        height: 100px;
+        overflow: hidden;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .separator-right, .separator-left {
+        background-color: $home-light-blue-green;
+        display: inline-block;
+        overflow: hidden;
+        width: 30px;
+        height: 190px;
+        margin-top: -45px;
+    }
+
+    .separator-right {
+        transform: rotate(45deg);
+        float: left;
+        margin-right: 5em;
+    }
+
+    .separator-left {
+        transform: rotate(-45deg);
+        float: right;
+        margin-left: 5em;
+    }
+
+    .about-button-primary {
+        color: white;
+        border: none;
+        background: $home-blue;
+        text-decoration: none;
+    }
+
+    .about-button-secondary {
+        border-color: $home-blue;
+        color: $home-blue;
+        text-decoration: none;
+        &:hover {
+            background: $home-light-blue-green;
         }
     }
+
+    .home-content-block {
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    /* Sections */
 
     .header {
         padding-top: 4em;
         padding-bottom: 4em;
         margin: 0;
 
-        background-color: #F0FFF0;
+        background-color: $home-light-blue-green;
         text-align: center;
 
         .name {
@@ -42,50 +94,34 @@
 
     .quick-connect {
         background-color: #F0F0F0;
-        padding: 0.5em 4em 0.5em 4em;
-
-        .info {
-            float: left;
-        }
-
-        .connect {
-            float: right;
-        }
-
-        p {
-            display: inline;
-            margin: 0;
-            font-family: $quick-connect-home-font-family;
-            font-size: 10px;
-            font-weight: 700;
-        }
 
         i {
             font-size: 16px;
             padding-right: 0.3em;
         }
 
-        .faint {
-            display: inline-block;
-            padding-left: 1em;
-            font-weight: 100;
+        a {
+            color: black;
+        }
+
+        .connect-info, .connect-social {
+            text-align: center;
             margin: 0;
-            a {
-                color: inherit;
-            }
-            .city {
-                padding-left:0.2em;
-            }
+            font-family: $quick-connect-home-font-family;
+            font-size: 10px;
+            font-weight: 700;
+            color: black;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
         }
     }
 
     .tagline {
-        height: 500px;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-image: url('https://source.unsplash.com/vJbz-O1NvSc');
-
+        height: 500px;
         color: white;
         display: table;
         width: 100%;
@@ -93,8 +129,9 @@
             font-family: $header-home-font-family;
             display: table-cell;
             vertical-align: middle;
-            padding-left: 9em;
-
+            .tagline-content {
+                margin-left: 9em;
+            }
             p {
                 font-size: 46px;
                 i {
@@ -105,18 +142,20 @@
     }
 
     .about {
-        .about-container {
-            padding-top: 3em;
+        margin-top: 3em;
 
+        .about-container {
             .soundclip {
                 font-size: 0.9rem;
             }
-
+            p {
+                padding-right: 2em;
+            }
             img {
+                vertical-align: right;
                 height: 250px;
                 width: 250px;
             }
-
             button {
                 margin-top: 1em;
                 width: 250px;
@@ -125,9 +164,6 @@
     }
 
     .work-history {
-        margin-top: 3em;
-        margin-left: 2em;
-        margin-right: 2em;
 
         .wh-item {
             margin-top: 1.5em;
@@ -139,50 +175,43 @@
             }
         }
 
-        .wh-skio {
-            border-bottom: 2px dotted black;
-            margin-bottom: 1em;
-            padding-bottom: 1em;
-        }
-
         img {
             max-width: 180px;
             margin-bottom: 1em;
         }
 
-        .about-button {
+        .button {
             width:180px;
+        }
+
+        .wh-skio {
+            border-bottom: 2px dotted black;
+            padding-bottom: 1.5em;
+            margin-bottom: 2em;
         }
     }
 
     .volunteering {
-        margin-top: 3em;
-        margin-left: 2em;
-        margin-right: 2em;
-
         .v-item {
             p {
                 padding-right: 2em;
             }
-
             .v-title {
                 font-size:1.5rem;
                 padding:0;
                 margin:0;
             }
         }
+        .volunteering-CTA {
+            margin-top: 1em;
+        }
     }
 
     .education {
-        margin-top: 3em;
         margin-bottom: 3em;
-        margin-left: 2em;
-        margin-right: 2em;
 
         .edu-item {
             margin-top: 2em;
-            margin-left: 3em;
-            margin-right: 3em;
 
             img {
                 width: 50px;
@@ -197,8 +226,7 @@
     }
 
     .footer {
-        // Todo: move color into variable
-        background-color: #F0FFF0;
+        background-color: $home-light-blue-green;
 
         .reserved {
             margin-left: 1.1rem
