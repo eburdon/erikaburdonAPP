@@ -12,7 +12,6 @@
     }
 
     .about-button {
-        // TODO: move this color into variable
         border-color: #007acc;
         color: #007acc;
         &:hover, &:link{
@@ -28,7 +27,7 @@
         padding-bottom: 4em;
         margin: 0;
 
-        background-color: #F0FFF0;
+        background-color: $home-gray-green;
         text-align: center;
 
         .name {
@@ -41,7 +40,7 @@
     }
 
     .quick-connect {
-        background-color: #F0F0F0;
+        background-color: $home-gray-green;
         padding: 0.5em 4em 0.5em 4em;
 
         .info {
