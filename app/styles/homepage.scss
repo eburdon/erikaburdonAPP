@@ -1,4 +1,9 @@
+@import 'settings';
+
+@import 'foundation-apps/scss/foundation';
+
 @import 'variables';
+@import 'components';
 
 .home-page {
 
@@ -10,6 +15,7 @@
 
     p {
         font-family: $about-home-font-family;
+        font-size: 1.1rem;
     }
 
     .fa-quote-left, .fa-quote-right {
@@ -32,7 +38,7 @@
     }
 
     .separator-right, .separator-left {
-        background-color: $home-light-blue-green;
+        background-color: goldenrod;
         display: inline-block;
         overflow: hidden;
         width: 30px;
@@ -69,8 +75,11 @@
     }
 
     .home-content-block {
-        margin-left: 4em;
-        margin-right: 4em;
+        margin-left: 1em;
+        @include breakpoint(medium) {
+            margin-left: 4em;
+            margin-right: 4em;
+        }
     }
 
     /* Sections */
@@ -113,8 +122,14 @@
             color: black;
             padding-top: 0.5em;
             padding-bottom: 0.5em;
+
+            .connect-title {
+                margin-top: 0.3em;
+            }
+
             .connect-item {
                 padding-left: 0.5em;
+                overflow: hidden;
             }
         }
     }
@@ -128,17 +143,30 @@
         color: white;
         display: table;
         width: 100%;
+
         .tagline {
-            font-family: $header-home-font-family;
             display: table-cell;
             vertical-align: middle;
-            .tagline-content {
-                margin-left: 9em;
-            }
-            p {
-                font-size: 46px;
+
+            .tagline-title {
+                font-family: $header-home-font-family;
+                word-wrap: break-word;
+                font-size: 2em;
+
+                @include breakpoint(medium) {
+                    font-size: 4em;
+                }
+
                 i {
                     padding-left: 0.5em;
+                }
+            }
+
+            .tagline-content {
+                margin-left: 1em;
+
+                @include breakpoint(medium) {
+                    margin-left: 9em;
                 }
             }
         }
@@ -151,9 +179,11 @@
             .soundclip {
                 font-size: 0.9rem;
             }
+
             p {
                 padding-right: 2em;
             }
+
             img {
                 vertical-align: right;
                 height: 250px;
@@ -176,6 +206,10 @@
                 padding:0;
                 margin:0;
             }
+        }
+
+        .quote {
+            font-style: italic;
         }
 
         img {

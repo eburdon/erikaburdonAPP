@@ -7,16 +7,19 @@
     <div class="quick-connect grid-block medium-horizontal small-vertical">
         <div class="grid-block medium-6 small-12">
             <div class="connect-info grid-block medium-horizontal small-vertical align-center">
-                QUICK INFORMATION
-                <a class="grid-block align-center shrink connect-item" href="mailto:erika@erikaburdon.ca"><i class="fa fa-envelope-o"></i>erika@erikaburdon.ca</a>
+                <span class="connect-title">QUICK INFORMATION</span>
+                <a class="grid-block align-center shrink connect-item" href="mailto:erika@erikaburdon.ca"><i class="fa fa-envelope-o"></i>
+                    <span class="connect-title">erika@erikaburdon.ca</span>
+                </a>
                 <div class="grid-block align-center horizontal shrink connect-item">
-                    <i class="fa fa-building-o city"></i>Vancouver, CANADA
+                    <i class="fa fa-building-o city"></i>
+                    <span class="connect-title">Vancouver, CANADA</span>
                 </div>
             </div>
         </div>
         <div class="grid-block medium-6 small-12">
             <div class="connect-info grid-block medium-horizontal small-vertical align-center">
-                CONNECT
+                <span class="connect-title">CONNECT</span>
                 <div class="grid-block small-horizontal align-center shrink connect-item">
                     <a class="grid-block shrink" href="https://github.com/eburdon" target="__blank"><i class="fa fa-github"></i></a>
                     <a class="grid-block shrink" href="https://www.linkedin.com/in/eburdon" target="__blank"><i class="fa fa-linkedin"></i></a>
@@ -25,11 +28,11 @@
             </div>
         </div>
     </div>
-    <div class="tagline-container grid-block">
-        <div class="tagline grid-container vertical">
+    <div class="tagline-container">
+        <div class="tagline">
             <div class="tagline-content">
-                <p>I LOVE <u>{{tagline}}</u><i class="fa fa-chevron-down" ng-click="exchangeTagline()"></i></p>
-                <button class="button-glass" ui-sref="eb.past-projects">Past Projects</button>
+                <p class="tagline-title">I LOVE <u>{{tagline}}</u><i class="fa fa-chevron-down" ng-click="exchangeTagline()"></i></p>
+                <button class="button button-glass" ui-sref="eb.past-projects">Past Projects</button>
             </div>
         </div>
     </div>
@@ -39,20 +42,20 @@
                 <h2>On the Topic of Me</h2>
                 <p class="soundclip">Design | Implementation | Support</p>
                 <p>
-                    I'm a 4th year Software Engineering student from the University of Victoria currently working at an innovative, industry-changing, high-paced startup in Vancouver, B.C. I'm also hard of hearing, so face-to-face or email are my preferred ways to chat.
+                    I'm a 4th year Software Engineering student from the University of Victoria currently working at an innovative, industry-changing startup in Vancouver, B.C. I'm also hard of hearing, so face-to-face or email are my preferred ways to chat.
                 </p>
                 <p>
-                    I really enjoy sitting on the edge of my skill set and taking on new projects. If you're looking for a solution, someone to help you polish off a feature or finish up that odd job, feel free to get in touch! I'm also looking for volunteer opportunities. If you're looking for help with encouraging young students to enter the STEM fields or teaching others about coding and technology, I'd be thrilled to help.
+                    I really enjoy sitting on the edge of my skill set and taking on new projects. If you have an idea and you're looking for a solution, feel free to get in touch! I'm also looking for volunteer opportunities, particularly with encouraging women and young students to enter the STEM fields.
                 </p>
             </div>
             <div class="about-connect-image grid-block vertical medium-3">
                 <img ng-if="githubImage" src="{{githubImage}}"/>
-                <button class="button-glass about-button-primary" ui-sref="eb.connect">Connect With Me Online</button>
+                <button class="button button-glass about-button-primary" ui-sref="eb.connect">Connect With Me Online</button>
             </div>
             <div class="grid-block vertical medium-12">
                 <h2>About This Site</h2>
                 <p>
-                    This is my full-stack experimental playground. For the front end, I've tried to focus on good design, awesome user interfaces, and appealing visuals. I've done that by implementing every page completely differently to see what does and doesn't work. The backend / API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon.
+                    This is my full-stack experimental playground. For the front end, I've tried to focus on good design, awesome user interfaces, and appealing visuals. I've done that by implementing every page completely different to see what does and doesn't work. The backend / API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon.
                 </p>
             </div>
         </div>
@@ -80,8 +83,8 @@
 
             <div class="grid-block vertical medium-9">
                 <p class="wh-title">SKIO Music | <b>Software Developer</b></p>
-                <p class="wh-dates">April 2015 - Present<p>
-                <p>
+                <p class="wh-dates">April 2015 - Present <br> Canada<p>
+                <p class="quote">
                     <i class="fa fa-quote-left"></i> At SKIO we believe in simplicity and creativity. So, we’ve made it easier to collaborate with anyone, anywhere, and anytime you like. Share music with artists and producers from around the world; find inspiration in their sounds and let them bring yours to new markets and genres. <i class="fa fa-quote-right"></i>
                 </p>
                 <p>
@@ -102,12 +105,12 @@
             </div>
             <div class="grid-block vertical medium-9">
                 <p class="wh-title">Technische Universitaet Darmstadt | <b>Junior Developer</b></p>
-                <p class="wh-dates">October 2013 - April 2014<p>
-                <p>
-                    <i class="fa fa-quote-left"></i>  eMoflon is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating  EMF-compliant Java code from your model. <i class="fa fa-quote-right"></i>
+                <p class="wh-dates">October 2013 - April 2014 <br> Germany<p>
+                <p class="quote">
+                    <i class="fa fa-quote-left"></i> eMoflon is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating  EMF-compliant Java code from your model. <i class="fa fa-quote-right"></i>
                 </p>
                 <p>
-                    TUD offered me my first international experience, and I was brought on as a co-op student to assist a team of graduate students on their research project. I de- and re-constructed the documentation for their modeling tool including their PDF tutorial, and extended their Eclipse plug-in for using the tool. Everything's published online, and you can find my work on their research page.
+                    TUD offered me my first international experience, and I was brought on as a co-op student to assist a team of graduate students on their research project. Their tool addresses topics such as Story Driven Modeling (SDM) and Triple Graph Grammars (TGGs). I contributed by drafting a 7-part tutorial handbook, extending Eclipse plug-ins that worked with the tool, and co-hosting a workshop (English only). Everything's published online, and you can find my work on their research page.
                 </p>
             </div>
         </div>
@@ -133,7 +136,7 @@
         </div>
         <div class="grid-container volunteering-CTA">
             <div class="grid-block">
-                <button class="button-glass about-button-primary" ui-sref="eb.connect">Looking for a Volunteer?</button>
+                <button class="button button-glass about-button-primary" ui-sref="eb.connect">Looking for a Volunteer?</button>
             </div>
         </div>
     </div>

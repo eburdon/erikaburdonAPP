@@ -1,6 +1,7 @@
 'use strict';
 
 var erikaburdonApp = angular.module('erikaburdonApp', [
+    'foundation',
     'ui.router',
     'ngAria',
     'ngCookies',
@@ -73,6 +74,6 @@ erikaburdonApp.run( function ($rootScope) {
 
     $rootScope.$on('$stateNotFound',
     function(event, unfoundState, unfoundStateParams, fromState, fromParams, error){
-      console.log('$stateNotFound', unfoundState, unfoundStateParams, fromState, fromParams);
+      console.log('$stateNotFound', unfoundState, unfoundStateParams, fromState, fromParams, error);
     });
 });
