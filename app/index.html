@@ -5,13 +5,28 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/foundation-apps/dist/css/foundation-apps.css" />
     <!-- endbower -->
     <!-- endbuild -->
+
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/components.css" rel="stylesheet" type="text/css">
+
+    <link href="styles/homepage.css" rel="stylesheet" type="text/css">
+    <link href="styles/past-projects-page.css" rel="stylesheet"type="text/css">
+    <link href="styles/connect-page.css" rel="stylesheet"type="text/css">
     <!-- endbuild -->
 </head>
 
@@ -20,44 +35,8 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-        <div class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <a class="navbar-brand" href="#/">ERIKA BURDON</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#/">Home</a></li>
-                        <li><a ui-sref="eb.about">About</a></li>
-                        <li><a ui-sref="eb.contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div ui-view></div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <p><span class="glyphicon glyphicon-heart"></span> from Erika</p>
-        </div>
-    </div>
-
+    <!-- Application content is inserted -->
+    <div ui-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -66,17 +45,15 @@
         r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
         }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-XXXXX-X');
+        ga('create', 'UA-70409460-1');
         ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -85,17 +62,31 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js"></script>
+    <script src="bower_components/viewport-units-buggyfill/viewport-units-buggyfill.hacks.js"></script>
+    <script src="bower_components/tether/tether.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
-    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="bower_components/foundation/js/foundation.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/hammerjs/hammer.js"></script>
+    <script src="bower_components/foundation-apps/dist/js/foundation-apps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+
+    <!-- shared -->
+    <script src="scripts/shared/services/helper.factory.js"></script>
+
+
+    <!-- sections -->
+    <script src="scripts/sections/home.module.js"></script>
+    <script src="scripts/sections/connect.module.js"></script>
+    <script src="scripts/sections/past-projects.module.js"></script>
+
+    <script src="scripts/sections/home/home.controller.js"></script>
+    <script src="scripts/sections/connect/connect.controller.js"></script>
+    <script src="scripts/sections/past-projects/past-projects.controller.js"></script>
     <!-- endbuild -->
 </body>
 </html>

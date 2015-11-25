@@ -1,0 +1,282 @@
+@import 'settings';
+
+@import 'foundation-apps/scss/foundation';
+
+@import 'variables';
+@import 'components';
+
+.home-page {
+
+    /* Components */
+
+    h1, h2 {
+       font-family: $header-home-font-family;
+    }
+
+    p {
+        font-family: $about-home-font-family;
+        font-size: 1.1rem;
+    }
+
+    .fa-quote-left, .fa-quote-right {
+        font-size: 1.5rem;
+    }
+
+    .fa-quote-left {
+        margin-right: 0.2em;
+    }
+
+    .fa-quote-right {
+        margin-left: 0.2em;
+    }
+
+    .separator {
+        height: 100px;
+        overflow: hidden;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .separator-right, .separator-left {
+        background-color: #66c2ff;
+        display: inline-block;
+        overflow: hidden;
+        width: 30px;
+        height: 190px;
+        margin-top: -45px;
+    }
+
+    .separator-right {
+        transform: rotate(45deg);
+        float: left;
+        margin-right: 5em;
+    }
+
+    .separator-left {
+        transform: rotate(-45deg);
+        float: right;
+        margin-left: 5em;
+    }
+
+    .about-button-primary {
+        color: white;
+        border: none;
+        background: $home-blue;
+        text-decoration: none;
+    }
+
+    .about-button-secondary {
+        border-color: $home-blue;
+        color: $home-blue;
+        text-decoration: none;
+        &:hover {
+            background: $home-light-blue-green;
+        }
+    }
+
+    .home-content-block {
+        margin-left: 1em;
+        @include breakpoint(medium) {
+            margin-left: 4em;
+            margin-right: 4em;
+        }
+    }
+
+    .header, .footer {
+        background-color: $home-light-blue-green;
+        background-image: url('../images/textures/concrete-wall.png');
+    }
+
+    .header {
+        padding-top: 4em;
+        padding-bottom: 4em;
+        margin: 0;
+        text-align: center;
+
+        .name {
+            display: inline-block;
+            padding-right: 2em;
+            padding-left: 2em;
+            text-align: center;
+            border-bottom: 4px solid black;
+        }
+    }
+
+    .footer {
+        .reserved {
+            margin-left: 1.1rem
+        }
+
+        p, li {
+            font-family: $quick-connect-home-font-family;
+            font-size: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    /* Sections */
+
+    .quick-connect {
+        background-color: $home-gray-green;
+
+        i {
+            font-size: 16px;
+            padding-right: 0.3em;
+        }
+
+        a {
+            color: black;
+        }
+
+        .connect-info {
+            text-align: center;
+            margin: 0;
+            font-family: $quick-connect-home-font-family;
+            font-size: 10px;
+            font-weight: 700;
+            color: black;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+
+            .connect-title {
+                margin-top: 0.3em;
+            }
+
+            .connect-item {
+                padding-left: 0.5em;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .tagline-container {
+        height: 500px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: url('https://source.unsplash.com/vJbz-O1NvSc');
+        background-size: cover;
+        color: white;
+        display: table;
+        width: 100%;
+
+        .tagline {
+            display: table-cell;
+            vertical-align: middle;
+
+            .tagline-title {
+                font-family: $header-home-font-family;
+                word-wrap: break-word;
+                font-size: 2em;
+
+                @include breakpoint(medium) {
+                    font-size: 4em;
+                }
+
+                i {
+                    padding-left: 0.5em;
+                }
+            }
+
+            .tagline-content {
+                margin-left: 1em;
+
+                @include breakpoint(medium) {
+                    margin-left: 9em;
+                }
+            }
+        }
+    }
+
+    .about {
+        margin-top: 3em;
+
+        .about-container {
+            .soundclip {
+                font-size: 0.9rem;
+            }
+
+            p {
+                padding-right: 2em;
+            }
+
+            img {
+                vertical-align: right;
+                height: 250px;
+                width: 250px;
+            }
+            button {
+                margin-top: 1em;
+                width: 250px;
+            }
+        }
+    }
+
+    .work-history {
+
+        .wh-item {
+            margin-top: 1.5em;
+
+            .wh-title {
+                font-size:1.5rem;
+                padding:0;
+                margin:0;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+        }
+
+        img {
+            max-width: 180px;
+            margin-bottom: 1em;
+        }
+
+        .button {
+            width:180px;
+        }
+
+        .wh-skio {
+            border-bottom: 2px dotted black;
+            padding-bottom: 1.5em;
+            margin-bottom: 2em;
+        }
+    }
+
+    .volunteering {
+        .v-item {
+            p {
+                padding-right: 2em;
+            }
+            .v-title {
+                font-size:1.5rem;
+                padding:0;
+                margin:0;
+            }
+        }
+        .volunteering-CTA {
+            margin-top: 1em;
+        }
+    }
+
+    .education {
+        margin-bottom: 3em;
+
+        .edu-item {
+            margin-top: 2em;
+
+            img {
+                width: 50px;
+            }
+
+            .edu-title {
+                font-size:1.5rem;
+                padding:0;
+                margin:0;
+            }
+        }
+    }
+}
