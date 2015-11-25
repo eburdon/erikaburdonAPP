@@ -38,7 +38,7 @@
     }
 
     .separator-right, .separator-left {
-        background-color: goldenrod;
+        background-color: #66c2ff;
         display: inline-block;
         overflow: hidden;
         width: 30px;
@@ -82,14 +82,15 @@
         }
     }
 
-    /* Sections */
+    .header, .footer {
+        background-color: $home-light-blue-green;
+        background-image: url('../images/textures/concrete-wall.png');
+    }
 
     .header {
         padding-top: 4em;
         padding-bottom: 4em;
         margin: 0;
-
-        background-color: $home-light-blue-green;
         text-align: center;
 
         .name {
@@ -100,6 +101,23 @@
             border-bottom: 4px solid black;
         }
     }
+
+    .footer {
+        .reserved {
+            margin-left: 1.1rem
+        }
+
+        p, li {
+            font-family: $quick-connect-home-font-family;
+            font-size: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    /* Sections */
 
     .quick-connect {
         background-color: $home-gray-green;
@@ -259,23 +277,6 @@
                 padding:0;
                 margin:0;
             }
-        }
-    }
-
-    .footer {
-        background-color: $home-light-blue-green;
-
-        .reserved {
-            margin-left: 1.1rem
-        }
-
-        p, li {
-            font-family: $quick-connect-home-font-family;
-            font-size: 10px;
-        }
-
-        ul {
-            list-style: none;
         }
     }
 }
