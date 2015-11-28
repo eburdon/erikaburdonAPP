@@ -1,25 +1,35 @@
-<div class="connect-page">
-    <div class="header">
-        <div class="name">
-            <h1>ERIKA<br>BURDON</h1>
+<!-- Page built with bootstrap grid framework -->
+<div class="connect-page container-fluid">
+    <div class="row header">
+        <div class="connect-title">CONTACT ME</div>
+        <div class="col-md-offset-4 connect-image"></div>
+    </div>
+
+    <div class="row content-divider"></div>
+
+    <div class="row bubble-row">
+        <div class="bubble-container col-sm-3" ng-repeat="item in firstRow">
+            <div class="bubble-item" ng-switch="item.network">
+                <div ng-switch-when="Email"><email-bubble></email-bubble></div>
+                <div ng-switch-when="GitHub"><github-bubble></github-bubble></div>
+                <div ng-switch-when="LinkedIn"><linkedin-bubble></linkedin-bubble></div>
+                <div ng-switch-when="SoundCloud"><soundcloud-bubble></soundcloud-bubble></div>
+            </div>
         </div>
     </div>
-    <div class="quick-connect clearfix">
-        <p class="info">QUICK INFORMATION<span class="faint">
-            <a href="mailto:erika@erikaburdon.ca"><i class="fa fa-envelope-o"></i>erika@erikaburdon.ca</a>
-            <i class="fa fa-building-o city"></i>Vancouver, CANADA
-        </span></p>
-        <p class="connect">CONNECT <span class="faint">
-            <a href="https://github.com/eburdon" target="__blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/eburdon" target="__blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/OneEaredMusic" target="__blank"><i class="fa fa-twitter"></i></a>
-        </span></p>
+
+    <div class="row bubble-row">
+        <div class="bubble-container col-sm-3" ng-repeat="item in secondRow">
+            <div class="bubble-item" ng-switch="item.network">
+                <div ng-switch-when="Facebook"><facebook-bubble></facebook-bubble></div>
+                <div ng-switch-when="Twitter"><twitter-bubble></twitter-bubble></div>
+                <div ng-switch-when="GooglePlus"><googleplus-bubble></googleplus-bubble></div>
+            </div>
+        </div>
     </div>
-    <div>
-        <h2>Get in Touch</h2>
-        <p>Oops - this page isn't quite done yet!</p>
-        <p>In the near future, this page will list the major ways to get in touch with me - Email, GitHub, LinkedIn, Twitter, Facebook, SoundCloud... the works.</p>
-        <p>For now though, feel free to email me anytime at <a href="mailto:erika@erikaburdon.ca">erika@erikaburdon.ca</a>.</p>
-        <button class="button-glass about-button" ui-sref="eb.home">Return to Home</button>
+
+    <div class="row footer">
+        Footer
     </div>
+
 </div>
