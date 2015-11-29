@@ -12,7 +12,7 @@
         margin-bottom: 0px;
 
         .connect-title {
-            font-family: 'Lobster', cursive;
+            font-family: $header-connect-font-family;
             font-size: 7em;
             transform: rotate(-10deg);
             margin-top: 0.25em;
@@ -44,20 +44,6 @@
         background-color: black;
         opacity: 0.8;
         margin-bottom: 2em;
-    }
-
-    .button-hollow {
-        border: 1px solid #A9A9A9;
-        color: black;
-        border-radius: 5px;
-        background: none;
-        text-decoration: none;
-    }
-
-    .button-hollow:hover {
-        background-color: $home-blue;
-        color: white;
-        border: none;
     }
 
     .bubble-row {
@@ -128,7 +114,8 @@
                         border: 2px solid $facebook-blue;
                     }
                     .btn:hover {
-                        border-color: $home-blue;
+                        border-color: $facebook-blue;
+                        background-color: $facebook-blue;
                     }
                 }
 
@@ -149,7 +136,7 @@
                         border: 2px solid $googleplus-red;
                     }
                     .btn:hover {
-                        border-color: $home-blue;
+                        background-color: $googleplus-red;
                     }
                 }
 
@@ -161,7 +148,7 @@
                         border: 2px solid $linkedin-blue;
                     }
                     .btn:hover {
-                        border-color: $home-blue;
+                        background-color: $linkedin-blue;
                     }
                 }
 
@@ -173,7 +160,7 @@
                         border: 2px solid $soundcloud-orange;
                     }
                     .btn:hover {
-                        border-color: $home-blue;
+                        background-color: $soundcloud-orange;
                     }
                 }
 
@@ -185,7 +172,7 @@
                         border: 2px solid $twitter-blue;
                     }
                     .btn:hover {
-                        border-color: $home-blue;
+                        background-color: $twitter-blue;
                     }
                 }
             }
