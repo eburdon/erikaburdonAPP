@@ -40,7 +40,9 @@ angular.module('social.service', ['helper.factory'])
         });
 
         return {
-            network: 'GitHub'
+            network: 'GitHub',
+            username: 'eburdon',
+            stats: [' 8 Following |', ' 4 Starred | ', ' 6 Followers ']
         };
     };
 
@@ -49,7 +51,7 @@ angular.module('social.service', ['helper.factory'])
             network: network,
             username: 'Karmaqueenn',
             page_link: 'https://soundcloud.com/karmaqueenn/sets',
-            playlists: 3
+            stats: ['3 Playlists | ', ' 23 Followers | ', ' 55 Following ']
         }
     };
 
@@ -65,7 +67,8 @@ angular.module('social.service', ['helper.factory'])
         return {
             network: network,
             username: '@OneEaredMusic',
-            page_link: 'https://twitter.com/OneEaredMusic'
+            page_link: 'https://twitter.com/OneEaredMusic',
+            stats: ['3 Playlists | ', ' 23 Followers | ', ' 55 Following ']
         }
     };
 

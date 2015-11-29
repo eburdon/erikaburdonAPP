@@ -4,34 +4,36 @@
 
     .header {
         width: 100%;
-        margin-bottom: 0;
+        margin-bottom: 3em;
 
         .connect-title {
-            font-size: 5em;
-            z-index: 1;
-            position: absolute;
-        }
-
-        .connect-image {
-            width: 500px;
-            height: 500px;
-            background-repeat: no-repeat;
-            background-image: url('https://source.unsplash.com/jLwVAUtLOAQ/400x500');
-            z-index: 0;
+            font-family: 'Lobster', cursive;
+            font-size: 7em;
+            transform: rotate(-10deg);
+            margin-top: 0.25em;
+            margin-bottom: 0.5em;
         }
     }
 
     .footer {
-        height: 3em;
-        border: 1px solid black;
-        background-color: yellow;
+        height: 5em;
+        color: #A9A9A9;
+        border-top: 1px solid #A9A9A9;
     }
 
-    .content-divider {
-        height: 2em;
-        border: 1px solid black;
-        background-color: yellow;
-        margin-bottom: 2em;
+    .button-hollow {
+        border: 1px solid #A9A9A9;
+        color: black;
+        border-radius: 5px;
+        background: none;
+        text-decoration: none;
+    }
+
+    .button-hollow:hover {
+        background-color: $home-blue;
+        font-size: 1.0em;
+        color: white;
+        border: none;
     }
 
     .bubble-row {
@@ -39,15 +41,104 @@
         margin-bottom: 2em;
 
         .bubble-container {
-            // add blue on hover?
+
+            .bubble-email:hover {
+                .btn {
+                    border: 2px solid $home-blue;
+                }
+                i {
+                    color:  $home-blue;
+                }
+            }
+
+            .bubble-github:hover {
+                .btn {
+                    border: 2px solid black;
+                }
+            }
+
+            .bubble-facebook:hover {
+                .btn {
+                    border: 2px solid rgb(58, 87, 149);
+                }
+                i {
+                    color: rgb(58, 87, 149);
+                }
+            }
+
+            .bubble-linkedin:hover {
+                .btn {
+                    border: 2px solid #069;
+                }
+                i {
+                    color: #069;
+                }
+            }
+
+            .bubble-soundcloud:hover {
+                .btn {
+                    border: 2px solid rgb(255, 85, 0);
+                }
+                i {
+                    color: rgb(255, 85, 0);
+                }
+            }
+
+            .bubble-twitter:hover {
+                .btn {
+                    border: 2px solid #55acee;
+                }
+                i {
+                    color: #55acee;
+                }
+            }
+
+            .bubble-googleplus:hover {
+                .btn {
+                    border: 2px solid #d73d32;
+                }
+                i {
+                    color: #d73d32;
+                }
+            }
+
+            .btn:hover {
+                background: none;
+            }
 
             .bubble-item {
                 padding: 1em;
-                max-width: 200px;
-                min-height: 200px;
+                max-width: 250px;
+                min-height: 250px;
                 border-radius: 50%;
                 background-color: white;
-                border: 1px solid black;
+                border: 1px solid #A9A9A9;
+
+                .bubble-content {
+                    margin-top: 30px;
+
+                    div {
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+
+                    .more-info {
+                        font-size: 12px;
+                    }
+
+                    i {
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .btn {
+                        margin-top: 3px;
+                        margin-bottom: 3px;
+                    }
+                }
             }
         }
     }

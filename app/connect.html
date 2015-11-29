@@ -1,19 +1,16 @@
 <!-- Page built with bootstrap grid framework -->
 <div class="connect-page container-fluid">
     <div class="row header">
-        <div class="connect-title">CONTACT ME</div>
-        <div class="col-md-offset-4 connect-image"></div>
+        <div class="connect-title col-md-offset-3">Get in Touch!</div>
     </div>
-
-    <div class="row content-divider"></div>
 
     <div class="row bubble-row">
         <div class="bubble-container col-sm-3" ng-repeat="item in firstRow">
             <div class="bubble-item" ng-switch="item.network">
-                <div ng-switch-when="Email"><email-bubble></email-bubble></div>
-                <div ng-switch-when="GitHub"><github-bubble></github-bubble></div>
-                <div ng-switch-when="LinkedIn"><linkedin-bubble></linkedin-bubble></div>
-                <div ng-switch-when="SoundCloud"><soundcloud-bubble></soundcloud-bubble></div>
+                <div class="bubble-content bubble-email" ng-switch-when="Email"><email-bubble info="item"></email-bubble></div>
+                <div class="bubble-content bubble-github" ng-switch-when="GitHub"><github-bubble info="item"></github-bubble></div>
+                <div class="bubble-content bubble-linkedin" ng-switch-when="LinkedIn"><linkedin-bubble info="item"></linkedin-bubble></div>
+                <div class="bubble-content bubble-soundcloud" ng-switch-when="SoundCloud"><soundcloud-bubble info="item"></soundcloud-bubble></div>
             </div>
         </div>
     </div>
@@ -21,15 +18,20 @@
     <div class="row bubble-row">
         <div class="bubble-container col-sm-3" ng-repeat="item in secondRow">
             <div class="bubble-item" ng-switch="item.network">
-                <div ng-switch-when="Facebook"><facebook-bubble></facebook-bubble></div>
-                <div ng-switch-when="Twitter"><twitter-bubble></twitter-bubble></div>
-                <div ng-switch-when="GooglePlus"><googleplus-bubble></googleplus-bubble></div>
+                <div class="bubble-content bubble-facebook" ng-switch-when="Facebook"><facebook-bubble info="item"></facebook-bubble></div>
+                <div class="bubble-content bubble-twitter" ng-switch-when="Twitter"><twitter-bubble info="item"></twitter-bubble></div>
+                <div class="bubble-content bubble-googleplus" ng-switch-when="GooglePlus"><googleplus-bubble info="item"></googleplus-bubble></div>
             </div>
         </div>
     </div>
 
-    <div class="row footer">
-        Footer
+    <div class="row">
+        <div class="col-xs-offset-5">
+            <a class="button button-hollow" ui-sref="eb.home">Return to Home</a>
+        </div>
     </div>
 
+    <div class="row footer">
+        <span><a ui-sref="eb.home">Home</a> | <a ui-sref="eb.connect">Connect</a> | <a ui-sref="eb.past-projects">Past Projects</a></span>
+    </div>
 </div>

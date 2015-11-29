@@ -4,6 +4,9 @@ angular.module('social-bubble.directives', [
 ])
 .directive('emailBubble', function() {
     return {
+        scope: {
+            info: '=',
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
@@ -12,6 +15,9 @@ angular.module('social-bubble.directives', [
 })
 .directive('facebookBubble', function() {
     return {
+        scope: {
+            info: '='
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
@@ -20,6 +26,9 @@ angular.module('social-bubble.directives', [
 })
 .directive('githubBubble', function() {
     return {
+        scope: {
+            info: '='
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
@@ -28,6 +37,9 @@ angular.module('social-bubble.directives', [
 })
 .directive('googleplusBubble', function() {
     return {
+        scope: {
+            info: '='
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
@@ -36,6 +48,9 @@ angular.module('social-bubble.directives', [
 })
 .directive('linkedinBubble', function() {
     return {
+        scope: {
+            info: '='
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
@@ -44,6 +59,9 @@ angular.module('social-bubble.directives', [
 })
 .directive('soundcloudBubble', function() {
     return {
+        scope: {
+            info: '='
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
@@ -52,6 +70,9 @@ angular.module('social-bubble.directives', [
 })
 .directive('twitterBubble', function() {
     return {
+        scope: {
+            info: '='
+        },
         priority: 2,
         restrict: 'E',
         replace: false,
