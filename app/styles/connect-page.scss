@@ -2,23 +2,48 @@
 
 .connect-page {
 
+    padding: 0;
+    background-image: url('../images/textures/gray_jean.png');
+    overflow-x: auto;
+
     .header {
         width: 100%;
-        margin-bottom: 3em;
+        background-color: white;
+        margin-bottom: 0px;
 
         .connect-title {
             font-family: 'Lobster', cursive;
             font-size: 7em;
             transform: rotate(-10deg);
             margin-top: 0.25em;
-            margin-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        .connect-subtitle {
+            margin-top: -3em;
         }
     }
 
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .footer {
-        height: 5em;
-        color: #A9A9A9;
+        background-color: white;
+        color: black;
         border-top: 1px solid #A9A9A9;
+        p {
+            margin-top: 8px;
+            font-size: 12px;
+        }
+    }
+
+    .content-separator {
+        height: 1em;
+        background-color: black;
+        opacity: 0.8;
+        margin-bottom: 2em;
     }
 
     .button-hollow {
@@ -31,7 +56,6 @@
 
     .button-hollow:hover {
         background-color: $home-blue;
-        font-size: 1.0em;
         color: white;
         border: none;
     }
@@ -42,80 +66,16 @@
 
         .bubble-container {
 
-            .bubble-email:hover {
-                .btn {
-                    border: 2px solid $home-blue;
-                }
-                i {
-                    color:  $home-blue;
-                }
-            }
-
-            .bubble-github:hover {
-                .btn {
-                    border: 2px solid black;
-                }
-            }
-
-            .bubble-facebook:hover {
-                .btn {
-                    border: 2px solid rgb(58, 87, 149);
-                }
-                i {
-                    color: rgb(58, 87, 149);
-                }
-            }
-
-            .bubble-linkedin:hover {
-                .btn {
-                    border: 2px solid #069;
-                }
-                i {
-                    color: #069;
-                }
-            }
-
-            .bubble-soundcloud:hover {
-                .btn {
-                    border: 2px solid rgb(255, 85, 0);
-                }
-                i {
-                    color: rgb(255, 85, 0);
-                }
-            }
-
-            .bubble-twitter:hover {
-                .btn {
-                    border: 2px solid #55acee;
-                }
-                i {
-                    color: #55acee;
-                }
-            }
-
-            .bubble-googleplus:hover {
-                .btn {
-                    border: 2px solid #d73d32;
-                }
-                i {
-                    color: #d73d32;
-                }
-            }
-
-            .btn:hover {
-                background: none;
-            }
-
             .bubble-item {
                 padding: 1em;
                 max-width: 250px;
                 min-height: 250px;
                 border-radius: 50%;
                 background-color: white;
-                border: 1px solid #A9A9A9;
+                border: 1px solid whitesmoke;
 
                 .bubble-content {
-                    margin-top: 30px;
+                    margin-top: 20px;
 
                     div {
                         text-align: center;
@@ -123,6 +83,7 @@
                     }
 
                     .more-info {
+                        margin-top: 8px;
                         font-size: 12px;
                     }
 
@@ -137,6 +98,94 @@
                     .btn {
                         margin-top: 3px;
                         margin-bottom: 3px;
+                    }
+                }
+
+                * {
+                    .btn:hover {
+                        background: $home-blue;
+                        color: white;
+                    }
+                }
+
+                .bubble-email {
+                    i {
+                        color:  $home-blue;
+                    }
+                    .btn {
+                        border: 2px solid $home-blue;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-facebook {
+                    i {
+                        color: $facebook-blue;
+                    }
+                    .btn {
+                        border: 2px solid $facebook-blue;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-github {
+                    .btn {
+                        border: 2px solid black;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-googleplus {
+                    i {
+                        color: $googleplus-red;
+                    }
+                    .btn {
+                        border: 2px solid $googleplus-red;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-linkedin {
+                    i {
+                        color: $linkedin-blue;
+                    }
+                    .btn {
+                        border: 2px solid $linkedin-blue;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-soundcloud {
+                    i {
+                        color: $soundcloud-orange;
+                    }
+                    .btn {
+                        border: 2px solid $soundcloud-orange;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-twitter {
+                    i {
+                        color: $twitter-blue;
+                    }
+                    .btn {
+                        border: 2px solid $twitter-blue;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
                     }
                 }
             }

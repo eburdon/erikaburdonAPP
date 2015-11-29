@@ -4,6 +4,9 @@
         {{info.username}}
     </p>
     <p>
-        <a type="button" class="btn btn-default" href="{{info.page_link}}" target="_blank">Visit</a>
+        <a type="button" class="btn btn-default" href="{{info.page_link}}" target="_blank">See History</a>
+    </p>
+    <p class="more-info">
+        <span ng-repeat="type in info.types">{{type}}</span>
     </p>
 </div>

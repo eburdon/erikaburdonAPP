@@ -1,10 +1,11 @@
 <div>
-    <i class="fa fa-github-square fa-3x"></i>
+    <i class="fa fa-github fa-3x"></i>
     <p>
         {{info.username}}
     </p>
     <p>
-        <a type="button" class="btn btn-default" href="https://www.github.com" target="_blank">View</a>
+        <a ng-hide="info.page_link" type="button" class="btn btn-default" href="https://www.github.com" target="_blank">Visit</a>
+        <a ng-show="info.page_link" type="button" class="btn btn-default" href="{{info.page_link}}" target="_blank">Visit</a>
     </p>
     <p class="more-info">
         <span ng-repeat="stat in info.stats">{{stat}}</span>

@@ -32,7 +32,13 @@ angular.module('social-bubble.directives', [
         priority: 2,
         restrict: 'E',
         replace: false,
-        templateUrl: 'scripts/sections/connect/directives/github-bubble.html'
+        templateUrl: 'scripts/sections/connect/directives/github-bubble.html',
+        controller : ['$scope', function (scope) {
+
+            scope.info.promise.promise.then(function(data){
+                scope.info = data;
+            });
+        }]
     };
 })
 .directive('googleplusBubble', function() {
