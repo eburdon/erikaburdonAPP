@@ -5,7 +5,7 @@ angular.module('past-projects', [])
     $stateProvider
     .state('eb.past-projects', {
         url: 'past-projects',
-        templateUrl: 'past-projects.html',
+        templateUrl: 'scripts/sections/past-projects/past-projects.html',
         controller: 'EbPastProjectsController'
     });
 });

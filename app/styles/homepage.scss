@@ -63,6 +63,7 @@
         border: none;
         background: $home-blue;
         text-decoration: none;
+        margin-right: 0;
     }
 
     .about-button-secondary {
@@ -83,8 +84,7 @@
     }
 
     .header, .footer {
-        background-color: $home-light-blue-green;
-        background-image: url('../images/textures/concrete-wall.png');
+        background-image: url('../images/textures/black_denim.png');
     }
 
     .header {
@@ -93,16 +93,23 @@
         margin: 0;
         text-align: center;
 
+        h1 {
+            color: whitesmoke;
+        }
+
         .name {
             display: inline-block;
             padding-right: 2em;
             padding-left: 2em;
             text-align: center;
-            border-bottom: 4px solid black;
+            border-bottom: 4px solid $home-blue;
         }
     }
 
     .footer {
+        color: whitesmoke;
+        padding-top: 8px;
+
         .reserved {
             margin-left: 1.1rem
         }
@@ -120,7 +127,7 @@
     /* Sections */
 
     .quick-connect {
-        background-color: $home-gray-green;
+        background-color: $home-light-blue-green;
 
         i {
             font-size: 16px;

@@ -1,10 +1,20 @@
-$button-outline: white;
+/* App-wide*/
+$button-outline:                    white;
+$home-blue:                         #1C6BA0;
 
-/* HOME PAGE */
-$header-home-font-family: 'Abril Fatface', cursive;
-$quick-connect-home-font-family: 'Montserrat', sans-serif;
-$about-home-font-family: 'Slabo 27px', serif;
+/* Home Page */
+$header-home-font-family:           'Abril Fatface', cursive;
+$quick-connect-home-font-family:    'Montserrat', sans-serif;
+$about-home-font-family:            'Slabo 27px', serif;
 
-$home-blue: #1C6BA0;
-$home-light-blue-green: #C5E3BF;
-$home-gray-green: #F0F0F0;
+$home-light-blue-green:             #C5E3BF;
+$home-gray-green:                   #F0F0F0;
+
+/* Connect Page */
+$header-connect-font-family:       'Lobster', cursive;
+
+$linkedin-blue:                     #069;
+$twitter-blue:                      #55acee;
+$googleplus-red:                    #d73d32;
+$facebook-blue:                     rgb(58, 87, 149);
+$soundcloud-orange:                 rgb(255, 85, 0);

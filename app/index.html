@@ -2,7 +2,7 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Erika Burdon</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -10,6 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:100,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -18,6 +19,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/foundation-apps/dist/css/foundation-apps.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!-- endbuild -->
 
     <!-- build:css(.tmp) styles/main.css -->
@@ -69,6 +71,7 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/hammerjs/hammer.js"></script>
     <script src="bower_components/foundation-apps/dist/js/foundation-apps.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -78,14 +81,17 @@
     <!-- shared -->
     <script src="scripts/shared/services/helper.factory.js"></script>
 
-
     <!-- sections -->
     <script src="scripts/sections/home.module.js"></script>
     <script src="scripts/sections/connect.module.js"></script>
     <script src="scripts/sections/past-projects.module.js"></script>
 
     <script src="scripts/sections/home/home.controller.js"></script>
+
     <script src="scripts/sections/connect/connect.controller.js"></script>
+    <script src="scripts/sections/connect/services/social.service.js"></script>
+    <script src="scripts/sections/connect/directives/social-bubble.directives.js"></script>
+
     <script src="scripts/sections/past-projects/past-projects.controller.js"></script>
     <!-- endbuild -->
 </body>

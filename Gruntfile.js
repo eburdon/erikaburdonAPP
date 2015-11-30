@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
             files: [
-                '<%= yeoman.app %>/**/*.html',
+                '<%= yeoman.app %>/{,*/}*.html',
                 '.tmp/styles/{,*/}*.css',
                 '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
@@ -232,7 +232,7 @@ module.exports = function (grunt) {
                 src: [
                     '<%= yeoman.dist %>/scripts/{,*/}*.js',
                     '<%= yeoman.dist %>/styles/{,*/}*.css',
-                    '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                    // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                     '<%= yeoman.dist %>/styles/fonts/*'
                 ]
             }
@@ -332,9 +332,35 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.dist %>',
-                    src: ['*.html'],
+                    src: ['*.html', 'scripts/{,*/}*.html'],
                     dest: '<%= yeoman.dist %>'
                 }]
+            }
+        },
+
+        ngtemplates: {
+            app: {
+                files: [{
+                    cwd: '<%= yeoman.app %>',
+                    src: ['scripts/**/*.html'],
+                    dest: '.tmp/concat/scripts/scripts.js'
+                }],
+                options: {
+                    module: 'erikaburdonApp',
+                    htmlmin: {
+                        collapseBooleanAttributes:      true,
+                        collapseWhitespace:             true,
+                        removeAttributeQuotes:          true,
+                        removeComments:                 true,
+                        removeCommentsFromCDATA:        true,
+                        removeEmptyAttributes:          true,
+                        removeOptionalTags:             true,
+                        removeRedundantAttributes:      false,
+                        removeScriptTypeAttributes:     true,
+                        removeStyleLinkTypeAttributes:  true,
+                    },
+                    append: true
+                }
             }
         },
 
@@ -367,12 +393,13 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                    '*.{ico,png,txt}',
-                    '.htaccess',
-                    '*.html',
-                    'images/{,*/}*.{webp}',
-                    'styles/fonts/{,*/}*.*'
-                ]
+                        '*.{ico,png,txt}',
+                        '.htaccess',
+                        'scripts/{,*/}*.html',
+                        '{,*/}*.html',
+                        'images/{,*/}*.{webp}',
+                        'styles/fonts/{,*/}*.*'
+                    ]
             }, {
                 expand: true,
                 cwd: '.tmp/images',
@@ -449,11 +476,13 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'htmlmin',
         'wiredep',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
         'concat',
+        'ngtemplates',
         'ngAnnotate',
         'copy:dist',
         'cdnify',
@@ -461,7 +490,6 @@ module.exports = function (grunt) {
         'uglify',
         'filerev',
         'usemin',
-        'htmlmin'
     ]);
 
     grunt.registerTask('default', [

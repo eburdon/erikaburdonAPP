@@ -2,78 +2,179 @@
 
 .connect-page {
 
-    h1, h2 {
-       font-family: $header-home-font-family;
-    }
-
-    p {
-        font-family: $about-home-font-family;
-        font-size: 1.1rem;
-    }
-
-    .about-button {
-        border-color: #007acc;
-        color: #007acc;
-        &:hover, &:link{
-            color: black;
-            border-color: black;
-            background: none;
-            text-decoration: none;
-        }
-    }
+    padding: 0;
+    background-image: url('../images/textures/gray_jean.png');
+    overflow-x: auto;
 
     .header {
-        padding-top: 4em;
-        padding-bottom: 4em;
-        margin: 0;
+        width: 100%;
+        background-color: white;
+        margin-bottom: 0px;
 
-        background-color: $home-gray-green;
-        text-align: center;
+        .connect-title {
+            font-family: $header-connect-font-family;
+            font-size: 7em;
+            transform: rotate(-10deg);
+            margin-top: 0.25em;
+            margin-bottom: 1em;
+        }
 
-        .name {
-            display: inline-block;
-            padding-right: 2em;
-            padding-left: 2em;
-            text-align: center;
-            border-bottom: 4px solid black;
+        .connect-subtitle {
+            margin-top: -3em;
         }
     }
 
-    .quick-connect {
-        background-color: $home-gray-green;
-        padding: 0.5em 4em 0.5em 4em;
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-        .info {
-            float: left;
-        }
-
-        .connect {
-            float: right;
-        }
-
+    .footer {
+        background-color: white;
+        color: black;
+        border-top: 1px solid #A9A9A9;
         p {
-            display: inline;
-            margin: 0;
-            font-family: $quick-connect-home-font-family;
-            font-size: 10px;
-            font-weight: 700;
+            margin-top: 8px;
+            font-size: 12px;
         }
+    }
 
-        i {
-            font-size: 16px;
-            padding-right: 0.3em;
-        }
+    .content-separator {
+        height: 1em;
+        background-color: black;
+        opacity: 0.8;
+        margin-bottom: 2em;
+    }
 
-        .faint {
-            display: inline-block;
-            padding-left: 1em;
-            font-weight: 100;
-            margin: 0;
-            a {
-                color: inherit;
-            }
-            .city {
-                padding-left:0.2em;
+    .bubble-row {
+
+        margin-bottom: 2em;
+
+        .bubble-container {
+
+            .bubble-item {
+                padding: 1em;
+                max-width: 250px;
+                min-height: 250px;
+                border-radius: 50%;
+                background-color: white;
+                border: 1px solid whitesmoke;
+
+                .bubble-content {
+                    margin-top: 20px;
+
+                    div {
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+
+                    .more-info {
+                        margin-top: 8px;
+                        font-size: 12px;
+                    }
+
+                    i {
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .btn {
+                        margin-top: 3px;
+                        margin-bottom: 3px;
+                    }
+                }
+
+                * {
+                    .btn:hover {
+                        background: $home-blue;
+                        color: white;
+                    }
+                }
+
+                .bubble-email {
+                    i {
+                        color:  $home-blue;
+                    }
+                    .btn {
+                        border: 2px solid $home-blue;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-facebook {
+                    i {
+                        color: $facebook-blue;
+                    }
+                    .btn {
+                        border: 2px solid $facebook-blue;
+                    }
+                    .btn:hover {
+                        border-color: $facebook-blue;
+                        background-color: $facebook-blue;
+                    }
+                }
+
+                .bubble-github {
+                    .btn {
+                        border: 2px solid black;
+                    }
+                    .btn:hover {
+                        border-color: $home-blue;
+                    }
+                }
+
+                .bubble-googleplus {
+                    i {
+                        color: $googleplus-red;
+                    }
+                    .btn {
+                        border: 2px solid $googleplus-red;
+                    }
+                    .btn:hover {
+                        background-color: $googleplus-red;
+                    }
+                }
+
+                .bubble-linkedin {
+                    i {
+                        color: $linkedin-blue;
+                    }
+                    .btn {
+                        border: 2px solid $linkedin-blue;
+                    }
+                    .btn:hover {
+                        background-color: $linkedin-blue;
+                    }
+                }
+
+                .bubble-soundcloud {
+                    i {
+                        color: $soundcloud-orange;
+                    }
+                    .btn {
+                        border: 2px solid $soundcloud-orange;
+                    }
+                    .btn:hover {
+                        background-color: $soundcloud-orange;
+                    }
+                }
+
+                .bubble-twitter {
+                    i {
+                        color: $twitter-blue;
+                    }
+                    .btn {
+                        border: 2px solid $twitter-blue;
+                    }
+                    .btn:hover {
+                        background-color: $twitter-blue;
+                    }
+                }
             }
         }
     }
