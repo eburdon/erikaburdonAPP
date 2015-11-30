@@ -8,7 +8,7 @@ angular.module('connect', [
     $stateProvider
     .state('eb.connect', {
         url: 'connect',
-        templateUrl: 'connect.html',
+        templateUrl: 'scripts/sections/connect/connect.html',
         controller: 'EbConnectController'
     });
 });

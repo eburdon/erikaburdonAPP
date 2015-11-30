@@ -63,6 +63,7 @@
         border: none;
         background: $home-blue;
         text-decoration: none;
+        margin-right: 0;
     }
 
     .about-button-secondary {
@@ -107,6 +108,7 @@
 
     .footer {
         color: whitesmoke;
+        padding-top: 8px;
 
         .reserved {
             margin-left: 1.1rem

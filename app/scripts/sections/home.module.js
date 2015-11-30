@@ -4,7 +4,7 @@ angular.module('home', ['helper.factory'])
 .config(function ($stateProvider) {
     $stateProvider
     .state('eb.home', {
-        templateUrl: 'home.html',
+        templateUrl: 'scripts/sections/home/home.html',
         url: '',
         controller: 'EbHomeController',
     });

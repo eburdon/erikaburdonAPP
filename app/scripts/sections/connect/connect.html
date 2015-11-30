@@ -8,7 +8,7 @@
     <div class="content-separator"></div>
 
     <div class="row bubble-row">
-        <div class="bubble-container col-sm-3" ng-repeat="item in firstRow">
+        <div class="bubble-container col-sm-3 col-sm-offset-0 col-xs-offset-3 col-xs-12 " ng-repeat="item in firstRow">
             <div class="bubble-item" ng-switch="item.network">
                 <div class="bubble-content bubble-email" ng-switch-when="Email"><email-bubble info="item"></email-bubble></div>
                 <div class="bubble-content bubble-github" ng-switch-when="GitHub"><github-bubble info="item"></github-bubble></div>
@@ -38,7 +38,9 @@
         </div>
          <div class="col-xs-11">
             <p>
-                This page was built using Bootstrap Grid Framework in a minimalist style.<br>The GitHub data is determined with two promises - one HTTP request to get the data from GitHub API, the second to manipulate the data the way I want.
+                Erika Burdon. 2015. All Rights Reserved.<br>
+                This page was built using Bootstrap Grid Framework in a minimalist style.<br>
+                The GitHub data is determined with two promises - one HTTP request to get the data from GitHub API, the second to manipulate the data the way I want.
             </p>
         </div>
     </div>
