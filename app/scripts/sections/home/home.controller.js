@@ -6,6 +6,9 @@ angular.module('home')
     helperFactory
     ) {
 
+    // scroll to top of page on load
+    document.getElementById('home-page').scrollTop = 0;
+
     $scope.githubImage = '';
 
     $scope.taglines = [

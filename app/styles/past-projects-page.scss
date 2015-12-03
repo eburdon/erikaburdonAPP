@@ -7,20 +7,8 @@
     }
 
     p {
-        font-family: $about-home-font-family;
+        font-family: $app-font-family;
         font-size: 1.1rem;
-    }
-
-    .about-button {
-        // TODO: move this color into variable
-        border-color: #007acc;
-        color: #007acc;
-        &:hover, &:link{
-            color: black;
-            border-color: black;
-            background: none;
-            text-decoration: none;
-        }
     }
 
     .header {
@@ -77,5 +65,9 @@
                 padding-left:0.2em;
             }
         }
+    }
+
+    .past-container {
+        margin: 30px 40px;
     }
 }

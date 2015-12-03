@@ -1,10 +1,21 @@
+@import 'settings';
+
+@import 'foundation-apps/scss/foundation';
+
 @import 'variables';
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .connect-page {
 
-    padding: 0;
     background-image: url('../images/textures/gray_jean.png');
-    overflow-x: auto;
+    font-family: $app-font-family;
+    overflow-x: hidden;
 
     .header {
         width: 100%;
@@ -33,9 +44,14 @@
         background-color: white;
         color: black;
         border-top: 1px solid #A9A9A9;
+        margin-top: 16px;
+        padding-top: 16px;
+        padding-left: 16px;
         p {
-            margin-top: 8px;
-            font-size: 12px;
+            font-size: 10px;
+        }
+        a {
+            text-decoration: none;
         }
     }
 
@@ -46,9 +62,18 @@
         margin-bottom: 2em;
     }
 
+    .action-buttons {
+        margin-top: 5%;
+        @include breakpoint(medium) {
+            text-align: center;
+        }
+    }
+
     .bubble-row {
 
-        margin-bottom: 2em;
+        @include breakpoint(large) {
+            margin-bottom: 2em;
+        }
 
         .bubble-container {
 
@@ -59,6 +84,11 @@
                 border-radius: 50%;
                 background-color: white;
                 border: 1px solid whitesmoke;
+                margin-bottom: 1em;
+
+                @include breakpoint(large) {
+                    margin-bottom: 0;
+                }
 
                 .bubble-content {
                     margin-top: 20px;
@@ -175,6 +205,13 @@
                         background-color: $twitter-blue;
                     }
                 }
+            }
+            .button-glass {
+                border: 2px solid $home-blue;
+                color: $home-blue;
+                width: 75%;
+                margin-top: 8px;
+                background: none;
             }
         }
     }

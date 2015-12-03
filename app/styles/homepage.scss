@@ -3,7 +3,6 @@
 @import 'foundation-apps/scss/foundation';
 
 @import 'variables';
-@import 'components';
 
 .home-page {
 
@@ -14,73 +13,8 @@
     }
 
     p {
-        font-family: $about-home-font-family;
+        font-family: $app-font-family;
         font-size: 1.1rem;
-    }
-
-    .fa-quote-left, .fa-quote-right {
-        font-size: 1.5rem;
-    }
-
-    .fa-quote-left {
-        margin-right: 0.2em;
-    }
-
-    .fa-quote-right {
-        margin-left: 0.2em;
-    }
-
-    .separator {
-        height: 100px;
-        overflow: hidden;
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-
-    .separator-right, .separator-left {
-        background-color: #66c2ff;
-        display: inline-block;
-        overflow: hidden;
-        width: 30px;
-        height: 190px;
-        margin-top: -45px;
-    }
-
-    .separator-right {
-        transform: rotate(45deg);
-        float: left;
-        margin-right: 5em;
-    }
-
-    .separator-left {
-        transform: rotate(-45deg);
-        float: right;
-        margin-left: 5em;
-    }
-
-    .about-button-primary {
-        color: white;
-        border: none;
-        background: $home-blue;
-        text-decoration: none;
-        margin-right: 0;
-    }
-
-    .about-button-secondary {
-        border-color: $home-blue;
-        color: $home-blue;
-        text-decoration: none;
-        &:hover {
-            background: $home-light-blue-green;
-        }
-    }
-
-    .home-content-block {
-        margin-left: 1em;
-        @include breakpoint(medium) {
-            margin-left: 4em;
-            margin-right: 4em;
-        }
     }
 
     .header, .footer {
@@ -108,19 +42,80 @@
 
     .footer {
         color: whitesmoke;
-        padding-top: 8px;
-
-        .reserved {
-            margin-left: 1.1rem
-        }
-
+        margin-top: 16px;
+        padding-top: 16px;
+        padding-left: 16px;
         p, li {
             font-family: $quick-connect-home-font-family;
             font-size: 10px;
         }
-
         ul {
             list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .home-content-block {
+        margin-left: 1em;
+        margin-right: 1em;
+        @include breakpoint(medium) {
+            margin-left: 4em;
+            margin-right: 4em;
+        }
+    }
+
+    .fa-quote-left, .fa-quote-right {
+        font-size: 1.5rem;
+    }
+
+    .fa-quote-left {
+        margin-right: 0.2em;
+    }
+
+    .fa-quote-right {
+        margin-left: 0.2em;
+    }
+
+    .separator-container {
+        height: 100px;
+        margin-top: 3em;
+        margin-bottom: 5em;
+        overflow: hidden;
+
+        .separator-right {
+            background-color: #66c2ff;
+            display: inline-block;
+            overflow: hidden;
+            width: 30px;
+            height: 190px;
+            margin-top: -45px;
+            float: left;
+            margin-right: 5em;
+
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    .about-button-hollow {
+        background: none;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .about-button-secondary {
+        background: none;
+        border: 2px solid $home-blue;
+        color: $home-blue;
+        text-decoration: none;
+        font-family: $app-font-family;
+        &:hover {
+            background: $home-light-blue-green;
+            border-color: $home-light-blue-green;
+            color: $home-blue;
         }
     }
 
@@ -128,12 +123,10 @@
 
     .quick-connect {
         background-color: $home-light-blue-green;
-
         i {
             font-size: 16px;
             padding-right: 0.3em;
         }
-
         a {
             color: black;
         }
@@ -201,10 +194,6 @@
         margin-top: 3em;
 
         .about-container {
-            .soundclip {
-                font-size: 0.9rem;
-            }
-
             p {
                 padding-right: 2em;
             }
@@ -213,10 +202,20 @@
                 vertical-align: right;
                 height: 250px;
                 width: 250px;
+                border-radius: 30% 0;
             }
             button {
                 margin-top: 1em;
                 width: 250px;
+                font-family: $app-font-family;
+            }
+
+            .soundclip {
+                font-size: 0.9rem;
+            }
+
+            .about-connect-image{
+                overflow: hidden;
             }
         }
     }
@@ -250,40 +249,6 @@
             border-bottom: 2px dotted black;
             padding-bottom: 1.5em;
             margin-bottom: 2em;
-        }
-    }
-
-    .volunteering {
-        .v-item {
-            p {
-                padding-right: 2em;
-            }
-            .v-title {
-                font-size:1.5rem;
-                padding:0;
-                margin:0;
-            }
-        }
-        .volunteering-CTA {
-            margin-top: 1em;
-        }
-    }
-
-    .education {
-        margin-bottom: 3em;
-
-        .edu-item {
-            margin-top: 2em;
-
-            img {
-                width: 50px;
-            }
-
-            .edu-title {
-                font-size:1.5rem;
-                padding:0;
-                margin:0;
-            }
         }
     }
 }
