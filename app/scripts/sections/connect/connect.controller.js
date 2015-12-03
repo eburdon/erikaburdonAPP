@@ -8,6 +8,8 @@ angular.module('connect')
     socialService
     ) {
 
+    document.getElementById('connect-page').scrollTop = 0
+
     $scope.gitHub = {
         network: 'GitHub',
         promise: socialService.createSocialObject('GitHub')

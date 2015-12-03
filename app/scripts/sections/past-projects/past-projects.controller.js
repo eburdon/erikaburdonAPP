@@ -6,5 +6,6 @@ angular.module('past-projects')
     $scope
     ) {
 
-    $log.info('Past projects controller loaded.');
+    document.getElementById('past-projects-page').scrollTop = 0;
+
 });

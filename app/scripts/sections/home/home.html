@@ -1,5 +1,5 @@
 <!-- Page built with Foundation for Apps grid framework -->
-<div class="home-page">
+<div class="home-page" id="home-page">
     <div class="header">
         <div class="name">
             <h1>ERIKA<br>BURDON</h1>
@@ -33,7 +33,7 @@
         <div class="tagline">
             <div class="tagline-content">
                 <p class="tagline-title">I LOVE <u>{{tagline}}</u><i class="fa fa-chevron-down" ng-click="exchangeTagline()"></i></p>
-                <button class="button button-glass" ui-sref="eb.past-projects">Past Projects</button>
+                <button class="button about-button-hollow" ui-sref="eb.past-projects">Past Projects</button>
             </div>
         </div>
     </div>
@@ -43,10 +43,10 @@
                 <h2>On the Topic of Me</h2>
                 <p class="soundclip">Design | Implementation | Support</p>
                 <p>
-                    I'm a 4th year Software Engineering student from the University of Victoria currently working at an innovative, industry-changing startup in Vancouver, B.C. I'm also hard of hearing, so face-to-face or email are my preferred ways to chat.
+                    I'm a 4th year Software Engineering student from the University of Victoria, and I love sitting on the edge of my skill set. At the moment I'm working at an industry-changing startup in Vancouver, B.C. but in my spare time, I like to work on side projects like this or go camping.
                 </p>
                 <p>
-                    I really enjoy sitting on the edge of my skill set and taking on new projects. If you have an idea and you're looking for a solution, feel free to get in touch! I'm also looking for volunteer opportunities, particularly with encouraging women and young students to enter the STEM fields.
+                    If you have a project or you're looking for a solution, feel free to get in touch! I'm also looking for volunteer opportunities, particularly with encouraging women and young students to enter the STEM fields.
                 </p>
             </div>
             <div class="about-connect-image grid-block vertical medium-3">
@@ -54,18 +54,18 @@
                     <img ng-if="githubImage" src="{{githubImage}}"/>
                 </div>
                 <div class="grid-container vertical">
-                    <button class="button button-glass about-button-primary" ui-sref="eb.connect">Connect With Me Online</button>
+                    <button class="button about-button-secondary" ui-sref="eb.connect">Connect With Me Online</button>
                 </div>
             </div>
             <div class="grid-block vertical medium-12">
                 <h2>About This Site</h2>
                 <p>
-                    This is my full-stack experimental playground. For the front end, I've tried to focus on good design, awesome user interfaces, and appealing visuals. I've done that by implementing every page completely different to see what does and doesn't work. The backend / API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon.
+                    This is my full-stack experimental playground! For the front end, I've tried to focus on good design, awesome user interfaces, and appealing visuals. I've tried to implement each page in a different style, using different frameworks (or none at all) to see what does and doesn't work in terms of useability and development / maintenance. The back end API isn't built yet, but I hope to use Amazon Lambda, a number of different languages, and other neat-o things sometime soon. Once the basic pages are done, I intend to build an Android app that uses the same endpoints as this site.
                 </p>
             </div>
         </div>
     </div>
-    <div class="separator">
+    <div class="separator-container">
         <div class="separator-right" style="opacity: 1.0;"></div>
         <div class="separator-right" style="opacity: 0.7;"></div>
         <div class="separator-right" style="opacity: 0.5;"></div>
@@ -121,20 +121,17 @@
         </div>
     </div>
     <div class="footer grid-block">
-    </div>
-    <div class="footer grid-block">
         <div class="grid-block medium-3">
             <ul>
                 <li>SITE MAP</li>
-                <li><a ui-sref="eb.home">Home</a></li>
                 <li><a ui-sref="eb.connect">Connect</a></li>
                 <li><a ui-sref="eb.past-projects">Past Projects</a></li>
             </ul>
         </div>
         <div class="grid-block medium-9">
             <p>
-                Erika Burdon. 2015. All Rights Reserved.<br>
-                This page was built using Foundation for Apps grid Framework.
+                Erika Burdon. 2015. All Rights Reserved.<br><br>
+                This particular page was built using <a href="http://foundation.zurb.com/apps/docs/#!/" target="_blank">Foundation for Apps</a> grid Framework. I tried a couple of fancy CSS tricks, but nothing else fancy was done. Sorry.
             </p>
         </div>
     </div>
