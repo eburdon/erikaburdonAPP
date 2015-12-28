@@ -7,7 +7,7 @@ angular.module('social.service', ['helper.factory'])
     service.buildEmailObject = function (network) {
         return {
             network: network,
-            email_link: 'erika@erikaburdon.ca',
+            email_link: 'erikaeburdon@gmail.com',
         }
     };
 
