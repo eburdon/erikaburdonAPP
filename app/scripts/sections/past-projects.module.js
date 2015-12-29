@@ -1,5 +1,5 @@
 'use strict';
-/* Todo: Modify templateUrl so it's referencing correct place */
+
 angular.module('past-projects', [])
 .config(function ($stateProvider) {
     $stateProvider

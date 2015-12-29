@@ -1,5 +1,7 @@
 'use strict';
 
+/* global appSettings:true */
+
 var erikaburdonApp = angular.module('erikaburdonApp', [
     'foundation',
     'ui.router',
@@ -12,8 +14,17 @@ var erikaburdonApp = angular.module('erikaburdonApp', [
     'home',
     'connect',
     'past-projects',
+    'workspace'
 ]);
 
+/*
+ * Configure constants.
+ *
+ * Make deep copies of any objects to prevent
+ * them from being changed outside of the app.
+ */
+
+erikaburdonApp.constant('settings', angular.copy(appSettings));
 
 // Analytics
 erikaburdonApp.config(function () {
@@ -61,9 +72,7 @@ erikaburdonApp.config(function ($stateProvider, $urlRouterProvider) {
     });
 });
 
-
-
-erikaburdonApp.run( function ($rootScope) {
+erikaburdonApp.run( function ($rootScope){
     // Dump template errors
     $rootScope.$on('$stateChangeError', console.log.bind(console));
 

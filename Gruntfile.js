@@ -9,6 +9,10 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    // load the grunt-replace tasks
+    grunt.loadNpmTasks('grunt-replace');
+    grunt.loadNpmTasks('grunt-ng-annotate');
+
     // Configurable paths for the application
     var appConfig = {
         app: require('./bower.json').appPath || 'app',
@@ -60,7 +64,7 @@ module.exports = function (grunt) {
         // The actual grunt server settings
         connect: {
             options: {
-                port: 9000,
+                port: 8080,
                 // Change this to '0.0.0.0' to access the server from outside.
                 hostname: 'localhost',
                 livereload: 35729
@@ -117,6 +121,7 @@ module.exports = function (grunt) {
             all: {
                 src: [
                     'Gruntfile.js',
+                    'config/**/*.js',
                     '<%= yeoman.app %>/scripts/{,*/}*.js'
                 ]
             },
@@ -232,7 +237,6 @@ module.exports = function (grunt) {
                 src: [
                     '<%= yeoman.dist %>/scripts/{,*/}*.js',
                     '<%= yeoman.dist %>/styles/{,*/}*.css',
-                    // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                     '<%= yeoman.dist %>/styles/fonts/*'
                 ]
             }
@@ -371,7 +375,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '.tmp/concat/scripts',
-                    src: '*.js',
+                    src: '**/*.js',
                     dest: '.tmp/concat/scripts'
                 }]
             }
@@ -441,8 +445,40 @@ module.exports = function (grunt) {
                 configFile: 'test/karma.conf.js',
                 singleRun: true
             }
+        },
+
+        // Environment settings
+        replace: {
+            development: {
+                options: {
+                    patterns: [{
+                        json: grunt.file.readJSON('./config/environments/development.json')
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: false,
+                    cwd: './config/',
+                    src: ['settings.js'],
+                    dest: '<%= yeoman.app %>/scripts/'
+                }]
+            },
+            production: {
+                options: {
+                    patterns: [{
+                        json: grunt.file.readJSON('./config/environments/production.json')
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: false,
+                    cwd: './config/',
+                    src: ['settings.js'],
+                    dest: '<%= yeoman.app %>/scripts/'
+                }]
+            }
         }
-    });
+    }); // end config
 
 
     grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
@@ -451,6 +487,7 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
+            'replace:development',
             'clean:server',
             'wiredep',
             'concurrent:server',
@@ -458,7 +495,7 @@ module.exports = function (grunt) {
             'connect:livereload',
             'watch'
         ]);
-    });
+    }); // end 'serve' registration
 
     grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
@@ -472,11 +509,10 @@ module.exports = function (grunt) {
         'autoprefixer',
         'connect:test',
         'karma'
-    ]);
+    ]); // end 'test' registration
 
     grunt.registerTask('build', [
         'clean:dist',
-        'htmlmin',
         'wiredep',
         'useminPrepare',
         'concurrent:dist',
@@ -490,9 +526,18 @@ module.exports = function (grunt) {
         'uglify',
         'filerev',
         'usemin',
-    ]);
+        'htmlmin'
+    ]); // end 'build' registration
 
     grunt.registerTask('default', [
+        'replace:development',
+        'newer:jshint',
+        'test',
+        'build'
+    ]);
+
+    grunt.registerTask('build-prod', [
+        'replace:production',
         'newer:jshint',
         'test',
         'build'

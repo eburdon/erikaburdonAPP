@@ -1,0 +1,13 @@
+{
+    "WWW_URL":      "http://erikaburdon.ca",
+    "API_URL":      "http://localhost:9000",
+    "APP_URL":      "http://localhost:8080",
+    "IMAGES_URL":   "http://images.erikaburdon.ca",
+
+    "CLOUDINARY_CLOUD_NAME": "erikaburdon",
+    "GOOGLE_ANALYTICS_TRACKING_ID": "",
+    "GOOGLE_CLIENT_ID": "",
+    "FACEBOOK_APP_ID": "",
+    "SOUNDCLOUD_CLIENT_ID": "",
+    "TWITTER_CLIENT_ID": ""
+}

@@ -16,15 +16,19 @@
         padding-bottom: 4em;
         margin: 0;
 
-        background-color: #F0FFF0;
+        background-image: url('../images/textures/black_denim.png');
         text-align: center;
+
+        h1 {
+            color: whitesmoke;
+        }
 
         .name {
             display: inline-block;
             padding-right: 2em;
             padding-left: 2em;
             text-align: center;
-            border-bottom: 4px solid black;
+            border-bottom: 4px solid $home-blue;
         }
     }
 
