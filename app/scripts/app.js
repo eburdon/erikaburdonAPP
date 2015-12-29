@@ -11,8 +11,9 @@ var erikaburdonApp = angular.module('erikaburdonApp', [
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'home',
+    'blog',
     'connect',
+    'home',
     'past-projects',
     'workspace'
 ]);
