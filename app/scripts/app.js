@@ -13,6 +13,7 @@ var erikaburdonApp = angular.module('erikaburdonApp', [
     'ngTouch',
     'blog',
     'connect',
+    'crystalBall',
     'home',
     'past-projects',
     'workspace'

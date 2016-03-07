@@ -5,21 +5,17 @@ angular.module('workspace')
     $http,
     $log,
     $scope,
-    settings
-    ) {
-
-    $log.log('Loaded workspace controller');
+    settings ) {
 
     $scope.resultText = 'None';
 
     $scope.whatwhat = function () {
-        var url = settings.API_URL + '/test'
+        var url =  settings.API_URL + '/crystalball'
         $log.log('API url = ', url);
 
-        $http({method: 'GET', url: url}).then(function(result){
-            console.log('data = ', result.data);
-            $scope.resultText = result.data;
+        $http({method: 'GET', url: url}).then(function(result) {
+            var data = result.data
+            $scope.resultText = data.response;
         });
     };
-
 });
