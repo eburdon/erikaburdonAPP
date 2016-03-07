@@ -1,5 +1,5 @@
 'use strict';
-/* Todo: Modify templateUrl so it's referencing correct place */
+
 angular.module('connect', [
     'social.service',
     'social-bubble.directives',

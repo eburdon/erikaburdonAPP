@@ -1,0 +1,29 @@
+<div class="crystal-ball-page">
+	<div class="crystal-ball">
+		<h1>What's in your future?</h1>
+		
+		<p>
+			Do you have a burning question about what your future holds? Wonder no more! The mysterious Crystal Ball - borrowed from strange lands far, far away - will answer any question you have.
+		</p>
+		
+		<p>
+			Ask your question, press the button, and know the truth...
+		</p>
+		
+		<button class="button" ng-click="ask()">The crystal ball says...</button>
+		
+		<h3>{{resultText}}</h3>
+
+		<div class="info-paragraph">
+			<button class="button button-hollow" ng-click="flipValue()">What's so interesting about this page?</button>
+			
+			<p ng-show="showWhatsHappening">
+				This is the first place in my Single Paged App that makes a <b>HTTP</b> call to my backend <b>REST API!</b>
+				The backend is also hosted on Amazon, except it's stored on an Elastic Beanstalk Instance instead of in buckets on S3. It's a <b>scala</b> service running on a <b>tomcat</b> server.
+				If you're able to get a response from the mysterious crystal ball, that means a doGet call was successfully made to my endpoint, and the string response was returned in a useable <b>JSON</b> format! Neat-o!
+			</p>
+		</div>
+
+		<button class="button button-hollow" ui-sref="eb.home">Return to Home</button>
+	</div>
+</div>
