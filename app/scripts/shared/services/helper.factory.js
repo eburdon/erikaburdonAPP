@@ -1,37 +1,40 @@
-'use strict';
+(function() {
 
-angular.module('helper.factory', [])
-.factory('helperFactory', function($q, $http, settings) {
-    // Move to a constants-style folder?
-    var GitHubUsername = 'eburdon';
+    'use strict';
 
-    var factory = {};
+    angular
+        .module('helper.factory', [])
+        .factory('helperFactory', helperFactory);
 
-    factory.test = function () {
-        var url = settings.API_URL + '/test'
-        console.log(url);
+        helperFactory.$inject = ['$q', '$http', 'settings'];
 
-        var thing = factory.getRequest(url);
+        function helperFactory($q, $http, settings) {
+            var GitHubUsername = 'eburdon';
 
-        console.log(thing);
-    };
+            var factory = {
+                getGitHubInformation: getGitHubInformation,
+                getRequest: getRequest
+            };
 
-    factory.getGitHubInformation = function () {
-        var url = 'https://api.github.com/users/' + GitHubUsername;
+            return factory;
 
-        return factory.getRequest(url);
-    };
+            ////////
 
-    factory.getRequest = function(url) {
-        var deferred = $q.defer();
+            function getGitHubInformation() {
+                var url = 'https://api.github.com/users/' + GitHubUsername;
 
-        $http.get(url).success(function(data) {
-            deferred.resolve(data);
-        }).error(function(error) {
-            deferred.reject(error);
-        });
-        return deferred.promise;
-    };
+                return getRequest(url);
+            }
 
-    return factory;
-});
+            function getRequest(url) {
+                var deferred = $q.defer();
+
+                $http.get(url).success(function(data) {
+                    deferred.resolve(data);
+                }).error(function(error) {
+                    deferred.reject(error);
+                });
+                return deferred.promise;
+            }
+        }
+})();

@@ -5,7 +5,7 @@ var appSettings = {
     'WWW_URL': 'http://erikaburdon.ca',
     'API_URL': 'http://localhost:8080',
     'APP_URL': 'http://localhost:9000',
-    'IMAGES_URL': 'http://images.erikaburdon.ca',
+    'IMAGES_URL': '',
 
     // GOOGLE ANALYTICS settings
     'GOOGLE_ANALYTICS_TRACKING_ID': '',

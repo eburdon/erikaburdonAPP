@@ -2,7 +2,7 @@
     "WWW_URL":      "http://erikaburdon.ca",
     "API_URL":      "http://api.erikaburdon.ca",
     "APP_URL":      "http://app.erikaburdon.ca",
-    "IMAGES_URL":   "http://images.erikaburdon.ca",
+    "IMAGES_URL":   "",
 
     "CLOUDINARY_CLOUD_NAME": "erikaburdon",
     "GOOGLE_ANALYTICS_TRACKING_ID": "",

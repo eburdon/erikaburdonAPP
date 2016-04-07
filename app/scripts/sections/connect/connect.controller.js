@@ -1,31 +1,34 @@
-'use strict';
+(function() {
+    
+    'use strict';
 
-angular.module('connect')
-.controller('EbConnectController', function (
-    $log,
-    $scope,
-    $q,
-    socialService
-    ) {
+    angular.module('connect')
+        .controller('EbConnectController', EbConnectController);
 
-    document.getElementById('connect-page').scrollTop = 0
+    EbConnectController.$inject = ['socialService']
 
-    $scope.gitHub = {
-        network: 'GitHub',
-        promise: socialService.createSocialObject('GitHub')
-    };
+    function EbConnectController(socialService) {
 
-    $scope.firstRow = {
-        Email :         socialService.createSocialObject('Email'),
-        LinkedIn :      socialService.createSocialObject('LinkedIn'),
-        SoundCloud :    socialService.createSocialObject('SoundCloud'),
-        GitHub :        $scope.gitHub,
-    };
+        document.getElementById('connect-page').scrollTop = 0
 
-    // Todo: UpWork?
-    $scope.secondRow = {
-        Facebook :      socialService.createSocialObject('Facebook'),
-        Twitter :       socialService.createSocialObject('Twitter'),
-        GooglePlus :    socialService.createSocialObject('GooglePlus'),
-    };
-});
+        var vm = this;
+
+        vm.gitHub = {
+            network: 'GitHub',
+            promise: socialService.createSocialObject('GitHub')
+        }
+
+        vm.firstRow = {
+            Email :         socialService.createSocialObject('Email'),
+            LinkedIn :      socialService.createSocialObject('LinkedIn'),
+            SoundCloud :    socialService.createSocialObject('SoundCloud'),
+            GitHub :        vm.gitHub,
+        }
+
+        vm.secondRow = {
+            Facebook :      socialService.createSocialObject('Facebook'),
+            Twitter :       socialService.createSocialObject('Twitter'),
+            GooglePlus :    socialService.createSocialObject('GooglePlus'),
+        }
+    }
+})();
