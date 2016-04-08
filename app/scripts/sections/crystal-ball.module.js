@@ -1,8 +1,10 @@
 'use strict';
 
 angular
-	.module('crystalBall', ['whatsInteresting'])
-	.config(function ($stateProvider) {
+	.module('crystalBall', [
+		'whatsInteresting'
+	])
+	.config(function($stateProvider) {
 	    $stateProvider
 		    .state('eb.crystalBall', {
 		        templateUrl: 'scripts/sections/crystal-ball/crystal-ball.html',

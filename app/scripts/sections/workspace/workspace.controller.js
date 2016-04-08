@@ -1,21 +1,15 @@
-'use strict';
+(function() {
 
-angular.module('workspace')
-.controller('EbWorkspaceController', function (
-    $http,
-    $log,
-    $scope,
-    settings ) {
+    'use strict';
 
-    $scope.resultText = 'None';
+    angular
+        .module('workspace')
+        .controller('EbWorkspaceController', EbWorkspaceController);
 
-    $scope.whatwhat = function () {
-        var url =  settings.API_URL + '/crystalball'
-        $log.log('API url = ', url);
+        EbWorkspaceController.$inject = ['$http', '$log', 'settings']
 
-        $http({method: 'GET', url: url}).then(function(result) {
-            var data = result.data
-            $scope.resultText = data.response;
-        });
-    };
-});
+        function EbWorkspaceController($http, $log, settings) {
+
+            var vm = this;
+        }
+})();
