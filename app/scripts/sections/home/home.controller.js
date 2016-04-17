@@ -26,7 +26,7 @@
 
         vm.exchangeTagline = exchangeTagline;
 
-        vm.githubImage = undefined;
+        vm.whatsInteresting = 'This page was built using Foundation for Apps grid Framework. I tried a couple of fancy CSS tricks, but that\'s it. This button is also a directive you\'ll find throughout the site.'
 
         activate();
 

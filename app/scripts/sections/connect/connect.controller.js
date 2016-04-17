@@ -30,5 +30,7 @@
             Twitter :       socialService.createSocialObject('Twitter'),
             GooglePlus :    socialService.createSocialObject('GooglePlus'),
         }
+
+        vm.whatsInteresting = 'This page was built using Bootstrap Grid Framework. The GitHub bubble data compiled using two promises 1) HTTP request to get the data from public GitHub API, and 2) to manipulate the data the way it needed to be displayed.';
     }
 })();

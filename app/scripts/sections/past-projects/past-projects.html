@@ -1,11 +1,9 @@
-<head><base href="/"></head>
-<div class="past-projects-page" id="past-projects-page">
+<div class="past-projects-page" id="past-projects-page" style="background-color:#F0F7FF">
     <div class="header">
-        <div class="name">
-            <h1>ERIKA<br>BURDON</h1>
-        </div>
+        <div class="name"><h1>ERIKA BURDON</h1></div>
+        <div><h2 style="color:white;">Past Projects</h2></div>
     </div>
-    <div class="quick-connect clearfix">
+    <div class="quick-connect clearfix" style="background-color:#C5E3BF;">
         <p class="info">QUICK INFORMATION<span class="faint">
             <a href="mailto:erikaeburdon@gmail.com"><i class="fa fa-envelope-o"></i>erikaeburdon@gmail.com</a>
             <i class="fa fa-building-o city"></i>Vancouver, CANADA
@@ -16,14 +14,103 @@
             <a href="https://twitter.com/OneEaredMusic" target="__blank"><i class="fa fa-twitter"></i></a>
         </span></p>
     </div>
+
+
     <div class="past-container">
-        <h2>Past Projects .... oops!</h2>
-        <p>
-            This page isn't done yet! But don't worry - it's next. Eventually, it'll be styled up with description of all the projects I'm currently working on or I've done in the past.
-        </p>
-        <p>
-            If you're <b>really</b> keen on seeing something I've already done, check out my old static website at <a href="http://www.web.uvic.ca/~eburdon">www.web.uvic.ca/~eburdon</a>! It's got a few examples there.
-        </p>
+        <div class="grid-container">
+            <div class=" grid-block small-up-2 medium-up-2">
+              <div class="grid-content">
+                <div class="card">
+                  <img src="images/thumbnails/evolution_hub.png" />
+                  <div class="card-divider">
+                    Angular Web App
+                  </div>
+                  <div class="card-section">
+                    <h4>Research and Education Platform</h4>
+                    <section class="block-list text-center">
+                        <header><a href="https://github.com/eburdon/TransparentLanguage_EmailParser" target="_blank">GitHub</a> <i class="fa fa-rocket" aria-hidden="true"></i> <a href="https://github.com/eburdon/TransparentLanguage_EmailParser/wiki/Screenshots" target="_blank">Tutorial</a> </header>
+                    </section>
+                    <hr/>
+                    <p>
+                        For a research course, teams were required to create some automatic tool or script that would investigate a code base to see how they evolved over time, and present a textual description and visual result of the tool. <br />
+
+                        My partner and I decided to build a single-page Angular web app to unify the entire class's research into one cohesive tool. Visitors are able to both execute any of the 10 tools, then view the freshly-generated visual results within the app. Links and summaries to the original GitHub repositories were also included. <br />
+
+                        View the project repository on GitHub or a screenshot demostration here.
+
+                        <br/><br/>
+                        <a>Click for full description</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-content">
+                <div class="card">
+                  <img src="images/thumbnails/word_of_day.png" />
+                  <div class="card-divider">
+                    Python GUI and Scripting Program
+                  </div>
+                  <div class="card-section">
+                    <h4>Word-of-the-day Email Parser</h4>
+                    <section class="block-list text-center">
+                        <header><a href="https://github.com/eburdon/EvolutionHub" target="_blank">GitHub</a> <i class="fa fa-rocket" aria-hidden="true"></i> <a href="https://github.com/eburdon/EvolutionHub/wiki/A-screenshot-demonstration" target="_blank">Tutorial</a> </header>
+                    </section>
+                    <hr/>
+                    <p>
+                        In an effort to gain more exposure to German, I subscribed to a mailing list which would send up to 2 emails per day of a new vocabulary word. These included the word, its translation, and example sentence in both German and English. <br />
+
+                        I wrote a script to parse each into a text file to study later, then delete the email. Result included a Python GUI to enter log-in information, then select either POP3 or IMAP access. <br />
+
+                        View the project repository on GitHub or a screenshot demostration here.
+
+                        <br/><br/>
+                        <a>Click for full description</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-content">
+                <div class="card">
+                  <img src="images/thumbnails/static_site.png" />
+                  <div class="card-divider">
+                    Static web page
+                  </div>
+                  <div class="card-section">
+                    <h4>Uvic Personal Web Space</h4>
+                    <hr/>
+                    <section class="block-list text-center">
+                        <header><a href="http://www.web.uvic.ca/~eburdon/" target="_blank">Visit Page</a></header>
+                    </section>
+                    <hr/>
+                    <p>
+                        My very first attempt at web development! UVic offers free web space / hosting to all of its students. I created a simple static webpage - simple HTML and CSS - and uploaded content via secure FTP connection. <br/>
+
+                        <br/><br/>
+                        <a>Click for full description</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <section class="block-list">
+            <header>ONGOING PROJECTS</header>
+            <ul>
+                <li><h6>Directed Studies Project</h6>
+                    Completing and executing a scalable itemset mining algorithm for low support frequencies
+                </li>
+                <li><h6>Android Tic-Tac-Toe</h6>
+                    Building the frame for a tic-tac-toe phone app to interact with this site!
+                </li>
+                <li><h6>Arduino Madness!</h6>
+                    Messing around with the Arduino Starter Kit
+                </li>
+            </ul>
+        </section>
+
         <button class="button" ui-sref="eb.home">Return to Home</button>
     </div>
 </div>

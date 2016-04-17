@@ -20,19 +20,13 @@ angular
     ])
 
     /*
-     * Configure constants.
-     *
-     * Make deep copies of any objects to prevent
-     * them from being changed outside of the app.
+     * Configure environment-generated constants.
      */
     .constant('settings', angular.copy(appSettings))
 
-    // Todo: Move into function?
-    .config(function() {
-        // GOOGLE ANALYTICS STUFF HERE
-    })
-
-    // Root application
+    /*
+     * Root application
+     */
     .config(function($stateProvider) {
         $stateProvider
         .state('eb', {
@@ -42,9 +36,10 @@ angular
         });
     })
 
-    // Configure special pages
+    /*
+     * Configure special pages.
+     */
     .config(function($stateProvider, $urlRouterProvider) {
-
         // Handle garbage URLs
         $urlRouterProvider.otherwise(function ($injector, $location) {
             var $state = $injector.get('$state');
@@ -71,10 +66,14 @@ angular
         });
     })
 
+    /*
+     * Execute app.
+     */
     .run(function($rootScope) {
         // Dump template errors
         $rootScope.$on('$stateChangeError', console.log.bind(console));
 
+        // Dump state change errors
         $rootScope.$on('$stateChangeError',
         function(event, toState, toParams, fromState, fromParams, error){
           console.log('$stateChangeError', error);

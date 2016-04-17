@@ -8,7 +8,7 @@ var appSettings = {
     'IMAGES_URL': '',
 
     // GOOGLE ANALYTICS settings
-    'GOOGLE_ANALYTICS_TRACKING_ID': '',
+    'GOOGLE_ANALYTICS_TRACKING_ID': '@@GOOGLE_ANALYTICS_TRACKING_ID',
 
     // Cloudinary settings
     'CLOUDINARY_CLOUD_NAME': 'erikaburdon',

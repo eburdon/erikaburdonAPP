@@ -5,7 +5,6 @@
     "IMAGES_URL":   "",
 
     "CLOUDINARY_CLOUD_NAME": "erikaburdon",
-    "GOOGLE_ANALYTICS_TRACKING_ID": "",
     "GOOGLE_CLIENT_ID": "",
     "FACEBOOK_APP_ID": "",
     "SOUNDCLOUD_CLIENT_ID": "",
