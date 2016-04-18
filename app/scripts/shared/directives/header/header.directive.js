@@ -3,27 +3,34 @@
     'use strict';
 
     /**
-    * @desc displays or hides a paragraph on button click
-    * @param 'text' Plain-text description about what's interesting about the page
-    * @example <whats-interesting-directive text='TEXT'></whats-interesting-directive>
+    * @desc displays site banner
+    * @param 'title' Optional title to show in header under site name
+    * @example <site-header title="Past Projects"></site-header>
     */
 
     angular
-        .module('whatsInteresting', [])
-        .directive('whatsInterestingDirective', whatsInterestingDirective);
+        .module('header', [])
+        .directive('siteHeader', headerDirective);
 
-        whatsInterestingDirective.$inject = [];
+        headerDirective.$inject = [];
 
-        function whatsInterestingDirective() {
-            return {
-                scope: {
-                    text:'='
-                },
+        function headerDirective() {
+            var directive =  {
                 restrict: 'E',
-                templateUrl: 'scripts/shared/directives/whats-interesting/whats-interesting.html',
+                templateUrl: 'scripts/shared/directives/header/header.html',
+                scope: {
+                    title:'@'
+                },
+                controller: 'headerController',
+                controllerAs: 'headerVm',
                 bindToController: true,
-                controller: 'whatsInterestingController',
-                controllerAs: 'wiVM'
+                link: linkFunc,
+            }
+
+            return directive;
+
+            function linkFunc(scope, el, attr, ctrl) {
+                ctrl.title = attr.title;
             }
         }
 })();

@@ -2,7 +2,8 @@
 
 angular
 	.module('crystalBall', [
-		'whatsInteresting'
+		'whatsInteresting',
+		'header',
 	])
 	.config(function($stateProvider) {
 	    $stateProvider

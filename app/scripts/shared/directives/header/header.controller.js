@@ -3,20 +3,15 @@
     'use strict';
 
     angular
-        .module('whatsInteresting')
-        .controller('whatsInterestingController', whatsInterestingController);
+        .module('header')
+        .controller('headerController', headerController);
 
-        whatsInterestingController.$inject = [];
+        headerController.$inject = ['headerConstants'];
 
-        function whatsInterestingController() {
+        function headerController(headerConstants) {
 
             var vm = this;
 
-            vm.showText = false;
-            vm.toggleText = toggleText;
-
-            function toggleText() {
-            	vm.showText = !vm.showText;
-            }
+            vm.constants = headerConstants;
         }
 })();

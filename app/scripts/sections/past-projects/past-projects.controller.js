@@ -9,8 +9,9 @@
 		EbPastProjectsController.$inject = [];
 
 		function EbPastProjectsController() {
-
-		    document.getElementById('past-projects-page').scrollTop = 0;
-
+			// scroll to top of page on load
+            $(document).ready(function(){
+                $(this).scrollTop(0);
+            });
 		};
 })();

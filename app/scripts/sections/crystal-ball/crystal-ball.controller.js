@@ -22,6 +22,11 @@
             ////////
 
             function activate() {
+                // scroll to top of page on load
+                $(document).ready(function(){
+                    $(this).scrollTop(0);
+                });
+
                 vm.showWhatsHappening = false;
                 vm.resultText = '(Click to reveal your future...)';
             }

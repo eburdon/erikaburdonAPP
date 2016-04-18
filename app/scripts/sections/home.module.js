@@ -2,7 +2,8 @@
 
 angular
 	.module('home', [
-		'helper.factory'
+		'helper.factory',
+		'header',
 	])
 	.config(function($stateProvider) {
 	    $stateProvider

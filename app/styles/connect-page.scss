@@ -4,41 +4,10 @@
 
 @import 'variables';
 
-.container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .connect-page {
-
     background-image: url('../images/textures/gray_jean.png');
     font-family: $app-font-family;
     overflow-x: hidden;
-
-    .header {
-        width: 100%;
-        background-color: white;
-        margin-bottom: 0px;
-
-        .connect-title {
-            font-family: $header-connect-font-family;
-            font-size: 7em;
-            transform: rotate(-10deg);
-            margin-top: 0.25em;
-            margin-bottom: 1em;
-        }
-
-        .connect-subtitle {
-            margin-top: -3em;
-        }
-    }
-
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
 
     .footer {
         background-color: white;
@@ -61,13 +30,6 @@
         }
     }
 
-    .content-separator {
-        height: 1em;
-        background-color: black;
-        opacity: 0.8;
-        margin-bottom: 2em;
-    }
-
     .action-buttons {
         margin-top: 5%;
         @include breakpoint(medium) {
@@ -75,149 +37,47 @@
         }
     }
 
-    .bubble-row {
+    .button-glass {
+        border: 2px solid $home-blue;
+        color: $home-blue;
+        width: 75%;
+        margin-top: 8px;
+        background: none;
+    }
 
-        @include breakpoint(large) {
-            margin-bottom: 2em;
-        }
+    .connect-container {
+        padding-top: 2rem;
 
-        .bubble-container {
-
-            .bubble-item {
-                padding: 1em;
-                max-width: 250px;
-                min-height: 250px;
-                border-radius: 50%;
-                background-color: white;
-                border: 1px solid whitesmoke;
-                margin-bottom: 1em;
-
-                @include breakpoint(large) {
-                    margin-bottom: 0;
-                }
-
-                .bubble-content {
-                    margin-top: 20px;
-
-                    div {
-                        text-align: center;
-                        vertical-align: middle;
-                    }
-
-                    .more-info {
-                        margin-top: 8px;
-                        font-size: 12px;
-                    }
-
-                    i {
-                        margin-bottom: 8px;
-                    }
-
-                    p {
-                        margin: 0;
-                    }
-
-                    .btn {
-                        margin-top: 3px;
-                        margin-bottom: 3px;
-                    }
-                }
-
-                * {
-                    .btn:hover {
-                        background: $home-blue;
-                        color: white;
-                    }
-                }
-
-                .bubble-email {
-                    i {
-                        color:  $home-blue;
-                    }
-                    .btn {
-                        border: 2px solid $home-blue;
-                    }
-                    .btn:hover {
-                        border-color: $home-blue;
-                    }
-                }
-
-                .bubble-facebook {
-                    i {
-                        color: $facebook-blue;
-                    }
-                    .btn {
-                        border: 2px solid $facebook-blue;
-                    }
-                    .btn:hover {
-                        border-color: $facebook-blue;
-                        background-color: $facebook-blue;
-                    }
-                }
-
-                .bubble-github {
-                    .btn {
-                        border: 2px solid black;
-                    }
-                    .btn:hover {
-                        border-color: $home-blue;
-                    }
-                }
-
-                .bubble-googleplus {
-                    i {
-                        color: $googleplus-red;
-                    }
-                    .btn {
-                        border: 2px solid $googleplus-red;
-                    }
-                    .btn:hover {
-                        background-color: $googleplus-red;
-                    }
-                }
-
-                .bubble-linkedin {
-                    i {
-                        color: $linkedin-blue;
-                    }
-                    .btn {
-                        border: 2px solid $linkedin-blue;
-                    }
-                    .btn:hover {
-                        background-color: $linkedin-blue;
-                    }
-                }
-
-                .bubble-soundcloud {
-                    i {
-                        color: $soundcloud-orange;
-                    }
-                    .btn {
-                        border: 2px solid $soundcloud-orange;
-                    }
-                    .btn:hover {
-                        background-color: $soundcloud-orange;
-                    }
-                }
-
-                .bubble-twitter {
-                    i {
-                        color: $twitter-blue;
-                    }
-                    .btn {
-                        border: 2px solid $twitter-blue;
-                    }
-                    .btn:hover {
-                        background-color: $twitter-blue;
-                    }
+        .card {
+            .icon {
+                margin-right: 1rem;
+            }
+            .LinkedIn {
+                .btn, .icon{
+                    border-color: $linkedin-blue;
+                    color: $linkedin-blue;
                 }
             }
-            .button-glass {
-                border: 2px solid $home-blue;
-                color: $home-blue;
-                width: 75%;
-                margin-top: 8px;
-                background: none;
+
+            .Twitter {
+                .btn, .icon{
+                    border-color: $twitter-blue;
+                    color: $twitter-blue;
+                }
+            }
+
+            .SoundCloud {
+                .btn, .icon{
+                    border-color: $soundcloud-orange;
+                    color: $soundcloud-orange;
+                }
+            }
+
+            .Spotify {
+                .btn, .icon{
+                    border-color: $spotify-green;
+                    color: $spotify-green;
+                }
             }
         }
     }

@@ -1,10 +1,40 @@
 @import 'shared';
 
-.crystal-ball {
-	margin: 3em 15em;
-	font-color: #0e1111;
+@import 'foundation-apps/scss/foundation';
 
-	.info-paragraph {
-		margin-top: 5em;
-	}
+@import 'variables';
+
+.crystal-ball-page {
+    background-image: url('../images/textures/gray_jean.png');
+
+    .crystal-ball {
+        font-color: #0e1111;
+        margin: 0 3em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        @include breakpoint(medium) {
+            margin: 0 4em;
+        }
+
+        h1, h2 {
+            font-family: $header-home-font-family;
+        }
+
+        p {
+            font-family: $app-font-family;
+            font-size: 1.1rem;
+        }
+
+        .action-buttons {
+            padding-top: 2em;
+            display: inline-flex;
+
+            button {
+                background: none;
+                color: $home-blue;
+                border: 1px solid $home-blue;
+            }
+        }
+    }
 }

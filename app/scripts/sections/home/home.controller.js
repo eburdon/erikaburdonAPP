@@ -34,7 +34,9 @@
 
         function activate() {
             // scroll to top of page on load
-            document.getElementById('home-page').scrollTop = 0;
+            $(document).ready(function(){
+                $(this).scrollTop(0);
+            });
 
             helperFactory
                 .getGitHubInformation()

@@ -5,32 +5,33 @@
     angular.module('connect')
         .controller('EbConnectController', EbConnectController);
 
-    EbConnectController.$inject = ['socialService']
+    EbConnectController.$inject = ['connectConstants', 'socialService', '$scope']
 
-    function EbConnectController(socialService) {
+    function EbConnectController(connectConstants, socialService, $scope) {
 
         document.getElementById('connect-page').scrollTop = 0
 
         var vm = this;
 
-        vm.gitHub = {
-            network: 'GitHub',
-            promise: socialService.createSocialObject('GitHub')
-        }
+        // scroll to top of page on load
+        $(document).ready(function(){
+            $(this).scrollTop(0);
+        });
 
-        vm.firstRow = {
-            Email :         socialService.createSocialObject('Email'),
-            LinkedIn :      socialService.createSocialObject('LinkedIn'),
-            SoundCloud :    socialService.createSocialObject('SoundCloud'),
-            GitHub :        vm.gitHub,
-        }
+        vm.constants = connectConstants;
+        vm.socialItems = {};
+        vm.whatsInteresting = 'The GitHub data was collected via the public GitHub API using a promise. Soon, I hope to collect all social data this way.';
 
-        vm.secondRow = {
-            Facebook :      socialService.createSocialObject('Facebook'),
-            Twitter :       socialService.createSocialObject('Twitter'),
-            GooglePlus :    socialService.createSocialObject('GooglePlus'),
-        }
+        activate();
 
-        vm.whatsInteresting = 'This page was built using Bootstrap Grid Framework. The GitHub bubble data compiled using two promises 1) HTTP request to get the data from public GitHub API, and 2) to manipulate the data the way it needed to be displayed.';
+        ////////
+
+        function activate() {
+
+            angular.copy(vm.constants, vm.socialItems);
+
+            socialService.createSocialObject('GitHub')
+                .then(function(result) { angular.extend(vm.socialItems.GITHUB, result); });
+        }
     }
 })();

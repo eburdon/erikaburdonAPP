@@ -1,33 +1,26 @@
-<!-- Page built with bootstrap grid framework -->
-<div class="connect-page container-fluid" id="connect-page">
-    <div class="row header">
-        <div class="connect-title col-md-offset-3">Get in Touch!</div>
-    </div>
+<div class="connect-page" id="connect-page">
 
-    <div class="content-separator"></div>
+    <site-header title="Connect"></site-header>
 
-    <div class="row bubble-row">
-        <div class="bubble-container col-sm-3 col-sm-offset-2 col-md-offset-0 col-xs-offset-1 col-xs-12" ng-repeat="item in connectVm.firstRow">
-            <div class="bubble-item" ng-switch="item.network">
-                <div class="bubble-content bubble-email" ng-switch-when="Email"><email-bubble info="item"></email-bubble></div>
-                <div class="bubble-content bubble-github" ng-switch-when="GitHub"><github-bubble info="item"></github-bubble></div>
-                <div class="bubble-content bubble-linkedin" ng-switch-when="LinkedIn"><linkedin-bubble info="item"></linkedin-bubble></div>
-                <div class="bubble-content bubble-soundcloud" ng-switch-when="SoundCloud"><soundcloud-bubble info="item"></soundcloud-bubble></div>
+    <div class="connect-container grid-container">
+        <div class=" grid-block small-up-2 medium-up-3">
+            <div class="grid-content" ng-repeat="item in connectVm.socialItems">
+                <div class="card">
+                    <div class="card-section text-center {{item.NAME}}">
+                        <h4><i class="icon fa {{item.ICON}}"></i>{{item.NAME}}</h4>
+                        <p>{{item.USERNAME}}</p>
+                        <a type="button" class="btn btn-default" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
+                        <p>
+                        </p>
+                        <p class="more-info">
+                            <span ng-if="item.STATS" ng-repeat="stat in item.STATS">{{stat}}<br/></span>
+                        </p>
+                        <p class="keywords">
+                            <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="row bubble-row">
-        <div class="bubble-container col-sm-3 col-sm-offset-2 col-md-offset-0 col-xs-offset-1 col-xs-12" ng-repeat="item in connectVm.secondRow">
-            <div class="bubble-item" ng-switch="item.network">
-                <div class="bubble-content bubble-facebook" ng-switch-when="Facebook"><facebook-bubble info="item"></facebook-bubble></div>
-                <div class="bubble-content bubble-twitter" ng-switch-when="Twitter"><twitter-bubble info="item"></twitter-bubble></div>
-                <div class="bubble-content bubble-googleplus" ng-switch-when="GooglePlus"><googleplus-bubble info="item"></googleplus-bubble></div>
-            </div>
-        </div>
-        <div class="bubble-container action-buttons col-sm-3 col-sm-offset-2 col-md-offset-0 col-xs-offset-1 col-xs-12">
-            <a type="button" class="row btn btn-default button-glass" ui-sref="eb.home">App Home</a>
-            <a type="button" class="row btn btn-default button-glass" ui-sref="eb.past-projects">Past Projects</a>
         </div>
     </div>
 
