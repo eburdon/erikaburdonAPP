@@ -28,31 +28,17 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link href="styles/main.css" rel="stylesheet" type="text/css">
 
-    <link href="styles/homepage.css" rel="stylesheet" type="text/css">
-    <link href="styles/past-projects-page.css" rel="stylesheet"type="text/css">
     <link href="styles/connect-page.css" rel="stylesheet"type="text/css">
     <link href="styles/crystal-ball.css" rel="stylesheet"type="text/css">
+    <link href="styles/header.css" rel="stylesheet"type="text/css">
+    <link href="styles/homepage.css" rel="stylesheet" type="text/css">
+    <link href="styles/past-projects-page.css" rel="stylesheet"type="text/css">
     <!-- endbuild -->
 </head>
 
 <body ng-app="erikaburdonApp">
-    <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
     <!-- Application content is inserted -->
     <div ui-view></div>
-
-    <!-- Google Analytics -->
-    <script>
-        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-        }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-70409460-1');
-        ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -85,6 +71,13 @@
     <!-- shared -->
     <script src="scripts/shared/services/helper.factory.js"></script>
 
+    <script src="scripts/shared/directives/header/header.directive.js"></script>
+    <script src="scripts/shared/directives/header/header.constants.js"></script>
+    <script src="scripts/shared/directives/header/header.controller.js"></script>
+
+    <script src="scripts/shared/directives/whats-interesting/whats-interesting.directive.js"></script>
+    <script src="scripts/shared/directives/whats-interesting/whats-interesting.controller.js"></script>
+
     <!-- sections -->
     <script src="scripts/sections/connect.module.js"></script>
     <script src="scripts/sections/crystal-ball.module.js"></script>
@@ -94,6 +87,7 @@
 
     <script src="scripts/sections/home/home.controller.js"></script>
 
+    <script src="scripts/sections/connect/connect.constants.js"></script>
     <script src="scripts/sections/connect/connect.controller.js"></script>
     <script src="scripts/sections/connect/services/social.service.js"></script>
     <script src="scripts/sections/connect/directives/social-bubble.directives.js"></script>

@@ -1,11 +1,17 @@
-'use strict';
+(function() {
 
-angular.module('past-projects')
-.controller('EbPastProjectsController', function (
-    $log,
-    $scope
-    ) {
+	'use strict';
 
-    document.getElementById('past-projects-page').scrollTop = 0;
+	angular
+		.module('past-projects')
+		.controller('EbPastProjectsController', EbPastProjectsController);
 
-});
+		EbPastProjectsController.$inject = [];
+
+		function EbPastProjectsController() {
+			// scroll to top of page on load
+            $(document).ready(function(){
+                $(this).scrollTop(0);
+            });
+		};
+})();

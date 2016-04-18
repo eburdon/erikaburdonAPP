@@ -1,31 +1,37 @@
-'use strict';
+(function() {
+    
+    'use strict';
 
-angular.module('connect')
-.controller('EbConnectController', function (
-    $log,
-    $scope,
-    $q,
-    socialService
-    ) {
+    angular.module('connect')
+        .controller('EbConnectController', EbConnectController);
 
-    document.getElementById('connect-page').scrollTop = 0
+    EbConnectController.$inject = ['connectConstants', 'socialService', '$scope']
 
-    $scope.gitHub = {
-        network: 'GitHub',
-        promise: socialService.createSocialObject('GitHub')
-    };
+    function EbConnectController(connectConstants, socialService, $scope) {
 
-    $scope.firstRow = {
-        Email :         socialService.createSocialObject('Email'),
-        LinkedIn :      socialService.createSocialObject('LinkedIn'),
-        SoundCloud :    socialService.createSocialObject('SoundCloud'),
-        GitHub :        $scope.gitHub,
-    };
+        document.getElementById('connect-page').scrollTop = 0
 
-    // Todo: UpWork?
-    $scope.secondRow = {
-        Facebook :      socialService.createSocialObject('Facebook'),
-        Twitter :       socialService.createSocialObject('Twitter'),
-        GooglePlus :    socialService.createSocialObject('GooglePlus'),
-    };
-});
+        var vm = this;
+
+        // scroll to top of page on load
+        $(document).ready(function(){
+            $(this).scrollTop(0);
+        });
+
+        vm.constants = connectConstants;
+        vm.socialItems = {};
+        vm.whatsInteresting = 'The GitHub data was collected via the public GitHub API using a promise. Soon, I hope to collect all social data this way.';
+
+        activate();
+
+        ////////
+
+        function activate() {
+
+            angular.copy(vm.constants, vm.socialItems);
+
+            socialService.createSocialObject('GitHub')
+                .then(function(result) { angular.extend(vm.socialItems.GITHUB, result); });
+        }
+    }
+})();

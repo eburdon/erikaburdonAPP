@@ -1,77 +1,34 @@
+@import 'settings';
+
+@import 'foundation-apps/scss/foundation';
+
 @import 'variables';
 
 .past-projects-page {
 
+    background-image: url('../images/textures/gray_jean.png');
+    
     h1, h2 {
        font-family: $header-home-font-family;
     }
 
     p {
         font-family: $app-font-family;
-        font-size: 1.1rem;
-    }
-
-    .header {
-        padding-top: 4em;
-        padding-bottom: 4em;
-        margin: 0;
-
-        background-image: url('../images/textures/black_denim.png');
-        text-align: center;
-
-        h1 {
-            color: whitesmoke;
-        }
-
-        .name {
-            display: inline-block;
-            padding-right: 2em;
-            padding-left: 2em;
-            text-align: center;
-            border-bottom: 4px solid $home-blue;
-        }
-    }
-
-    .quick-connect {
-        background-color: #F0F0F0;
-        padding: 0.5em 4em 0.5em 4em;
-
-        .info {
-            float: left;
-        }
-
-        .connect {
-            float: right;
-        }
-
-        p {
-            display: inline;
-            margin: 0;
-            font-family: $quick-connect-home-font-family;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        i {
-            font-size: 16px;
-            padding-right: 0.3em;
-        }
-
-        .faint {
-            display: inline-block;
-            padding-left: 1em;
-            font-weight: 100;
-            margin: 0;
-            a {
-                color: inherit;
-            }
-            .city {
-                padding-left:0.2em;
-            }
-        }
     }
 
     .past-container {
-        margin: 30px 40px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        @include breakpoint(medium) {
+            margin-top: 2rem;
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+
+        .card-section p {
+            font-size: 14px;
+        }
     }
 }

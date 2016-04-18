@@ -1,38 +1,54 @@
-'use strict';
+(function() {
 
-angular.module('home')
-.controller('EbHomeController', function (
-    $scope,
-    helperFactory
-    ) {
+    'use strict';
 
-    // scroll to top of page on load
-    document.getElementById('home-page').scrollTop = 0;
+    angular
+    .module('home')
+    .controller('EbHomeController', EbHomeController);
 
-    $scope.githubImage = '';
+    EbHomeController.$inject = ['helperFactory'];
 
-    $scope.taglines = [
-        'BIG IDEAS',
-        'MUSIC',
-        'SOFTWARE ENGINEERING',
-        'CAMPING',
-        'SCALABILITY',
-        'DESIGN',
-    ];
+    function EbHomeController(helperFactory) {
 
-    var offset = 0;
-    $scope.tagline = $scope.taglines[offset];
+        var TAGLINES = [
+            'BIG IDEAS',
+            'MUSIC',
+            'SOFTWARE ENGINEERING',
+            'CAMPING',
+            'SCALABILITY',
+            'DESIGN',
+        ];
 
-    $scope.exchangeTagline = function() {
-        offset += 1;
-        if (offset === $scope.taglines.length) {
-            offset = 0;
+        var vm = this;
+
+        vm.offset = 0;
+        vm.tagline = TAGLINES[vm.offset];
+
+        vm.exchangeTagline = exchangeTagline;
+
+        vm.whatsInteresting = 'This page was built using Foundation for Apps grid Framework. I tried a couple of fancy CSS tricks, but that\'s it. This button is also a directive you\'ll find throughout the site.'
+
+        activate();
+
+        ////////
+
+        function activate() {
+            // scroll to top of page on load
+            $(document).ready(function(){
+                $(this).scrollTop(0);
+            });
+
+            helperFactory
+                .getGitHubInformation()
+                .then(function(githubInfo) { vm.githubImage = githubInfo.avatar_url; });
         }
 
-        $scope.tagline = $scope.taglines[offset];
-    }
+        function exchangeTagline() {
+            vm.offset += 1;
 
-    var item = helperFactory.getGitHubInformation().then(function (githubInfo) {
-        $scope.githubImage = githubInfo.avatar_url;
-    });
-});
+            if (vm.offset === TAGLINES.length) { vm.offset = 0; }
+
+            vm.tagline = TAGLINES[vm.offset];
+        }
+    };
+})();
