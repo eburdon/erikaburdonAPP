@@ -7,7 +7,7 @@
             <div class="grid-content" ng-repeat="item in connectVm.socialItems">
                 <div class="card">
                     <div class="card-section text-center {{item.NAME}}">
-                        <h4><i class="icon fa {{item.ICON}}"></i>{{item.NAME}}</h4>
+                        <h3><i class="icon fa {{item.ICON}}"></i>{{item.NAME}}</h3>
                         <p>{{item.USERNAME}}</p>
                         <a type="button" class="btn btn-default" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
                         <p>
@@ -23,22 +23,15 @@
             </div>
         </div>
     </div>
-
-    <div class="row footer">
-        <div class="col-xs-1">
-            <p>
-                Site Map<br>
-                <a ui-sref="eb.home">Home</a><br>
-                <a ui-sref="eb.past-projects">Past Projects</a><br>
-            </p>
+    <div class="footer grid-block">
+        <div class="grid-block medium-3">
+            <ul>
+                <li>SITE MAP</li>
+                <li><a ui-sref="eb.home">Home</a></li>
+                <li><a ui-sref="eb.past-projects">Past Projects</a></li>
+                <li><a ui-sref="eb.crystalBall">Crystal Ball</a></li>
+            </ul>
         </div>
-         <div class="col-xs-11">
-            <p>
-                Erika Burdon. 2015. All Rights Reserved<br><br>
-                <whats-interesting-directive 
-                    text="connectVm.whatsInteresting">
-                </whats-interesting-directive>
-            </p>
-        </div>
+        <div class="grid-block medium-9"><p>Erika Burdon. 2016. All Rights Reserved.</p></div>
     </div>
 </div>

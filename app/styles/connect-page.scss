@@ -9,27 +9,6 @@
     font-family: $app-font-family;
     overflow-x: hidden;
 
-    .footer {
-        background-color: white;
-        color: black;
-        border-top: 1px solid #A9A9A9;
-        margin-top: 16px;
-        padding-top: 16px;
-        padding-left: 16px;
-        p {
-            font-size: 10px;
-        }
-        a {
-            text-decoration: none;
-        }
-
-        .info-paragraph {
-            p {
-             font-color: black;
-            }
-        }
-    }
-
     .action-buttons {
         margin-top: 5%;
         @include breakpoint(medium) {
@@ -48,7 +27,17 @@
     .connect-container {
         padding-top: 2rem;
 
+        h3 {
+            font-family: $app-font-family;
+        }
+
         .card {
+
+            word-wrap: break-word;
+            .btn {
+                white-space: normal;
+            }
+
             .icon {
                 margin-right: 1rem;
             }
@@ -78,6 +67,10 @@
                     border-color: $spotify-green;
                     color: $spotify-green;
                 }
+            }
+
+            .more-info, .keywords {
+                font-size: rem-calc(13);
             }
         }
     }

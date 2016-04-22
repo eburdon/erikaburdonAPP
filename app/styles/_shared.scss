@@ -4,4 +4,30 @@
     background: none;
     color: $home-blue;
     border: 2px solid $home-blue;
+
+    & :hover {
+    	background: none;
+    	color: black;
+    	border: 2px solid black;
+    }
+}
+
+.footer {
+	background-image: url('../images/textures/black_denim.png');
+	color: whitesmoke;
+	margin-top: 16px;
+	padding-top: 16px;
+	padding-left: 16px;
+	font-family: $app-font-family;
+	font-size: rem-calc(8);
+
+	p {
+		font-size: rem-calc(8);
+	}
+	ul {
+	    list-style: none;
+	}
+	a {
+	    text-decoration: none;
+	}
 }

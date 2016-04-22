@@ -45,7 +45,7 @@
                 NAME: 'Spotify',
                 ICON: 'fa-spotify',
                 USERNAME: 'erikaburdon',
-                LINK: 'https://soundcloud.com/karmaqueenn/sets',
+                LINK: 'https://play.spotify.com/user/erikaburdons',
                 LINK_TEXT: 'Listen to Playlists',
                 STATS: ['4 Playlists', '2 Followers', '14 Following '],
             },

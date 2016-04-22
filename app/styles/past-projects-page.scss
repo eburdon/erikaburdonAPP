@@ -27,8 +27,18 @@
             margin-right: 4rem;
         }
 
+        .card-section {
+            h4 {
+                font-family: $app-font-family;
+            }
+        }
+
         .card-section p {
             font-size: 14px;
+        }
+
+        .block-list ul h6{
+            font-family: $app-font-family;
         }
     }
 }
