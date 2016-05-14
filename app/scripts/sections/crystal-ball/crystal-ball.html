@@ -1,16 +1,12 @@
 <div class="crystal-ball-page">
 
-    <site-header title="Crystal Ball"></site-header>
+    <site-header></site-header>
 
     <div class="crystal-ball">
         <h1>What's in your future?</h1>
         
         <p>
-            Do you have a burning question about what your future holds? Wonder no more! The mysterious Crystal Ball - borrowed from strange lands far, far away - will answer any question you have.
-        </p>
-        
-        <p>
-            Ask your question, press the button, and know the truth...
+            Do you wonder whats coming for you in the future? Wonder no more! The mysterious Crystal Ball will answer any question you have! Ask your question, press the button, and know the truth...
         </p>
         
         <button class="button" ng-click="crystalVM.ask()">The crystal ball says...</button>
@@ -18,8 +14,6 @@
         <h3>{{crystalVM.resultText}}</h3>
 
         <div class="action-buttons">
-            <button class="button" ui-sref="eb.home">Return to Home</button>
-
             <whats-interesting-directive 
                 text="crystalVM.whatsInteresting">
             </whats-interesting-directive>

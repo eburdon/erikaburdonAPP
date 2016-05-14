@@ -3,12 +3,7 @@
 /* exported appSettings */
 var appSettings = {
     'WWW_URL': 'http://erikaburdon.ca',
-    'API_URL': 'http://localhost:8080',
-    'APP_URL': 'http://localhost:9000',
-    'IMAGES_URL': '',
-
-    // GOOGLE ANALYTICS settings
-    'GOOGLE_ANALYTICS_TRACKING_ID': '@@GOOGLE_ANALYTICS_TRACKING_ID',
+    'API_URL': 'http://api.erikaburdon.ca',
 
     // Cloudinary settings
     'CLOUDINARY_CLOUD_NAME': 'erikaburdon',

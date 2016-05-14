@@ -9,6 +9,12 @@
        font-family: $header-home-font-family;
     }
 
+    .footer {
+        ul, p {
+            font-size: 11px;
+        }
+    }
+
     p {
         font-family: $app-font-family;
         font-size: 1.1rem;
@@ -91,7 +97,8 @@
         height: 500px;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-image: url('https://source.unsplash.com/Sd8O2SgKDJA');
+        // background-image: url('https://source.unsplash.com/oQmKteV2yBA');
+        background-image: url('https://source.unsplash.com/FQNDN2gx9bY');
         background-size: cover;
         color: white;
         display: table;

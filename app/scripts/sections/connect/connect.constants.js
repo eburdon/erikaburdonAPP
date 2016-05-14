@@ -5,10 +5,12 @@
     angular
         .module('connect')
         .constant('connectConstants', {
-            GITHUB: {
-                NAME: 'GitHub',
-                ICON: 'fa-github',
-                LINK_TEXT: 'Overview'
+            EMAIL: {
+                NAME: 'Email',
+                ICON: 'fa-envelope-o',
+                USERNAME: 'erikaeburdon@gmail.com',
+                LINK_TEXT: 'Send Message',
+                LINK: 'mailto:erikaeburdon@gmail.com',
             },
             LINKED_IN: {
                 NAME: 'LinkedIn',
@@ -18,6 +20,11 @@
                 LINK_TEXT: 'View History',
                 KEYWORDS: ['Employment', 'Volunteering', 'Education'],
             },
+            GITHUB: {
+                NAME: 'GitHub',
+                ICON: 'fa-github',
+                LINK_TEXT: 'Overview'
+            },
             TWITTER: {
                 NAME: 'Twitter',
                 ICON: 'fa-twitter',
@@ -26,13 +33,7 @@
                 LINK_TEXT: 'View Tweets',
                 STATS: ['152 Tweets', '37 Followers', '171 Following '],
             },
-            EMAIL: {
-                NAME: 'Email',
-                ICON: 'fa-envelope-o',
-                USERNAME: 'erikaeburdon@gmail.com',
-                LINK_TEXT: 'Send Message',
-                LINK: 'mailto:erikaeburdon@gmail.com',
-            },
+            
             SOUNDCLOUD: {
                 NAME: 'SoundCloud',
                 ICON: 'fa-soundcloud',

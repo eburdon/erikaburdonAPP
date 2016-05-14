@@ -4,11 +4,6 @@
 var appSettings = {
     'WWW_URL': '@@WWW_URL',
     'API_URL': '@@API_URL',
-    'APP_URL': '@@APP_URL',
-    'IMAGES_URL': '@@IMAGES_URL',
-
-    // GOOGLE ANALYTICS settings
-    'GOOGLE_ANALYTICS_TRACKING_ID': '@@GOOGLE_ANALYTICS_TRACKING_ID',
 
     // Cloudinary settings
     'CLOUDINARY_CLOUD_NAME': '@@CLOUDINARY_CLOUD_NAME',

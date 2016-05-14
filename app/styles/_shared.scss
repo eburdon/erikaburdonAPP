@@ -19,12 +19,14 @@
 	padding-top: 16px;
 	padding-left: 16px;
 	font-family: $app-font-family;
-	font-size: rem-calc(8);
+	font-size: 11px;
 
 	p {
-		font-size: rem-calc(8);
+		font-size: 11px;
 	}
+	
 	ul {
+		font-size: 11px;
 	    list-style: none;
 	}
 	a {
