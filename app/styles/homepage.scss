@@ -5,11 +5,14 @@
 @import 'variables';
 
 .home-page {
-
-    /* Components */
-
-    h1, h2 {
+    h1, h2, h3 {
        font-family: $header-home-font-family;
+    }
+
+    .footer {
+        ul, p {
+            font-size: 11px;
+        }
     }
 
     p {
@@ -17,28 +20,7 @@
         font-size: 1.1rem;
     }
 
-    .header, .footer {
-        background-image: url('../images/textures/black_denim.png');
-    }
-
     background-image: url('../images/textures/gray_jean.png');
-
-    .footer {
-        color: whitesmoke;
-        margin-top: 16px;
-        padding-top: 16px;
-        padding-left: 16px;
-        p, li {
-            font-family: $quick-connect-home-font-family;
-            font-size: 10px;
-        }
-        ul {
-            list-style: none;
-        }
-        a {
-            text-decoration: none;
-        }
-    }
 
     .home-content-block {
         margin-left: 1em;
@@ -88,6 +70,12 @@
         background: none;
         color: white;
         border: 2px solid white;
+
+        & :hover {
+            background: none;
+            color: black;
+            border: 2px solid black;
+        }
     }
 
     .about-button-secondary {
@@ -96,10 +84,11 @@
         color: $home-blue;
         text-decoration: none;
         font-family: $app-font-family;
-        &:hover {
-            background: $home-light-blue-green;
-            border-color: $home-light-blue-green;
-            color: $home-blue;
+
+        & :hover {
+            background: none;
+            color: black;
+            border: 2px solid black;
         }
     }
 
@@ -108,7 +97,8 @@
         height: 500px;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-image: url('https://source.unsplash.com/Sd8O2SgKDJA');
+        // background-image: url('https://source.unsplash.com/oQmKteV2yBA');
+        background-image: url('https://source.unsplash.com/FQNDN2gx9bY');
         background-size: cover;
         color: white;
         display: table;
@@ -139,6 +129,18 @@
                 @include breakpoint(medium) {
                     margin-left: 9em;
                 }
+
+                .button {
+                    border-color: #4E8DF3;
+                    color: #4E8DF3;
+                    background: none;
+
+                    & :hover{
+                        border-color: black;
+                        color: black;
+                        background: none;
+                    }
+                }
             }
         }
     }
@@ -160,7 +162,6 @@
             button {
                 margin-top: 1em;
                 width: 250px;
-                font-family: $app-font-family;
             }
 
             .soundclip {
@@ -171,9 +172,7 @@
                 overflow: hidden;
             }
 
-            .tech-icons{
-                height: 75px;
-
+            .tech-icons {
                 .android, .scala {
                     vertical-align: top;
                     width: 50px;

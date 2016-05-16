@@ -16,6 +16,10 @@
         font-family: $app-font-family;
     }
 
+    .footer ul{
+        font-size: 11px;
+    }
+
     .past-container {
         margin-top: 1rem;
         margin-left: 1rem;
@@ -27,8 +31,18 @@
             margin-right: 4rem;
         }
 
+        .card-section {
+            h4 {
+                font-family: $app-font-family;
+            }
+        }
+
         .card-section p {
             font-size: 14px;
+        }
+
+        .block-list ul h6{
+            font-family: $app-font-family;
         }
     }
 }

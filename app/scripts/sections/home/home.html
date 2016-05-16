@@ -2,56 +2,88 @@
 
     <site-header></site-header>
 
-    <div class="tagline-container">
-        <div class="tagline">
-            <div class="tagline-content">
-                <p class="tagline-title">I LOVE <u>{{homeVm.tagline}}</u><i class="fa fa-chevron-down" ng-click="homeVm.exchangeTagline()"></i></p>
-                <button class="button about-button-secondary" ui-sref="eb.past-projects">Past Projects</button>
-            </div>
-        </div>
-    </div>
     <div class="about home-content-block">
         <div class="about-container grid-block vertical medium-horizontal">
             <div class="grid-block vertical medium-9">
-                <h2>On the Topic of Me</h2>
-                <p class="soundclip">Design | Implementation | Support</p>
                 <p>
-                    I'm a 4th year Software Engineering student from the University of Victoria, and I love sitting on the edge of my skill set. At the moment I'm working at an industry-changing startup in Vancouver, B.C. In my spare time, I like to rock out to the Killers, flex my tech skills, or just leave it all behind and go camping.
+                    I'm a 4th year Software Engineering student from the University of Victoria. I love BIG ideas, and  sitting on the edge of my skill set.
                 </p>
                 <p>
-                    If you have a project or looking for a solution, feel free to get in touch! I'm especially looking for volunteer opportunities, particularly with encouraging women and young students to enter the STEM fields.
+                    I'm currently working at an industry-changing startup in Vancouver, BC! In my spare time, I like to rock out to the Killers, flex my tech skills by working on projects, or leave it all behind and go camping.
+                </p>
+                <p>
+                    If you have a small project or volunteer opportunity, feel free to <a ui-sref="eb.connect">get in touch!</a> I'm looking for a range of projects to contribute to, and to help encourage women and young students to enter the STEM fields.
                 </p>
             </div>
             <div class="about-connect-image grid-block vertical medium-3">
                 <div class="grid-container vertical">
                     <img ng-show="homeVm.githubImage" src="{{homeVm.githubImage}}"/>
                 </div>
-                <div class="grid-container vertical">
-                    <button class="button about-button-secondary" ui-sref="eb.connect">Connect With Me Online</button>
-                </div>
-            </div>
-            <div class="grid-block vertical medium-12">
-                <h2>About This Site</h2>
-                <p>
-                    This is my full stack experimental playground! For the front end, I've tried to focus on good design and awesome UI, keeping mobile layouts a priority. It's built with Angular! It also uses Sass and Foundation for Apps. I'm focusing on following good coding practices, particularly flexible and easy-to-maintain components, as well as clear code and good performance.
-                </p>
-                <div class="tech-icons text-center">
-                    <img class="angular" src="images/icons/ang_grunt_yo.png" />
-                    <img class="scala" src="images/icons/scala.png" />
-                    <img class="android" src="images/icons/android.png" />
-                </div>
-                <p>
-
-                    The back end's primary language is Scala, but I'm tinkering with other languages such as Haskell, and trying to use Amazon Lambda and other neat-o things sometime soon. Before all that however, I intend to build an Android app whose actions will make real changes to this site. That will finish this project's Front End, Back End, and Mobile triangle.
-                </p>
-            </div>
-
-            <div class="grid-block vertical medium-12">
-                <h3>Recent pages:</h3>
-                <button class="button button-hollow" ui-sref="eb.crystalBall">Crystal Ball</button>
             </div>
         </div>
     </div>
+
+    <div class="separator-container">
+        <div class="separator-right" style="opacity: 1.0;"></div>
+        <div class="separator-right" style="opacity: 0.7;"></div>
+        <div class="separator-right" style="opacity: 0.5;"></div>
+        <div class="separator-right" style="opacity: 0.3;"></div>
+        <div class="separator-right" style="opacity: 0.1;"></div>
+    </div>
+
+    <div class="work-history home-content-block vertical grid-block">
+        <h3>Current Projects</h3>
+        <div class="past-container">
+            <hr/>
+            <section class="block-list text-center">
+                <header>erikaburdon.ca APP + API</header>
+            </section>
+            <hr/>
+            <p>
+                <img class="angular" src="images/icons/ang_grunt_yo.png" style="height:30px;margin:0;"/>
+                <img class="scala" src="images/icons/scala.png"  style="height:25px;margin:0;"/>
+                <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
+            </p>
+            <p>
+                This is my full stack playground! For both pieces, I've keeping a strong focus on good coding practicies, especially TDD, good performance, flexibility and maintenance. <strong>Front end:</strong> I've focused on good, minimal, and mobile-first UI styling. It's built with AngularJs, and uses Sass and Foundation for Apps. <strong>Back end:</strong> Primary language is Scala, but I'm tinkering with and will be including other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE is running off its own instance. I hope to implement a minature micro-service architecture, with some components running independently on Amazon Lambda.
+            </p>
+            <hr/>
+            <section class="block-list text-center"><header>Frequent Itemset Mining at Low support levels</header></section>
+            <hr/>
+            <p>
+                <img class="angular" src="images/icons/java.png" style="height:30px;margin:0;"/>
+            </p>
+            <p>Directed Studies project at UVic; I am continuing data mining and software engineering research already done in this field, improving the existing Apriori algorithm for calcluating frequently co-occuring items in a transactions. Data sourced from Webdocs. Written in Java. Hosted on Java Hadoop Cluster.</p>
+            <hr/>
+            <section class="block-list text-center"><header>Distributed Facebook Analysis</header></section>
+            <hr/>
+            <p>
+                <img class="angular" src="images/icons/golang.png" style="height:30px;margin:0;"/>
+                <img class="angular" src="images/icons/python.png" style="height:30px;margin:0;"/>
+                <img class="angular" src="images/icons/facebook.png" style="height:30px;margin:0;"/>
+            </p>
+            <p>
+                Creating open-source scripts that can analyze a user's Facebook data. Only users can download their information and execute this script. The FB data set includes information such as photo and message  metadata from the day they opened an account in an easy-to-parse XML format.  The first iteration of this project is to analyze their message history. This is written in Go, and distributes the workload via a MapReduce implementation. Data is stored and accessed using an efficient Prefix Trie. The final output is a pie chart of their most active hours. Future work includes further partitioning and distribution of the workload, migrating the Python parser to Go, and further message analysis such as most active day of the week, month, year, etc.
+            </p>
+            <hr/>
+            <section class="block-list text-center"><header>erikaburdon.ca Android App</header></section>
+            <hr/>
+            <p>
+                <img class="android" src="images/icons/android.png"  style="height:25px;margin:0;"/>
+            </p>
+            <p>
+                Creating a simple Android app that will use a CRUD endpoint to manipulate data that will also be available real-time on this web site.
+            </p>
+            <hr/>
+            <section class="block-list text-center"><header>Arduino Madness</header></section>
+            <hr/>
+            <p>
+                <img class="angular" src="images/icons/arduino.png" style="height:30px;margin:0;"/>
+            </p>
+            <p>Working with the Arduino Starter Kit and other sensors to build small embedded systems that use the microprocessor.</p>
+        </div>
+    </div>
+
     <div class="separator-container">
         <div class="separator-right" style="opacity: 1.0;"></div>
         <div class="separator-right" style="opacity: 0.7;"></div>
@@ -60,7 +92,7 @@
         <div class="separator-right" style="opacity: 0.1;"></div>
     </div>
     <div class="work-history home-content-block vertical grid-block">
-        <h2>WORK HISTORY</h2>
+        <h3>A Brief History...</h3>
         <div class="grid-block wh-item wh-skio medium-horizontal small-vertical">
             <div class="grid-block vertical medium-3">
                 <div class="grid-container"><img src="images/icons/skio-music-logo.png" /></div>
@@ -107,21 +139,8 @@
             </div>
         </div>
     </div>
+
     <div class="footer grid-block">
-        <div class="grid-block medium-3">
-            <ul>
-                <li>SITE MAP</li>
-                <li><a ui-sref="eb.connect">Connect</a></li>
-                <li><a ui-sref="eb.past-projects">Past Projects</a></li>
-            </ul>
-        </div>
-        <div class="grid-block medium-9">
-            <p>
-                Erika Burdon. 2015. All Rights Reserved.<br><br>
-                <whats-interesting-directive 
-                    text="homeVm.whatsInteresting">
-                </whats-interesting-directive>
-            </p>
-        </div>
+        <div class="grid-block medium-9"><p>Erika Burdon. 2016. All Rights Reserved.</p></div>
     </div>
 </div>

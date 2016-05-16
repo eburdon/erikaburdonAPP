@@ -15,7 +15,7 @@
             vm.ask = ask;
             vm.flipValue = flipValue;
 
-            vm.whatsInteresting = 'This is the first place in my App that makes a call to my backend/REST API. This is also hosted on Amazon, except it\'s stored on an Elastic Beanstalk Instance instead of in static buckets on S3. It\'s a scala service running on a tomcat server. If you\'re able to get a response from the mysterious crystal ball, that means a doGet call was successfully made to my endpoint, and the string response was returned in a useable JSON format!';
+            vm.whatsInteresting = 'This is the first place my App makes a call to my backend REST API. This API is also hosted on Amazon on an Elastic Beanstalk Instance. It\'s a scala service running on a tomcat server. If you\'re able to get a response from the mysterious crystal ball, that means a doGet call was successfully made to my endpoint, and the string response was returned in a useable JSON format!';
 
             activate();
 

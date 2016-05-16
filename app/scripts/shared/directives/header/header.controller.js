@@ -9,7 +9,6 @@
         headerController.$inject = ['headerConstants'];
 
         function headerController(headerConstants) {
-
             var vm = this;
 
             vm.constants = headerConstants;
