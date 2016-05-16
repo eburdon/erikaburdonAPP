@@ -14,7 +14,7 @@ With [erikaburdon.ca](http://erikaburdon.ca), I have a front and back end compon
 
 * Yeoman (Yo + Grunt + Bower)
 
-* AngularJS, Javascript
+* AngularJS, JavaScript
 
 * Foundation for Apps, Boostrap... I'm trying them all, really.
 
