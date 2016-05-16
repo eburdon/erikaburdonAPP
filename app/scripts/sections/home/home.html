@@ -2,14 +2,14 @@
 
     <site-header></site-header>
 
-    <div class="about home-content-block">
+    <div class="grid-block vertical about home-content-block">
         <div class="about-container grid-block vertical medium-horizontal">
             <div class="grid-block vertical medium-9">
                 <p>
-                    I'm a 4th year Software Engineering student from the University of Victoria. I love BIG ideas, and  sitting on the edge of my skill set.
+                    I'm a 4th year Software Engineering student from the University of Victoria. I love big ideas and sitting on the edge of my skill set.
                 </p>
                 <p>
-                    I'm currently working at an industry-changing startup in Vancouver, BC! In my spare time, I like to rock out to the Killers, flex my tech skills by working on projects, or leave it all behind and go camping.
+                    I'm currently working at an industry-changing startup in Vancouver, BC! In my spare time, I like to rock out to the Killers, flex my tech skills with projects, or leave it all behind and go camping.
                 </p>
                 <p>
                     If you have a small project or volunteer opportunity, feel free to <a ui-sref="eb.connect">get in touch!</a> I'm looking for a range of projects to contribute to, and to help encourage women and young students to enter the STEM fields.
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="separator-container">
+    <div class="grid-block separator-container">
         <div class="separator-right" style="opacity: 1.0;"></div>
         <div class="separator-right" style="opacity: 0.7;"></div>
         <div class="separator-right" style="opacity: 0.5;"></div>
@@ -31,7 +31,7 @@
         <div class="separator-right" style="opacity: 0.1;"></div>
     </div>
 
-    <div class="work-history home-content-block vertical grid-block">
+    <div class="grid-content work-history home-content-block">
         <h3>Current Projects</h3>
         <div class="past-container">
             <hr/>
@@ -45,7 +45,12 @@
                 <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
             </p>
             <p>
-                This is my full stack playground! For both pieces, I've keeping a strong focus on good coding practicies, especially TDD, good performance, flexibility and maintenance. <strong>Front end:</strong> I've focused on good, minimal, and mobile-first UI styling. It's built with AngularJs, and uses Sass and Foundation for Apps. <strong>Back end:</strong> Primary language is Scala, but I'm tinkering with and will be including other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE is running off its own instance. I hope to implement a minature micro-service architecture, with some components running independently on Amazon Lambda.
+                This is my full stack playground! For both pieces, I've keeping a strong focus on good coding practicies, especially TDD, good performance, flexibility and maintenance. <strong>Front end:</strong> I've focused on good, minimal, and mobile-first UI styling. It's built with AngularJs, and uses Sass and Foundation for Apps. <strong>Back end:</strong> Primary language is Scala, but I'm tinkering with and will be including other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE is running off its own instance. I hope to implement a miniature micro-service architecture, with some components running independently on Amazon Lambda.</p>
+                <p>Recent pages:
+                    <ul>
+                        <a ui-sref="eb.crystal-ball">Crystal Ball</a>
+                    </ul>
+                </p>
             </p>
             <hr/>
             <section class="block-list text-center"><header>Frequent Itemset Mining at Low support levels</header></section>
@@ -91,7 +96,8 @@
         <div class="separator-right" style="opacity: 0.3;"></div>
         <div class="separator-right" style="opacity: 0.1;"></div>
     </div>
-    <div class="work-history home-content-block vertical grid-block">
+
+    <div class="grid-content work-history home-content-block">
         <h3>A Brief History...</h3>
         <div class="grid-block wh-item wh-skio medium-horizontal small-vertical">
             <div class="grid-block vertical medium-3">
@@ -138,9 +144,5 @@
                 </p>
             </div>
         </div>
-    </div>
-
-    <div class="footer grid-block">
-        <div class="grid-block medium-9"><p>Erika Burdon. 2016. All Rights Reserved.</p></div>
     </div>
 </div>

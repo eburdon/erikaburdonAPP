@@ -3,7 +3,6 @@
 angular
 	.module('connect', [
     	'social.service',
-    	'social-bubble.directives',
     	'header'
 	])
 	.config(function($stateProvider) {

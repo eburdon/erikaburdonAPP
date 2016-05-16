@@ -23,14 +23,14 @@
             GITHUB: {
                 NAME: 'GitHub',
                 ICON: 'fa-github',
-                LINK_TEXT: 'Overview'
+                LINK_TEXT: 'Visit Profile'
             },
             TWITTER: {
                 NAME: 'Twitter',
                 ICON: 'fa-twitter',
                 USERNAME: '@OneEaredMusic',
                 LINK: 'https://twitter.com/OneEaredMusic',
-                LINK_TEXT: 'View Tweets',
+                LINK_TEXT: 'Tweet',
                 STATS: ['152 Tweets', '37 Followers', '171 Following '],
             },
             
@@ -39,7 +39,7 @@
                 ICON: 'fa-soundcloud',
                 USERNAME: 'Karmaqueenn',
                 LINK: 'https://soundcloud.com/karmaqueenn/sets',
-                LINK_TEXT: 'Listen to Playlists',
+                LINK_TEXT: 'See Playlists',
                 STATS: ['3 Playlists', '11 Followers', '57 Following '],
             },
             SPOTIFY: {
@@ -47,7 +47,7 @@
                 ICON: 'fa-spotify',
                 USERNAME: 'erikaburdon',
                 LINK: 'https://play.spotify.com/user/erikaburdons',
-                LINK_TEXT: 'Listen to Playlists',
+                LINK_TEXT: 'See Playlists',
                 STATS: ['4 Playlists', '2 Followers', '14 Following '],
             },
         });

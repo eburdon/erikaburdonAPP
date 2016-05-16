@@ -5,14 +5,10 @@
 @import 'variables';
 
 .home-page {
+    background-image: url('../images/textures/gray_jean.png');
+
     h1, h2, h3 {
        font-family: $header-home-font-family;
-    }
-
-    .footer {
-        ul, p {
-            font-size: 11px;
-        }
     }
 
     p {
@@ -20,7 +16,9 @@
         font-size: 1.1rem;
     }
 
-    background-image: url('../images/textures/gray_jean.png');
+    .grid-block {
+        height: 100%;
+    }
 
     .home-content-block {
         margin-left: 1em;
@@ -192,6 +190,8 @@
 
         .wh-item {
             margin-top: 1.5em;
+            padding-left: 1rem;
+            width:100%;
 
             .wh-title {
                 font-size:1.5rem;
