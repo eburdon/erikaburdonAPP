@@ -41,3 +41,13 @@ I've just written a how-to here because I keep forgetting.
 
 
 Cheers!
+
+## Feature notes
+
+### Facebook Analysis:
+
+Critical note: We understand the importance of privacy. Your messenger data is NOT SAVED to our system - it is used in-memory for processing, then discarded. Similarly, your final image is not saved unless you give us explicit permission to do so.
+
+How does this work?
+
+Your files are uploaded to AWS S3 using a restricted public access key. The Lambda processing should automatically delete any files you upload and create in the analysis process, but as a backup, a 24-hour expiry limit on the bucket has also been implemented.

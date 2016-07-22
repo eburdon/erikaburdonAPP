@@ -3,6 +3,7 @@
 angular
 	.module('facebook', [
 		'header',
+		'ngFileUpload'
 	])
 	.config(function($stateProvider) {
 	    $stateProvider

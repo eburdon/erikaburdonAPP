@@ -48,7 +48,7 @@
                 This is my full stack playground! For both pieces, I've keeping a strong focus on good coding practicies, especially TDD, good performance, flexibility and maintenance. <strong>Front end:</strong> I've focused on good, minimal, and mobile-first UI styling. It's built with AngularJs, and uses Sass and Foundation for Apps. <strong>Back end:</strong> Primary language is Scala, but I'm tinkering with and will be including other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE is running off its own instance. I hope to implement a miniature micro-service architecture, with some components running independently on Amazon Lambda.</p>
                 <p>Recent pages:
                     <ul>
-                        <a ui-sref="eb.crystal-ball">Crystal Ball</a>
+                        <a class="button button-glass about-button-secondary" ui-sref="eb.crystal-ball">Crystal Ball</a>
                     </ul>
                 </p>
             </p>
@@ -66,7 +66,7 @@
 
             <p>The second iteration is implementing a serverless microservice to preprocess (parse) the XML file using Amazon's Lambda, execute MapReduce on Amazon's EMR service, and finally postprocess (image output) the data on Lambda and display in-context on the app.</p>
 
-            <button ui-sref="eb.facebook">Visit Page</button>
+            <a class="button button-glass about-button-secondary" ui-sref="eb.facebook">Facebook Project Page</a>
 
             <p>There's lots of future work that could be done, including: a) more fine-grained analysis such as most active day of the week, month, per year, etc..., b) exploring other data provided in the data set, c) adding fault tolerance.</p>
             <hr/>
