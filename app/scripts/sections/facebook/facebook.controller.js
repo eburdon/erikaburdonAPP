@@ -59,15 +59,18 @@
                         AWS.config.logger = console.log
 
                         AWS.config.update({ accessKeyId: settings.PUBLIC_FACEBOOK_ANALYSIS_ACCESS_KEY, secretAccessKey: settings.PUBLIC_FACEBOOK_ANALYSIS_SECRET_KEY });
-                        AWS.config.region = 'us-west-2'; // Oregon
-                        var bucket = new AWS.S3({ params: { Bucket: settings.PUBLIC_FACEBOOK_BUCKET } });
+                        AWS.config.region = settings.PUBLIC_FACEBOOK_REGION; // Oregon
+                        // var bucket = new AWS.S3({ params: { Bucket: settings.PUBLIC_FACEBOOK_BUCKET } });
+                        var bucket = new AWS.S3({ params: { Bucket: "facebook-analysis" } });
+
       
                         var params = {
                             Key: filename,
                             ContentType: files[i].type,
                             Body: files[i],
-                            ServerSideEncryption: 'AES256',
-                            Bucket : settings.PUBLIC_FACEBOOK_BUCKET
+                            ServerSideEncryption: "AES256",
+                            // Bucket : settings.PUBLIC_FACEBOOK_BUCKET
+                            Bucket : "facebook-analysis"
                         }
 
                         bucket.putObject(params, function(err, data) {

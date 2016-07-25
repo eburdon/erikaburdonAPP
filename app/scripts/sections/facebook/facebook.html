@@ -2,9 +2,10 @@
 
     <site-header></site-header>
 
-    <div>
-    	<div ngf-drop="facebookVM.uploadFiles($files)" class="drop-box"
-		  ngf-drag-over-class="'dragover'" ngf-multiple="true" ><h2>Drop files here</h2></div>
+    <div class="grid-block">
+    	<div ngf-drop="facebookVM.uploadFiles($files)" class="facebook-file-dropbox drop-box grid-block"
+		  ngf-drag-over-class="'dragover'" ngf-multiple="true"><h2>Drop files anywhere in this area</h2></div>
 		<div ngf-no-file-drop>File Drag/Drop is not supported for this browser. Try Chrome!</div>
+		<div class="facebook-file-explainbox grid-block"> Don't worry, we don't save your data.</div>
     </div>
 </div>
