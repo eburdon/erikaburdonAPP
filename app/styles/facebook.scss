@@ -1,17 +1,16 @@
-@import 'settings';
-
-@import 'foundation-apps/scss/foundation';
-
-@import 'variables';
+.page-section {
+    margin: 2rem;
+    padding: 2rem;
+}
 
 .facebook-file-dropbox {
-	border: 3px dashed black;
-	margin:2rem;
-	padding:2rem;
+    border: 3px dashed black;
+    margin: 2rem;
+    padding: 2rem;
 }
 
 .facebook-file-explainbox {
-	border: 3px solid black;
-	margin:2rem;
-	padding:2rem;
+    border: 3px solid black;
+    margin: 2rem;
+    padding: 2rem;
 }

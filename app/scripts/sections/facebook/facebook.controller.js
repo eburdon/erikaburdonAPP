@@ -14,6 +14,11 @@
 
             vm.uploadFiles = uploadFiles;
 
+            vm.dropboxMessage = "Loading..."
+            vm.outboxMessage = "Process not started."
+
+            vm.exposeError = exposeError;
+
             activate();
 
             ////////
@@ -23,31 +28,36 @@
                 $(document).ready(function(){
                     $(this).scrollTop(0);
                 });
+
+                vm.dropboxMessage = "Drop messages.htm here to start."
             }
 
-            // TODO: Break out into mult functions
-            // for multiple files:
+            function exposeError() {
+                console.log("EXPOSED!");
+                vm.dropboxMessage = "ERROR!"
+            }
+
             function uploadFiles (files) {
 
                 if (files && files.length) {
                 
                     for (var i = 0; i < files.length; i++) {
-                        console.log("Starting upload...");
+                        vm.dropboxMessage = "Uploading..."
 
                         var filename = files[i].name;
                         var filesize = files[i].size;
 
                         if (Math.round(filesize) > 500585760) {
-                            // TODO: Expose error to user
-                            console.log("File must be less than 500MB. Sorry about that.");
+                            vm.dropboxMessage = "File must be less than 500MB. Sorry about that. Try again, or contact erikaeburdon@gmail.com"
                             return;
                         }
 
                         if (filename !== 'messages.htm' ) {
-                             // TODO: Expose error to user
-                            console.log("Only processing of messages.htm is supported right now.");
+                            vm.dropboxMessage = "This feature can only process a `messages.htm' file. Try again, or contact erikaeburdon@gmail.com"
                             return;
                         }
+
+                        vm.outboxMessage = "Loading..."
 
                         // random number between 0 and 10000
                         var rand = Math.floor((Math.random() * 1000) + 0);
@@ -80,13 +90,11 @@
 
                         bucket.upload(params, options, function(err, data) {
                             if (err) {
-                                // TODO: expose to user
                                 console.log(err);
+                                console.log("Try again, or contact erikaeburdon@gmail.com");
                                 return;
                             } else {
-                                // successful upload
-                                // TODO: expose to user
-                                console.log("Upload success!");
+                                console.log("File upload success!");
                             }
                         });
                     }
