@@ -1,0 +1,42 @@
+<div class="facebook-page">
+    <site-header></site-header>
+
+    <div class="grid-block">
+        <div ngf-drop="facebookVM.uploadFiles($files)" class="facebook-file-dropbox drop-box grid-block small-5"
+          ngf-drag-over-class="'dragover'" ngf-multiple="true"><strong>{{facebookVM.dropboxMessage}}</strong></div>
+        <div ngf-no-file-drop>File Drag/Drop is not supported for this browser. Try Chrome V51.0.2704.106!</div>
+        <div class="facebook-file-explainbox grid-block small-6">
+            <div>
+                <h3>Distributed Facebook Analysis: A Serverless Microservice Architecture</h3>
+                <p>This feature is a cool way to analyze your message history on Facebook, since the beginning of time <i>(since you signed up).</i> Anyone can download their own private Facebook data from their settings page. This .zip includes a 'message.htm' file. Upload that here, and a visual graph of the 3 friends you message the most, and what time you're most active, will appear.</p>
+                <p><strong>Don't worry, we don't save your data.</strong><br/>Read 'How It Works' for details, but any file you upload will be deleted either: a) after processing (expected), or b) by expiry in the datastore after 24 hours (failsafe).</p>
+                <p><i>Development team:</i><br/>Erika Burdon<br/>Jordan Heemskerk<br/>Alexander Carmichael</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section">
+        <h3>Output</h3>
+        <p>{{facebookVM.outboxMessage}}</p>
+    </div>
+
+
+    <div  class="page-section">
+        <hr/>
+        <h3>How it works</h3>
+        <p>Diagram coming soon...</p>
+        <p>Upload a file here into a public S3 bucket. This triggers an Amazon Lambda instance to pre-process the file. This step filters out any message content - we're only concerned with the name of the person you're messaging, and the time you're messaging them. This produces a simple .txt file parsed line-by-line by an Amazon Elastic Map Reduce (EMR) Cluster. This instance executes a Go Lang MapReduce implementation on an Apache Hadoop framework. The map is a single iteration over the file to emit all K, V pairs, where K is the friend, and V is the message timestamp. The reduce accumulates this count (e.g., 2 messages at 00:24 to Bob and Sue), and creates a prefix trie on the value. Given the scope of this feature, this trie behaves like a dictionary. In future work, this trie will enable efficient processing of more fine-grained analysis, such as all messages sent between 00:01 and 03:00, in a particular year. Finally, this trie data is returned to Lambda in another .txt file, where it is parsed to create a graph.</p>
+    </div>
+
+    <div  class="page-section">
+        <hr/>
+        <h3>Future Work</h3>
+        <p>
+            <ul>
+               <li>Fine-grained Analysis: Top friends per Month / Year / Time</li>
+               <li>Fault Tolerance: handling server failures <i>(local / server implementation only)</i></li>
+               <li>Your contribution?</li>
+            </ul>
+        </p>
+    </div>
+</div>

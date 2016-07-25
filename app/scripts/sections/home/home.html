@@ -48,10 +48,27 @@
                 This is my full stack playground! For both pieces, I've keeping a strong focus on good coding practicies, especially TDD, good performance, flexibility and maintenance. <strong>Front end:</strong> I've focused on good, minimal, and mobile-first UI styling. It's built with AngularJs, and uses Sass and Foundation for Apps. <strong>Back end:</strong> Primary language is Scala, but I'm tinkering with and will be including other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE is running off its own instance. I hope to implement a miniature micro-service architecture, with some components running independently on Amazon Lambda.</p>
                 <p>Recent pages:
                     <ul>
-                        <a ui-sref="eb.crystal-ball">Crystal Ball</a>
+                        <a class="button button-glass about-button-secondary" ui-sref="eb.crystal-ball">Crystal Ball</a>
                     </ul>
                 </p>
             </p>
+            <hr/>
+            <section class="block-list text-center"><header>Distributed Facebook Analysis: Implementing a Microservice Architecture</header></section>
+            <hr/>
+            <p>
+                <img class="angular" src="images/icons/facebook.png" style="height:30px;margin:0;"/>
+                <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
+                <img class="angular" src="images/icons/python.png" style="height:30px;margin:0;"/>
+                <img class="angular" src="images/icons/golang.png" style="height:30px;margin:0;"/>
+            </p>
+            <p>Using the downloadable Facebook data as a data set, this is a distributed, open-source project that can analyze a user's Facebook habits.</p>
+            <p>The first iteration of this project implemented MapReduce to analyze message history. Written in Go, this distributes and parallelizes processing of their message data since the day they joined Facebook. Data is stored in-memory using an efficient Prefix Trie. The final output is a pie chart of their most active hours.</p>
+
+            <p>The second iteration is implementing a serverless microservice to preprocess (parse) the XML file using Amazon's Lambda, execute MapReduce on Amazon's EMR service, and finally postprocess (image output) the data on Lambda and display in-context on the app.</p>
+
+            <a class="button button-glass about-button-secondary" ui-sref="eb.facebook">Facebook Project Page</a>
+
+            <p>There's lots of future work that could be done, including: a) more fine-grained analysis such as most active day of the week, month, per year, etc..., b) exploring other data provided in the data set, c) adding fault tolerance.</p>
             <hr/>
             <section class="block-list text-center"><header>Frequent Itemset Mining at Low support levels</header></section>
             <hr/>
@@ -59,17 +76,6 @@
                 <img class="angular" src="images/icons/java.png" style="height:30px;margin:0;"/>
             </p>
             <p>Directed Studies project at UVic; I am continuing data mining and software engineering research already done in this field, improving the existing Apriori algorithm for calcluating frequently co-occuring items in a transactions. Data sourced from Webdocs. Written in Java. Hosted on Java Hadoop Cluster.</p>
-            <hr/>
-            <section class="block-list text-center"><header>Distributed Facebook Analysis</header></section>
-            <hr/>
-            <p>
-                <img class="angular" src="images/icons/golang.png" style="height:30px;margin:0;"/>
-                <img class="angular" src="images/icons/python.png" style="height:30px;margin:0;"/>
-                <img class="angular" src="images/icons/facebook.png" style="height:30px;margin:0;"/>
-            </p>
-            <p>
-                Creating open-source scripts that can analyze a user's Facebook data. Only users can download their information and execute this script. The FB data set includes information such as photo and message  metadata from the day they opened an account in an easy-to-parse XML format.  The first iteration of this project is to analyze their message history. This is written in Go, and distributes the workload via a MapReduce implementation. Data is stored and accessed using an efficient Prefix Trie. The final output is a pie chart of their most active hours. Future work includes further partitioning and distribution of the workload, migrating the Python parser to Go, and further message analysis such as most active day of the week, month, year, etc.
-            </p>
             <hr/>
             <section class="block-list text-center"><header>erikaburdon.ca Android App</header></section>
             <hr/>

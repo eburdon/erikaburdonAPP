@@ -16,6 +16,7 @@ angular
         'crystalBall',
         'home',
         'past-projects',
+        'facebook',
         'workspace'
     ])
 
