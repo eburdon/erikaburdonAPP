@@ -58,22 +58,27 @@
                         // log AWS in browser
                         AWS.config.logger = console.log
 
+                        AWS.config.region = settings.PUBLIC_FACEBOOK_REGION;
+
                         AWS.config.update({ accessKeyId: settings.PUBLIC_FACEBOOK_ANALYSIS_ACCESS_KEY, secretAccessKey: settings.PUBLIC_FACEBOOK_ANALYSIS_SECRET_KEY });
-                        AWS.config.region = settings.PUBLIC_FACEBOOK_REGION; // Oregon
-                        // var bucket = new AWS.S3({ params: { Bucket: settings.PUBLIC_FACEBOOK_BUCKET } });
-                        var bucket = new AWS.S3({ params: { Bucket: "facebook-analysis" } });
+                        
+                        var bucket = new AWS.S3({ params: { Bucket:  settings.PUBLIC_FACEBOOK_BUCKET, maxRetries: 3}, httpOptions: { timeout: 360000 } });
 
       
                         var params = {
+                            Bucket :  settings.PUBLIC_FACEBOOK_BUCKET,
                             Key: filename,
                             ContentType: files[i].type,
                             Body: files[i],
-                            ServerSideEncryption: "AES256",
-                            // Bucket : settings.PUBLIC_FACEBOOK_BUCKET
-                            Bucket : "facebook-analysis"
+                            ServerSideEncryption: "AES256"
                         }
 
-                        bucket.putObject(params, function(err, data) {
+                        var options = {
+                            // owner of the bucket (e.g., erikaburdon) has full control
+                            ACL: "bucket-owner-full-control"
+                        }
+
+                        bucket.upload(params, options, function(err, data) {
                             if (err) {
                                 // TODO: expose to user
                                 console.log(err);
@@ -85,9 +90,6 @@
                             }
                         });
                     }
-
-                    // or send them all together for HTML5 browsers:
-                    // Upload.upload({..., data: {file: files}, ...})...;
               }
             }
         }
