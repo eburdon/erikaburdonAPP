@@ -1,8 +1,8 @@
-node_modules
-dist
 .tmp
 .sass-cache
-bower_components
 .npm-debug.log
-./config/environments/*
-./app/scripts/settings.js
+app/scripts/settings.js
+dist
+node_modules
+bower_components
+config/environments/*
