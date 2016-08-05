@@ -3,38 +3,87 @@
 
     <div class="grid-block">
         <div ngf-drop="facebookVM.uploadFiles($files)" class="facebook-file-dropbox drop-box grid-block small-5"
-          ngf-drag-over-class="'dragover'" ngf-multiple="true"><strong>{{facebookVM.dropboxMessage}}</strong></div>
+          ngf-drag-over-class="'dragover'" ngf-multiple="true"><strong>{{dropboxMessage}}</strong></div>
         <div ngf-no-file-drop>File Drag/Drop is not supported for this browser. Try Chrome V51.0.2704.106!</div>
         <div class="facebook-file-explainbox grid-block small-6">
             <div>
-                <h3>Distributed Facebook Analysis: A Serverless Microservice Architecture</h3>
-                <p>This feature is a cool way to analyze your message history on Facebook, since the beginning of time <i>(since you signed up).</i> Anyone can download their own private Facebook data from their settings page. This .zip includes a 'message.htm' file. Upload that here, and a visual graph of the 3 friends you message the most, and what time you're most active, will appear.</p>
+                <h3>Distributed Facebook Analysis: A Server-based Microservice Architecture</h3>
+                <p>This feature is a cool way to analyze your message history on Facebook, since the beginning of time <i>(since you signed up; up to 10MB).</i> Anyone can download their own private Facebook data from their settings page. This .zip includes a 'message.htm' file. Upload that file here, and a visual graph of the 3 friends you message the most and what time you're most active will appear below.</p>
                 <p><strong>Don't worry, we don't save your data.</strong><br/>Read 'How It Works' for details, but any file you upload will be deleted either: a) after processing (expected), or b) by expiry in the datastore after 24 hours (failsafe).</p>
                 <p><i>Development team:</i><br/>Erika Burdon<br/>Jordan Heemskerk<br/>Alexander Carmichael</p>
+                <p><i>Estimated execution times:</i><br/>File upload: Max 1 minute<br/>Data processing: Max 1 minute<br/>MapReduce and Image Generation: Max 3 minutes</p>
+                <p><strong>Read the wiki! (Or download source files): </strong><a href="https://github.com/eburdon/FacebookDataAnalysis/wiki" target="_blank">Github Repo</a></p>
             </div>
         </div>
     </div>
 
     <div class="page-section">
         <h3>Output</h3>
-        <p>{{facebookVM.outboxMessage}}</p>
+        <p>{{outboxMessage}}</p>
+        <button ng-if="showTryAgainButton" ng-click="facebookVM.tryImage()">TRY AGAIN</button>
+        <img ng-src="{{outboxImage}}">
     </div>
 
-
-    <div  class="page-section">
+    <div class="page-section">
         <hr/>
         <h3>How it works</h3>
-        <p>Diagram coming soon...</p>
-        <p>Upload a file here into a public S3 bucket. This triggers an Amazon Lambda instance to pre-process the file. This step filters out any message content - we're only concerned with the name of the person you're messaging, and the time you're messaging them. This produces a simple .txt file parsed line-by-line by an Amazon Elastic Map Reduce (EMR) Cluster. This instance executes a Go Lang MapReduce implementation on an Apache Hadoop framework. The map is a single iteration over the file to emit all K, V pairs, where K is the friend, and V is the message timestamp. The reduce accumulates this count (e.g., 2 messages at 00:24 to Bob and Sue), and creates a prefix trie on the value. Given the scope of this feature, this trie behaves like a dictionary. In future work, this trie will enable efficient processing of more fine-grained analysis, such as all messages sent between 00:01 and 03:00, in a particular year. Finally, this trie data is returned to Lambda in another .txt file, where it is parsed to create a graph.</p>
+        <hr/>
     </div>
 
-    <div  class="page-section">
+    <div class="page-section grid-block">
+        <div class="grid-block small-6">
+            <img  style="display:block" src="images/sysarch.png"> 
+        </div>
+
+        <div class="grid-block small-6" style="margin-left:2rem;">
+            <p>
+                <ol>
+                    <li>User uploads their file via the front-end (FE) web interface</li>
+                    <li>File is uploaded directly to a public S3 data bucket via asynchronous call (AngularJS)</li>
+                    <li>FE receives an "OK" response and fires an asynchronous call to the backend to trigger file parsing (Python)</li>
+                    <li>Once parsed, the server initiates a Elastic Map Reduce (EMR) step to analyze the data (GoLang)</li>
+                    <li>FE receives an "OK" response (indicated EMR has started), and asks the server for the image. Image is returned!</li>
+                </ol>
+            </p>
+        </div>
+    </div>
+
+    <div class="page-section">
+        <p>
+            The FE interface has minimal validation on the input file - it checks file size, and that the file name is type is what we're expecting. CORS have been defined to permit only limited origins to upload, and the action is authenticated with a restricted PUBLIC facebook security key.
+        </p>
+
+        <p>
+            The pre-processing / parsing step filters out any message content. The EMR analsys only needs the name of the person the messages was sent to, and the time sent. This produces a simple .txt file to be parsed line-by-line. The EMR executes a GoLang MapReduce implementation on an Apache Hadoop Framework, managed by AWS. The map is a single iteration over the file to emit all K, V pairs, where K is the friend, and V is the message timestamp. The reduce accumulates this count (e.g., 2 messages at 00:24 to Bob and Sue), and creates a prefix trie on the value. This tree is then written to a file, aggregated with all the existing trees already written.
+        </p>
+
+        <p>
+            The post-processing step / image generation, reads each tree and builds one global tree. That is, our implemenation uses 3 map clusters, meaning that 3 output trie files are created with N number of people in each. Those are combined into one tree, then the top 3 users are found, and their leaves are traversed to produce data for an image.
+        </p>
+    </div>
+
+    <div class="page-section">
+        <hr/>
+        <h3>Restrictions</h3>
+        <p>
+            <ul>
+               <li>Max 10MB file upload: Save costs with size of files uploaded to S3. Note that any sized file can be run locally!</li>
+               <li>Limited lifetime: This feature will only be available until <strong>August 12th</strong> to keep costs low for the dev team.</i></li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="page-section">
         <hr/>
         <h3>Future Work</h3>
         <p>
             <ul>
-               <li>Fine-grained Analysis: Top friends per Month / Year / Time</li>
-               <li>Fault Tolerance: handling server failures <i>(local / server implementation only)</i></li>
+               <li>Fine-grained Analysis: Top friends per Month / Year / Time.</li>
+               <li>Fault Tolerance: handling server failures <i>(local / server implementation only).</i></li>
+               <li>Remove BeautifulSoup; Use a XML parser able to process LARGE files.</li>
+               <li>Clean up the user interface - better messaging.</li>
+               <li>Host EC2 server using Elastic Beanstalk for better monitoring.</li>
+               <li>Swap out EC2 instance for Lambda - make more atomic, rather than several async calls.</li>
                <li>Your contribution?</li>
             </ul>
         </p>
