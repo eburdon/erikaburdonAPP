@@ -45,12 +45,17 @@
                 <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
             </p>
             <p>
-                This is my full stack playground! For both pieces, I've keeping a strong focus on good coding practicies, especially TDD, good performance, flexibility and maintenance. <strong>Front end:</strong> I've focused on good, minimal, and mobile-first UI styling. It's built with AngularJs, and uses Sass and Foundation for Apps. <strong>Back end:</strong> Primary language is Scala, but I'm tinkering with and will be including other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE is running off its own instance. I hope to implement a miniature micro-service architecture, with some components running independently on Amazon Lambda.</p>
-                <p>Recent pages:
+                This is my playground! For front and back, I've kept a strong focus on good coding practicies - especially TDD. I'm also concentrating good performance (hypothetical distribution), flexibility, and maintenance. <strong>Front end:</strong> Redesign in progress. Working towards minimal, mobile-first UI styling. Built using AngularJS, uses Sass and Foundation for Apps. New design will explore react. <strong>Back end:</strong> None implemented: previous versions were either written in Scala (hosted via EC2 instance), or written in Python on the Bottle framework. Will tinker with other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE has previously run off its own instance. I hope to implement a micro-service architecture soon using Amazon Lambda.</p>
+    <!--             <p>Recent pages:
                     <ul>
                         <a class="button button-glass about-button-secondary" ui-sref="eb.crystal-ball">Crystal Ball</a>
                     </ul>
-                </p>
+                </p> -->
+            </p>
+            <p>
+                Visit the repos:<br/>
+                <a href="https://github.com/eburdon/erikaburdonAPP">Github: erikaburdonAPP</a><br/>
+                <a href="https://github.com/eburdon/erikaburdonAPI">Github: erikaburdonAPI</a>
             </p>
             <hr/>
             <section class="block-list text-center"><header>Distributed Facebook Analysis: Implementing a Microservice Architecture</header></section>
@@ -60,22 +65,42 @@
                 <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
                 <img class="angular" src="images/icons/python.png" style="height:30px;margin:0;"/>
                 <img class="angular" src="images/icons/golang.png" style="height:30px;margin:0;"/>
+                <img class="angular" src="images/icons/hadoop-history.png" style="height:30px;margin:0;"/>
             </p>
-            <p>Using the downloadable Facebook data as a data set, this is a distributed, open-source project that can analyze a user's Facebook habits.</p>
+            <p>Any user can download their personal Facebook data from the settings page. Using this data, this project is a distributed, open-source tool that can analyze a user's Facebook habits based on the messages they've sent to friends.</p>
             <p>The first iteration of this project implemented MapReduce to analyze message history. Written in Go, this distributes and parallelizes processing of their message data since the day they joined Facebook. Data is stored in-memory using an efficient Prefix Trie. The final output is a pie chart of their most active hours.</p>
 
-            <p>The second iteration is implementing a serverless microservice to preprocess (parse) the XML file using Amazon's Lambda, execute MapReduce on Amazon's EMR service, and finally postprocess (image output) the data on Lambda and display in-context on the app.</p>
+            <p>The second iteration is a proof of concept that implements a server-based microservice architecture. Users upload their file via this web interface, which triggers pre-processing on an EC2 instance, followed by MapReduce on an EMR cluster, and finally post-processing on the same EC2 instance to generate a png graph. This graph is displayed in-context on the upload page.</p>
+
+            <p>The third iteration hopes to implement a serverless microservice using Amazon Lambda to trigger the EC2 processing and EMR analysis independently.</p>
+
+            <p>There's lots of future work to be done, including: a) more fine-grained analysis such as most active day of the week, month, per year, etc..., b) exploring other data provided in the data set, c) adding fault tolerance.</p>
 
             <a class="button button-glass about-button-secondary" ui-sref="eb.facebook">Facebook Project Page</a>
 
-            <p>There's lots of future work that could be done, including: a) more fine-grained analysis such as most active day of the week, month, per year, etc..., b) exploring other data provided in the data set, c) adding fault tolerance.</p>
+            <p>Visit the repo: <br/>
+                <a href="https://github.com/eburdon/FacebookDataAnalysis">Github: FacebookDataAnalysis</a>
+            </p>
             <hr/>
             <section class="block-list text-center"><header>Frequent Itemset Mining at Low support levels</header></section>
             <hr/>
             <p>
                 <img class="angular" src="images/icons/java.png" style="height:30px;margin:0;"/>
+                <img class="angular" src="images/icons/hadoop-history.png" style="height:30px;margin:0;"/>
             </p>
-            <p>Directed Studies project at UVic; I am continuing data mining and software engineering research already done in this field, improving the existing Apriori algorithm for calcluating frequently co-occuring items in a transactions. Data sourced from Webdocs. Written in Java. Hosted on Java Hadoop Cluster.</p>
+            <p>
+                Continued work on data mining and software engineering research already done in this field. Tried to improve performance for a new algorithm, a variant of the existing Apriori algorithm standard for calculating frequently co-occurring items in transactions. The new algorithm is an improvement by requiring a 1% support level instead of 5%. This change returns more useful items in a reccommendation system.
+            </p>
+
+            <p>
+                I tried to improve phase input partitioning by implementing a custom CombineInputFormat, RecordReader, RecordWriter, and OutputFormat. If successful, the solution would merge files generated from each map cluster (potentially exponentially larger than others) into one, then resplit evenly onto the next map cluster. This would evenly distribute the workload between servers and improve performance while maintaining a total order.
+            </p>
+            
+            <p>
+                Data set: Retail.dat. Written in: Java. Supporting Framework: Apache Hadoop
+            </p>
+            
+            <p>This is a private repo.</p>
             <hr/>
             <section class="block-list text-center"><header>erikaburdon.ca Android App</header></section>
             <hr/>
@@ -83,15 +108,16 @@
                 <img class="android" src="images/icons/android.png"  style="height:25px;margin:0;"/>
             </p>
             <p>
-                Creating a simple Android app that will use a CRUD endpoint to manipulate data that will also be available real-time on this web site.
+                Creating a simple Android app that will use a CRUD endpoint to manipulate data. This data will be available real-time on this site.
             </p>
+            <p>This is a private repo (for now).</p>
             <hr/>
             <section class="block-list text-center"><header>Arduino Madness</header></section>
             <hr/>
             <p>
                 <img class="angular" src="images/icons/arduino.png" style="height:30px;margin:0;"/>
             </p>
-            <p>Working with the Arduino Starter Kit and other sensors to build small embedded systems that use the microprocessor.</p>
+            <p>Tinkering with the Arduino Starter Kit and other sensors to build small embedded systems that use the microprocessor. I hope to expand this into a smart-mirror project.</p>
         </div>
     </div>
 
