@@ -15,7 +15,7 @@
             vm.uploadFiles = uploadFiles;
             vm.tryImage = tryImage;
 
-            $scope.dropboxMessage = "Drop messages.htm here to start."
+            $scope.dropboxMessage = "This project was available from July 31 - August 12 as a demonstration / proof of concept. It will be improved in the future - Check back for updates, or download the source code and try it yourself!"
             $scope.outboxMessage = "Ready when you are, Captain.";
 
             activate();
