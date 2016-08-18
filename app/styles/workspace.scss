@@ -1,3 +1,90 @@
-.workspace-content {
-	margin: 1rem;
+@import 'settings';
+
+@import 'foundation-apps/scss/foundation';
+
+@import 'variables';
+
+.workspace-page {
+	
+	h1, h2, h3, h4, h5, h6 , p {
+		color: $p-darkest;
+	}
+
+	button {
+		min-height: 2em;
+		min-width: 6em;
+		border-radius: 10px;
+		border: 0;
+		background-color: $p-accent;
+	}
+
+	.header-block {
+
+		.name-block {
+			background-color: $p-mid;
+			min-height: 50%;
+
+			.name-title {
+				width: 100%;
+			}
+		}
+
+		.project-block {
+			background-color: $p-mid;
+
+			.project-title {
+				border: 1px solid $p-darkest;
+				padding: 0.5em;
+			}
+
+			.project-detail-button {
+				border-radius: 10px;
+				border: 1px solid $p-darkest;
+				background-color: $p-light;
+				padding: 0.5em;
+				color: $p-darkest;
+			}
+		}
+
+		.more-button {
+			background-color: $p-mid;
+			color: $p-darkest;
+			border: 1px solid $p-accent;
+		}
+	}
+
+	.splash-block {
+		background-image: url('https://source.unsplash.com/jeZXVb3JHgc');
+		background-size: 100% 100%;
+
+		h1 {
+			color: white;
+			font-size: 2.5em;
+
+			span {
+				font-size:2em;
+			}
+		}
+
+		.contact-link {
+			color: white;
+			margin: 2em;
+			text-align: right;
+		}
+
+		.tagline-title {
+			width: 100%;
+		}
+	}
+
+	/* TODO: Move to shared */
+	.text-block {
+		background-color: $p-light;
+		margin: 1em;
+		margin-top: 0.5em;
+		border-radius: 5px;
+		padding: 1em;
+	}
+
 }
+
