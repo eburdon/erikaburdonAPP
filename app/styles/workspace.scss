@@ -4,6 +4,8 @@
 
 @import 'variables';
 
+@import 'mixins';
+
 .workspace-page {
 	
 	h1, h2, h3, h4, h5, h6 , p {
@@ -16,6 +18,18 @@
 		border-radius: 10px;
 		border: 0;
 		background-color: $p-accent;
+	}
+
+	.desktop-only {
+		display: none;
+
+		@include breakpoint(medium) {
+			display: block;
+		}
+	}
+
+	p {
+		@include font-size($p-font-sizes);
 	}
 
 	.header-block {
@@ -44,25 +58,33 @@
 				padding: 0.5em;
 				color: $p-darkest;
 			}
+
+			.project-more-button {
+				float: left;
+
+				@include breakpoint(medium) {
+					float: right;
+				}
+			}
 		}
 
 		.more-button {
 			background-color: $p-mid;
 			color: $p-darkest;
-			border: 1px solid $p-accent;
+			border: 1px solid $p-light;
 		}
 	}
 
 	.splash-block {
 		background-image: url('https://source.unsplash.com/jeZXVb3JHgc');
+		background-repeat: no-repeat;
 		background-size: 100% 100%;
 
 		h1 {
 			color: white;
-			font-size: 2.5em;
-
+			
 			span {
-				font-size:2em;
+				font-size:1.5em;
 			}
 		}
 
@@ -77,7 +99,6 @@
 		}
 	}
 
-	/* TODO: Move to shared */
 	.text-block {
 		background-color: $p-light;
 		margin: 1em;

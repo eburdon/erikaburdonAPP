@@ -20,10 +20,28 @@ $facebook-blue:                     rgb(58, 87, 149);
 $soundcloud-orange:                 rgb(255, 85, 0);
 $spotify-green: 					#2ebd59;
 
-/* Redesign; 5 color Palette */
-
+/* Redesign; 5 color Palette; RENAME */
 $p-darkest:		#454851;
 $p-dark: 		#73956F;
 $p-mid: 		#94B3C7;
 $p-light: 		#CFD7E4;
 $p-accent:		#7BAE7F;
+
+/* Response text size mappings
+
+$name: (
+	null: 15px,   - default
+	480px: 16px,  - firt breakpoint (foundation)
+	640px: 17px,
+	1024px: 19px  - last breakpoint
+);
+*/
+
+$p-font-sizes: (
+	null: 12px,
+	480px: 13px,
+	640px: 14px,
+	1024px: 16px
+);
+
+
