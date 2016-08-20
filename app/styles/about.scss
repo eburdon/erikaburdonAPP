@@ -1,0 +1,59 @@
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'variables';
+@import 'mixins';
+
+.about-page {
+
+	* {
+		background-color: $p-light;
+	}
+
+	.nav-bar {
+		background-color: $p-darkest;
+
+		* {
+			background-color: $p-darkest;
+		}
+
+		h1, p, li, a {
+			color: $p-light;
+		}
+
+		min-height: 4em;
+	}
+
+	.page-content {
+		background-color: $p-light;
+	}
+
+	.projects-title {
+		width: 100%;
+
+		p, h1 {
+			margin: 0;
+			padding: 0;
+			color: $p-darkest;
+		}
+	}
+
+	.projects-image-header {
+		img {
+			max-height: 20em;
+			margin-bottom:5em;
+		}
+	}
+
+	.project-cards {
+		.card {
+			max-width: 30em;
+			margin: 2em;
+		}
+	}
+
+	.active-header {
+		color: $p-accent;
+		font-weight: 700;
+		background-color: #ededed;
+	}
+}

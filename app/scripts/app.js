@@ -12,6 +12,7 @@ angular
         'ngResource',
         'ngSanitize',
         'ngTouch',
+        'about',
         'connect',
         'crystalBall',
         'home',
