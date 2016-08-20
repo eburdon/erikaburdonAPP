@@ -9,7 +9,7 @@
         EbWorkspaceController.$inject = ['$http', '$log', 'settings']
 
         function EbWorkspaceController($http, $log, settings) {
-
+            
             var vm = this;
         }
 })();

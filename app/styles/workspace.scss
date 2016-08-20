@@ -7,12 +7,16 @@
 @import 'mixins';
 
 .workspace-page {
-	
-	h1, h2, h3, h4, h5, h6 , p {
+
+	h1 {
+		color: $p-light;
+	}
+
+	h2, h3, h4, h5, h6, p {
 		color: $p-darkest;
 	}
 
-	button {
+	.button {
 		min-height: 2em;
 		min-width: 6em;
 		border-radius: 10px;
@@ -23,9 +27,17 @@
 	.desktop-only {
 		display: none;
 
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			display: block;
 		}
+	}
+
+	.desktop-middle-only {
+		display: none;
+
+		@include breakpoint(medium) {
+			display: block;
+		}		
 	}
 
 	p {
@@ -35,11 +47,21 @@
 	.header-block {
 
 		.name-block {
-			background-color: $p-mid;
-			min-height: 50%;
+			background-color: $p-darkest;
+			height: 45%;
+
+			p {
+				color: $p-light;
+			}
 
 			.name-title {
 				width: 100%;
+			}
+
+			.more-button {
+				background-color: $p-darkest;
+				color: $p-light;
+				border: 2px solid $p-dark;
 			}
 		}
 
@@ -66,12 +88,10 @@
 					float: right;
 				}
 			}
-		}
 
-		.more-button {
-			background-color: $p-mid;
-			color: $p-darkest;
-			border: 1px solid $p-light;
+			.what {
+				overflow-y: inherit;
+			}
 		}
 	}
 
@@ -101,9 +121,9 @@
 
 	.text-block {
 		background-color: $p-light;
-		margin: 1em;
-		margin-top: 0.5em;
-		border-radius: 5px;
+		/* margin: 1em; */
+		/* margin-top: 0.5em; */
+		/* border-radius: 5px; */
 		padding: 1em;
 	}
 
