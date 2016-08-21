@@ -6,25 +6,25 @@
 .about-page {
 
 	* {
-		background-color: $p-light;
+		background-color: whitesmoke;
+	}
+
+	p, h1, h2, h3, h4, h5, h6 {
+		color: $eb-text-color;
 	}
 
 	.nav-bar {
-		background-color: $p-darkest;
+		background-color: $eb-base-blue;
 
 		* {
-			background-color: $p-darkest;
-		}
-
-		h1, p, li, a {
-			color: $p-light;
+			background-color: $eb-base-blue;
 		}
 
 		min-height: 4em;
 	}
 
 	.page-content {
-		background-color: $p-light;
+		background-color: $eb-base-light;
 	}
 
 	.projects-title {
@@ -33,7 +33,7 @@
 		p, h1 {
 			margin: 0;
 			padding: 0;
-			color: $p-darkest;
+			color: $eb-text-color;
 		}
 	}
 
@@ -52,8 +52,12 @@
 	}
 
 	.active-header {
-		color: $p-accent;
+		color: whitesmoke;
 		font-weight: 700;
-		background-color: #ededed;
+		background-color: $eb-base-blue;
+	}
+
+	.card-divider {
+		background-color: $eb-base-blue;
 	}
 }

@@ -6,19 +6,25 @@
 .workspace-page {
 
 	h1 {
-		color: $p-light;
+		color: $eb-text-color;
 	}
 
 	h2, h3, h4, h5, h6, p {
-		color: $p-darkest;
+		color: $eb-text-color;
 	}
 
 	.button {
 		min-height: 2em;
 		min-width: 6em;
 		border-radius: 10px;
-		border: 0;
-		background-color: $p-accent;
+		border: 1px solid $eb-border;
+		background-color: $eb-accent;
+		color: $eb-text-color;
+
+		&:hover {
+			text-decoration: none;
+			background-color: $eb-accent;
+		}
 	}
 
 	.desktop-only {
@@ -44,38 +50,41 @@
 	.header-block {
 
 		.name-block {
-			background-color: $p-darkest;
+			background-color: $eb-base-blue;
 			height: 45%;
-
-			p {
-				color: $p-light;
-			}
 
 			.name-title {
 				width: 100%;
 			}
 
 			.more-button {
-				background-color: $p-darkest;
-				color: $p-light;
-				border: 2px solid $p-dark;
+				border: 1px solid $eb-border;
+				background-color: $eb-base-blue;
+
+				&:hover {
+					background-color: $eb-accent;
+				}
 			}
 		}
 
 		.project-block {
-			background-color: $p-mid;
+			background-color: $eb-base-light;
 
 			.project-title {
-				border: 1px solid $p-darkest;
+				border: 1px solid $eb-border;
 				padding: 0.5em;
 			}
 
 			.project-detail-button {
 				border-radius: 10px;
-				border: 1px solid $p-darkest;
-				background-color: $p-light;
+				border: 1px solid $eb-border;
+				background-color: $eb-base-light;
+				color: $eb-text-color;
 				padding: 0.5em;
-				color: $p-darkest;
+
+				&:hover {
+					background-color: $eb-accent;
+				}
 			}
 
 			.project-more-button {
@@ -93,7 +102,7 @@
 	}
 
 	.splash-block {
-		background-image: url('https://source.unsplash.com/jeZXVb3JHgc');
+		background-image: url('https://source.unsplash.com/HGzfUfk65uo'); 
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 
@@ -117,10 +126,7 @@
 	}
 
 	.text-block {
-		background-color: $p-light;
-		/* margin: 1em; */
-		/* margin-top: 0.5em; */
-		/* border-radius: 5px; */
+		background-color: $eb-base-light;
 		padding: 1em;
 	}
 
