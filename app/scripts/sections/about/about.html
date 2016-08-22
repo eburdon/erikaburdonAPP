@@ -3,7 +3,7 @@
 	<div class="nav-bar menu-group">
 		<div class="nav-bar menu-group-left">
 			<ul class="nav-bar menu-bar">
-				<li>Erika Burdon</li>
+				<li><h3>Erika Burdon</h3></li>
 			</ul>	
 		</div>
 		<div class="menu-group-right">
@@ -13,90 +13,52 @@
 		</div>
 	</div>
 
-	<div class="grid-content">
+	<div class="grid-block vertical">
 
-		<div class="projects-title grid-block vertical">
-			<p>something witty goes here</p>
-			<h1>PROJECTS</h1>
+		<div class="grid-content">
+			<p>
+                I'm a 4th year Software Engineering student from the University of Victoria. I love big ideas and sitting on the edge of my skill set.
+            </p>
+            <p>
+                I'm currently working at an industry-changing startup in Vancouver, BC! In my spare time, I like to rock out to the Killers, flex my tech skills with projects, or leave it all behind and go camping.
+            </p>
+            <p>
+                If you have a small project or volunteer opportunity, feel free to <a ui-sref="eb.connect">get in touch!</a> I'm looking for a range of projects to contribute to, and to help encourage women and young students to enter the STEM fields.
+            </p>
+
+            <img ng-show="homeVm.githubImage" src="{{homeVm.githubImage}}"/>
 		</div>
 
-		<div class="project-cards grid-block align-center">
-			<div class="card">
-				<img src="http://placekitten.com/g/400/200">
-				<div class="card-divider">
-					This is a header <span class="active-header">Active</span>
-				</div>
-				<div class="card-section">
-					<h4>Look at This Swag Card</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+		<div class="grid-block vertical">
+
+			<div class="item-block grid-block" style="border: 1px solid black;">
+				<div class="headline" style="border-right:5px solid black;"><h2>Email</h2></div>
+				<div>
+					<p>username: eburdon</p>
 				</div>
 			</div>
 
-			<div class="card">
-				<img src="http://placekitten.com/g/400/200">
 
-				<div class="card-divider">
-					This is a header <span class="active-header">Active</span>
-				</div>
-
-				<div class="card-section">
-					<h4>Look at This Swag Card</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+			<div class="item-block grid-block" style="border: 1px solid black;">
+				<div class="headline" style="border-right:5px solid black;"><h2>GitHub</h2></div>
+				<div>
+					<p>username: eburdon</p>
 				</div>
 			</div>
 
-			<div class="card">
-				<img src="http://placekitten.com/g/400/200">
-
-				<div class="card-divider">
-					This is a header
-				</div>
-
-				<div class="card-section">
-					<h4>Look at This Swag Card</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="project-cards grid-block align-center">
-			<div class="card">
-				<img src="http://placekitten.com/g/400/200">
-				<div class="card-divider">
-					Software Evolution: Research Platform
-				</div>
-				<div class="card-section">
-					<h4>Look at This Swag Card</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+			<div class="item-block grid-block"  style="border: 1px solid black;">
+				<div class="headline" style="border-right:5px solid black;"><h2>LinkedIn</h2></div>
+				<div>
+					<p>username: eburdon</p>
 				</div>
 			</div>
 
-			<div class="card">
-				<img src="http://placekitten.com/g/400/200">
-
-				<div class="card-divider">
-					Word-of-the-day Email Parser
-				</div>
-
-				<div class="card-section">
-					<h4>Look at This Swag Card</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
-				</div>
-			</div>
-
-			<div class="card">
-				<img src="http://placekitten.com/g/400/200">
-
-				<div class="card-divider">
-					Uvic Personal Web Space
-				</div>
-
-				<div class="card-section">
-					<h4>Look at This Swag Card</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+			<div class="item-block grid-block"  style="border: 1px solid black;">
+				<div class="headline" style="border-right:5px solid black;"><h2>Twitter</h2></div>
+				<div>
+					<p>username: @OneEaredMusic</p>
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>

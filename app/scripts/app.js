@@ -14,9 +14,8 @@ angular
         'ngTouch',
         'about',
         'connect',
-        'crystalBall',
         'home',
-        'past-projects',
+        'projects',
         'facebook',
         'workspace'
     ])

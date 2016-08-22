@@ -3,12 +3,12 @@
 	'use strict';
 
 	angular
-		.module('past-projects')
-		.controller('EbPastProjectsController', EbPastProjectsController);
+		.module('projects')
+		.controller('EbProjectsController', EbProjectsController);
 
-		EbPastProjectsController.$inject = [];
+		EbProjectsController.$inject = [];
 
-		function EbPastProjectsController() {
+		function EbProjectsController() {
 			// scroll to top of page on load
             $(document).ready(function(){
                 $(this).scrollTop(0);

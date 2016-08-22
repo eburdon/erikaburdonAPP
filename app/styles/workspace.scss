@@ -1,31 +1,9 @@
 @import 'settings';
 @import 'foundation-apps/scss/foundation';
+@import 'shared';
 @import 'variables';
-@import 'mixins';
 
 .workspace-page {
-
-	h1 {
-		color: $eb-text-color;
-	}
-
-	h2, h3, h4, h5, h6, p {
-		color: $eb-text-color;
-	}
-
-	.button {
-		min-height: 2em;
-		min-width: 6em;
-		border-radius: 10px;
-		border: 1px solid $eb-border;
-		background-color: $eb-accent;
-		color: $eb-text-color;
-
-		&:hover {
-			text-decoration: none;
-			background-color: $eb-accent;
-		}
-	}
 
 	.desktop-only {
 		display: none;
@@ -41,10 +19,6 @@
 		@include breakpoint(medium) {
 			display: block;
 		}		
-	}
-
-	p {
-		@include font-size($p-font-sizes);
 	}
 
 	.header-block {
@@ -67,37 +41,19 @@
 			}
 		}
 
-		.project-block {
+		.secondary-block {
+
 			background-color: $eb-base-light;
 
-			.project-title {
-				border: 1px solid $eb-border;
-				padding: 0.5em;
-			}
-
-			.project-detail-button {
-				border-radius: 10px;
-				border: 1px solid $eb-border;
-				background-color: $eb-base-light;
-				color: $eb-text-color;
-				padding: 0.5em;
-
-				&:hover {
-					background-color: $eb-accent;
+			
+				img {
+					height: 40px;
+					margin: 0.75em;
 				}
-			}
 
-			.project-more-button {
-				float: left;
-
-				@include breakpoint(medium) {
-					float: right;
+				.button {
+					margin-top: 1em;
 				}
-			}
-
-			.what {
-				overflow-y: inherit;
-			}
 		}
 	}
 
@@ -115,20 +71,18 @@
 		}
 
 		.contact-link {
-			color: white;
+			color: $eb-base-light;
 			margin: 2em;
 			text-align: right;
+
+			&:hover {
+				text-decoration:none;
+				color: whitesmoke;
+			}
 		}
 
 		.tagline-title {
 			width: 100%;
 		}
 	}
-
-	.text-block {
-		background-color: $eb-base-light;
-		padding: 1em;
-	}
-
 }
-

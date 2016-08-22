@@ -1,40 +1,24 @@
+@import 'mixins';
 @import 'variables';
 
-/* Page constants */
-.page {
-	
+.button {
+	min-height: 2em;
+	min-width: 6em;
+	border-radius: 10px;
+	border: 1px solid $eb-border;
+	background-color: $eb-accent;
+	color: $eb-text-color;
+
+	&:hover {
+		text-decoration: none;
+		background-color: $eb-accent;
+	}
 }
 
-.button-hollow {
-    background: none;
-    color: $home-blue;
-    border: 2px solid $home-blue;
-
-    & :hover {
-    	background: none;
-    	color: black;
-    	border: 2px solid black;
-    }
+h1, h2, h3, h4, h5, h6, p {
+	color: $eb-text-color;
 }
 
-.footer {
-	background-image: url('../images/textures/black_denim.png');
-	color: whitesmoke;
-	margin-top: 16px;
-	padding-top: 16px;
-	padding-left: 16px;
-	font-family: $app-font-family;
-	font-size: 11px;
-
-	p {
-		font-size: 11px;
-	}
-	
-	ul {
-		font-size: 11px;
-	    list-style: none;
-	}
-	a {
-	    text-decoration: none;
-	}
+p {
+	@include font-size($p-font-sizes);
 }
