@@ -22,10 +22,18 @@
         }
 
         min-height: 4em;
-    }
 
-    .page-content {
-        background-color: $eb-base-light;
+        h4, a {
+            color: whitesmoke;
+            font-weight: 700;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .brand-name {
+            margin-left: 4em;
+        }
     }
 
     .projects-title {
@@ -42,6 +50,14 @@
         h1 {
             line-height: 75%;
         }
+
+        p {
+            font-size: 0.75em;
+        }
+
+        .active-title {
+            margin-left: 4em;
+        }
     }
 
     .projects-image-header {
@@ -57,7 +73,14 @@
             margin: 2em;
 
             .card-divider {
-                background-color: $eb-base-blue;
+                background-color: $eb-base-light;
+            }
+
+            .active-header {
+                font-weight: 700;
+                text-decoration: underline;
+                background-color: $eb-base-light;
+                float: right;
             }
 
             .card-section {
@@ -65,12 +88,5 @@
                 height: 100%;
             }
         }
-    }
-
-    .active-header {
-        color: whitesmoke;
-        font-weight: 700;
-        background-color: $eb-base-blue;
-        float: right;
     }
 }
