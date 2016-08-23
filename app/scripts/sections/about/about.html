@@ -1,63 +1,62 @@
 <div class="page about-page grid-frame vertical align-center">
 
-    <div class="nav-bar menu-group">
-        <div class="nav-bar menu-group-left">
-            <ul class="nav-bar menu-bar">
-                <li><h3>Erika Burdon</h3></li>
-            </ul>   
-        </div>
-        <div class="menu-group-right">
-            <ul class="nav nav-bar menu-bar">
-                <li><a ui-sref="eb.workspace">Home</a></li>
-            </ul>   
-        </div>
+   <div class="nav-bar menu-group">
+
+        <ul class="nav-bar menu-bar brand-name">
+            <li><h4>erikaburdon</h4></li>
+        </ul>
+
+        <ul class="nav-bar menu-bar">
+            <li><a ui-sref="eb.home">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-block vertical">
+            <div class="grid-block">
+                <div class="grid-content">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+
+            <div class="grid-block">
+                <div class="grid-content">
+                    <p>
+                        Expected to graduate in January 2017 in Software Engineering from the University of Victoria, I'm a full time developer in Vancouver, B.C. I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on.
+                    </p>
+                    <p>
+                        I'm currently working at an industry-changing startup. In my spare time, I like to rock out to the Killers, flex my tech skills with projects, or leave it all behind and go camping. If you have a small project or volunteer opportunity, feel free to get in touch! I'm looking for a range of projects to contribute to - open source or private - and to help encourage women and young students to enter the STEM fields.
+                    </p>
+                </div>
+
+                <div class="grid-content">
+                    <img class="about-image" ng-show="aboutVM.githubImage" src="{{aboutVM.githubImage}}"/>
+                </div>
+            </div>
     </div>
 
     <div class="grid-block vertical">
 
-        <div class="grid-content">
-            <p>
-                I'm a 4th year Software Engineering student from the University of Victoria. I love big ideas and sitting on the edge of my skill set.
-            </p>
-            <p>
-                I'm currently working at an industry-changing startup in Vancouver, BC! In my spare time, I like to rock out to the Killers, flex my tech skills with projects, or leave it all behind and go camping.
-            </p>
-            <p>
-                If you have a small project or volunteer opportunity, feel free to <a ui-sref="eb.connect">get in touch!</a> I'm looking for a range of projects to contribute to, and to help encourage women and young students to enter the STEM fields.
-            </p>
-
-            <img ng-show="homeVm.githubImage" src="{{homeVm.githubImage}}"/>
+        <div class="grid-block">
+            <div class="grid-content">
+                <h2>Connect</h2>
+            </div>
         </div>
 
-        <div class="grid-block vertical">
+        <div class="item-block grid-block" ng-repeat="item in aboutVM.socialItems" style="border: 1px solid black;">
 
-            <div class="item-block grid-block" style="border: 1px solid black;">
-                <div class="headline" style="border-right:5px solid black;"><h2>Email</h2></div>
-                <div>
-                    <p>username: eburdon</p>
-                </div>
-            </div>
-
-
-            <div class="item-block grid-block" style="border: 1px solid black;">
-                <div class="headline" style="border-right:5px solid black;"><h2>GitHub</h2></div>
-                <div>
-                    <p>username: eburdon</p>
-                </div>
-            </div>
-
-            <div class="item-block grid-block"  style="border: 1px solid black;">
-                <div class="headline" style="border-right:5px solid black;"><h2>LinkedIn</h2></div>
-                <div>
-                    <p>username: eburdon</p>
-                </div>
-            </div>
-
-            <div class="item-block grid-block"  style="border: 1px solid black;">
-                <div class="headline" style="border-right:5px solid black;"><h2>Twitter</h2></div>
-                <div>
-                    <p>username: @OneEaredMusic</p>
-                </div>
+            <div class="headline" style="border-right:5px solid black;"><h2>{{item.NAME}}</h2></div>
+        
+            <div>
+                <p>{{item.USERNAME}}</p>
+                <a type="button" class="btn btn-default" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
+                <p>
+                </p>
+                <p class="more-info">
+                    <span ng-if="item.STATS" ng-repeat="stat in item.STATS">{{stat}}<br/></span>
+                </p>
+                <p class="keywords">
+                    <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
+                </p>
             </div>
         </div>
     </div>
