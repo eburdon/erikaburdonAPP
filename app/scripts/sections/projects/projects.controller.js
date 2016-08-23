@@ -1,17 +1,17 @@
 (function() {
 
-	'use strict';
+    'use strict';
 
-	angular
-		.module('projects')
-		.controller('EbProjectsController', EbProjectsController);
+    angular
+        .module('projects')
+        .controller('EbProjectsController', EbProjectsController);
 
-		EbProjectsController.$inject = [];
+        EbProjectsController.$inject = [];
 
-		function EbProjectsController() {
-			// scroll to top of page on load
+        function EbProjectsController() {
+            // scroll to top of page on load
             $(document).ready(function(){
                 $(this).scrollTop(0);
             });
-		};
+        };
 })();

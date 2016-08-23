@@ -18,30 +18,28 @@ $twitter-blue:                      #55acee;
 $googleplus-red:                    #d73d32;
 $facebook-blue:                     rgb(58, 87, 149);
 $soundcloud-orange:                 rgb(255, 85, 0);
-$spotify-green: 					#2ebd59;
+$spotify-green:                     #2ebd59;
 
 /* 5 color Palette*/
-$eb-base-blue:	#79C7C5;
+$eb-base-blue:  #79C7C5;
 $eb-base-light: #ADE1E5;
-$eb-text-color:	#000501;
-$eb-accent:		#99D19C;
-$eb-border:		#73AB84;
+$eb-text-color: #000501;
+$eb-accent:     #99D19C;
+$eb-border:     #73AB84;
 
 /* Response text size mappings
 
 $name: (
-	null: 15px,   - default
-	480px: 16px,  - firt breakpoint (foundation)
-	640px: 17px,
-	1024px: 19px  - last breakpoint
+    null: 15px,   - default
+    480px: 16px,  - firt breakpoint (foundation)
+    640px: 17px,
+    1024px: 19px  - last breakpoint
 );
 */
 
 $p-font-sizes: (
-	null: 12px,
-	480px: 12px,
-	640px: 13px,
-	1024px: 14px
+    null: 12px,
+    480px: 12px,
+    640px: 13px,
+    1024px: 14px
 );
-
-

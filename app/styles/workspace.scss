@@ -5,84 +5,84 @@
 
 .workspace-page {
 
-	.desktop-only {
-		display: none;
+    .desktop-only {
+        display: none;
 
-		@include breakpoint(large) {
-			display: block;
-		}
-	}
+        @include breakpoint(large) {
+            display: block;
+        }
+    }
 
-	.desktop-middle-only {
-		display: none;
+    .desktop-middle-only {
+        display: none;
 
-		@include breakpoint(medium) {
-			display: block;
-		}		
-	}
+        @include breakpoint(medium) {
+            display: block;
+        }       
+    }
 
-	.header-block {
+    .header-block {
 
-		.name-block {
-			background-color: $eb-base-blue;
-			height: 45%;
+        .name-block {
+            background-color: $eb-base-blue;
+            height: 45%;
 
-			.name-title {
-				width: 100%;
-			}
+            .name-title {
+                width: 100%;
+            }
 
-			.more-button {
-				border: 1px solid $eb-border;
-				background-color: $eb-base-blue;
+            .more-button {
+                border: 1px solid $eb-border;
+                background-color: $eb-base-blue;
 
-				&:hover {
-					background-color: $eb-accent;
-				}
-			}
-		}
+                &:hover {
+                    background-color: $eb-accent;
+                }
+            }
+        }
 
-		.secondary-block {
+        .secondary-block {
 
-			background-color: $eb-base-light;
+            background-color: $eb-base-light;
 
-			
-				img {
-					height: 40px;
-					margin: 0.75em;
-				}
+            
+                img {
+                    height: 40px;
+                    margin: 0.75em;
+                }
 
-				.button {
-					margin-top: 1em;
-				}
-		}
-	}
+                .button {
+                    margin-top: 1em;
+                }
+        }
+    }
 
-	.splash-block {
-		background-image: url('https://source.unsplash.com/HGzfUfk65uo'); 
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
+    .splash-block {
+        background-image: url('https://source.unsplash.com/HGzfUfk65uo'); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
 
-		h1 {
-			color: white;
-			
-			span {
-				font-size:1.5em;
-			}
-		}
+        h1 {
+            color: white;
+            
+            span {
+                font-size:1.5em;
+            }
+        }
 
-		.contact-link {
-			color: $eb-base-light;
-			margin: 2em;
-			text-align: right;
+        .contact-link {
+            color: $eb-base-light;
+            margin: 2em;
+            text-align: right;
 
-			&:hover {
-				text-decoration:none;
-				color: whitesmoke;
-			}
-		}
+            &:hover {
+                text-decoration:none;
+                color: whitesmoke;
+            }
+        }
 
-		.tagline-title {
-			width: 100%;
-		}
-	}
+        .tagline-title {
+            width: 100%;
+        }
+    }
 }

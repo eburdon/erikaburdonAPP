@@ -1,16 +1,16 @@
 'use strict';
 
 angular
-	.module('connect', [
-    	'social.service',
-    	'header'
-	])
-	.config(function($stateProvider) {
-	    $stateProvider
-		    .state('eb.connect', {
-		        url: 'connect',
-		        templateUrl: 'scripts/sections/connect/connect.html',
-		        controller: 'EbConnectController',
-		        controllerAs: 'connectVm'
-		    });
-	});
+    .module('connect', [
+        'social.service',
+        'header'
+    ])
+    .config(function($stateProvider) {
+        $stateProvider
+            .state('eb.connect', {
+                url: 'connect',
+                templateUrl: 'scripts/sections/connect/connect.html',
+                controller: 'EbConnectController',
+                controllerAs: 'connectVm'
+            });
+    });

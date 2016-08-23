@@ -2,23 +2,23 @@
 @import 'variables';
 
 .button {
-	min-height: 2em;
-	min-width: 6em;
-	border-radius: 10px;
-	border: 1px solid $eb-border;
-	background-color: $eb-accent;
-	color: $eb-text-color;
+    min-height: 2em;
+    min-width: 6em;
+    border-radius: 10px;
+    border: 1px solid $eb-border;
+    background-color: $eb-accent;
+    color: $eb-text-color;
 
-	&:hover {
-		text-decoration: none;
-		background-color: $eb-accent;
-	}
+    &:hover {
+        text-decoration: none;
+        background-color: $eb-accent;
+    }
 }
 
 h1, h2, h3, h4, h5, h6, p {
-	color: $eb-text-color;
+    color: $eb-text-color;
 }
 
 p {
-	@include font-size($p-font-sizes);
+    @include font-size($p-font-sizes);
 }
