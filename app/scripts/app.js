@@ -13,7 +13,7 @@ angular
         'ngSanitize',
         'ngTouch',
         'about',
-        'connect',
+        'career',
         'home',
         'projects',
         'facebook',

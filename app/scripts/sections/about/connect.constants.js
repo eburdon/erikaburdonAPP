@@ -17,7 +17,7 @@
                 ICON: 'fa-linkedin ',
                 USERNAME: 'eburdon',
                 LINK: 'https://www.linkedin.com/in/eburdon',
-                LINK_TEXT: 'View History',
+                LINK_TEXT: 'View Profile',
                 KEYWORDS: ['Employment', 'Volunteering', 'Education'],
             },
             GITHUB: {
@@ -31,7 +31,7 @@
                 USERNAME: '@OneEaredMusic',
                 LINK: 'https://twitter.com/OneEaredMusic',
                 LINK_TEXT: 'Tweet',
-                STATS: ['152 Tweets', '37 Followers', '171 Following '],
+                STATS: ['201 Tweets', '48 Followers', '193 Following '],
             },
         });
 })();

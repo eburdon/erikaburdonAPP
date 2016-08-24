@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('about', [])
+    .module('about', ['social.service'])
     .config(function($stateProvider) {
         $stateProvider
             .state('eb.about', {
