@@ -57,10 +57,9 @@ angular
 
         $stateProvider.state('eb.error-404', {
             url: '404',
-            template: '<p>Oops! Page not found.</p><p><button ui-sref="eb.home">Return to home</button></p>'
+            templateUrl: 'scripts/sections/404/404.html',
         });
 
-        // Todo: add nav to this page on a bad API response
         $stateProvider.state('eg.error-server', {
             url: 'oops',
             template: '<p>Oops, something went wrong!</p>'

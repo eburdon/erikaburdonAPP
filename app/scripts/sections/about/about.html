@@ -1,4 +1,5 @@
 <div class="page about-page grid-frame vertical align-center">
+    <!-- I'm glad I know Sign Language. It's pretty handy. -->
 
    <div class="nav-bar menu-group">
 
@@ -11,7 +12,10 @@
         </ul>
     </div>
 
-    <div class="grid-block vertical">
+    <div class="about-page-content grid-content">
+
+        <div class="grid-block vertical">
+
             <div class="grid-block">
                 <div class="grid-content">
                     <h1>About Me</h1>
@@ -19,45 +23,63 @@
             </div>
 
             <div class="grid-block">
-                <div class="grid-content">
+                <div class="grid-content medium-12 large-9">
                     <p>
-                        Expected to graduate in January 2017 in Software Engineering from the University of Victoria, I'm a full time developer in Vancouver, B.C. I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on.
+                        You may have guessed my name by now. Expected to graduate in April 2017 from the University of Victoria in Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities, and returned to Canada to graduate, adopt a dog, and change the world!
                     </p>
+
                     <p>
-                        I'm currently working at an industry-changing startup. In my spare time, I like to rock out to the Killers, flex my tech skills with projects, or leave it all behind and go camping. If you have a small project or volunteer opportunity, feel free to get in touch! I'm looking for a range of projects to contribute to - open source or private - and to help encourage women and young students to enter the STEM fields.
+                        I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on. In my spare time, I like to rock out to the Killers, flex my skills, or leave it all behind and go camping. I also love really, <i>really</i> bad puns. 
+                    </p>
+                        
+                    <p>
+                        If you have a small project or volunteer opportunities for young women and students in Science and Engineering, feel free to get in touch! I'm looking for a range of projects to contribute to - open source or private - and to help encourage women and young students to enter the field.
                     </p>
                 </div>
 
-                <div class="grid-content">
+                <div class="grid-content medium-12 large-3">
+                <p style="text-align:center;">
+                    
                     <img class="about-image" ng-show="aboutVM.githubImage" src="{{aboutVM.githubImage}}"/>
+                </p>
                 </div>
             </div>
-    </div>
-
-    <div class="grid-block vertical">
-
-        <div class="grid-block">
-            <div class="grid-content">
-                <h2>Connect</h2>
-            </div>
         </div>
 
-        <div class="item-block grid-block" ng-repeat="item in aboutVM.socialItems" style="border: 1px solid black;">
+        <div class="grid-block vertical">
 
-            <div class="headline" style="border-right:5px solid black;"><h2>{{item.NAME}}</h2></div>
-        
-            <div>
-                <p>{{item.USERNAME}}</p>
-                <a type="button" class="btn btn-default" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
-                <p>
-                </p>
-                <p class="more-info">
-                    <span ng-if="item.STATS" ng-repeat="stat in item.STATS">{{stat}}<br/></span>
-                </p>
-                <p class="keywords">
-                    <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
-                </p>
+            <div class="connect-title grid-block">
+                <div class="grid-content">
+                    <h2>Connect</h2>
+                </div>
+            </div>
+
+            <div class="grid-block small-up-2">
+
+                <div class="item-block grid-block" ng-repeat="item in aboutVM.socialItems">
+            
+                    <div class="headline grid-content">
+                        <h4 style="text-align:center">{{item.NAME}}</h4>
+                        <p style="text-align:center"><i class="icon fa {{item.ICON}}"></i></p>
+                    </div>
+                
+                    <div class="item-block-content grid-content">
+                        <div class="grid-block">
+                            <p>
+                                {{item.USERNAME}} <br/>
+                                <a class="button" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
+                            </p>
+                            <p class="more-info">
+                                <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
+                                {{stat}}<br/></span>
+                            </p>
+                            <p class="keywords">
+                                <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </div>    
 </div>

@@ -5,7 +5,6 @@
 @import 'mixins';
 
 .about-page {
-
     * {
         background-color: whitesmoke;
     }
@@ -36,11 +35,44 @@
         }
     }
 
+    .about-page-content {
+        padding-left:4em;
+        max-width: 100%;
+        overflow-x:hidden;
+    }
+
+    .connect-title {
+        margin-bottom: 2em;
+    }
+
+    .item-block {
+        margin-bottom: 2em;
+
+        .item-block-content {
+            border-left: 3px solid $eb-base-light;
+
+            .grid-block {
+                padding-left: 1em;
+            }
+
+            p {
+                margin-right: 1em;
+            }
+
+            .button {
+                background-color: whitesmoke;
+
+                &:hover {
+                    background-color: $eb-accent;
+                }
+            }
+        }
+    }
+
     .about-image {
         vertical-align: right;
         height: 250px;
         width: 250px;
         border-radius: 30% 0;
     }
-
 }
