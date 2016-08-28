@@ -25,11 +25,11 @@
             <div class="grid-block v-align">
                 <div class="text-content grid-content medium-12 large-9 align-middle">
                     <p>
-                        You may have guessed my name by now. Expected to graduate in April 2017 from the University of Victoria in Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities, and returned to Canada to graduate, adopt a dog, and change the world!
+                        Expected to graduate in April 2017 from the University of Victoria in Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities, and returned to Canada to graduate, adopt a dog, and change the world!
                     </p>
 
                     <p>
-                        I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on. In my spare time, I like to rock out to the Killers, flex my skills, or leave it all behind and go camping. I also love really, <i>really</i> bad puns. 
+                        I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on. In my spare time, I like to rock out to the Killers, flex my skills, or leave it all behind and go camping.
                     </p>
                         
                     <p>
@@ -55,32 +55,38 @@
                 </div>
             </div>
 
-            <div class="grid-block small-up-2">
-
-                <div class="item-block grid-block" ng-repeat="item in aboutVM.socialItems">
+             <div class="grid-block">
+                <div class="item-block grid-content" ng-repeat="item in aboutVM.socialItems">
             
-                    <div class="headline grid-content">
-                        <h4 style="text-align:center">{{item.NAME}}</h4>
-                        <p style="text-align:center"><i class="icon fa {{item.ICON}}"></i></p>
-                    </div>
-                
-                    <div class="item-block-content grid-content">
-                        <div class="grid-block">
-                            <p>
-                                {{item.USERNAME}} <br/>
-                                <a class="button" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
-                            </p>
-                            <p class="more-info">
-                                <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
-                                {{stat}}<br/></span>
-                            </p>
-                            <p class="keywords">
-                                <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
-                            </p>
+                    <div class="card">
+                        <div class="card-divider">
+                             <div class="headline grid-content">
+                                <h4>{{item.NAME}}</h4>
+                                <p><i class="icon fa fa-2x {{item.ICON}}"></i></p>
+                            </div>
+                        </div>
+            
+                        <div class="card-section">
+                            <div class="item-block-content grid-content">
+                                <div class="grid-block v-align">
+                                    <p class="align-left">
+                                        <strong>{{item.USERNAME}}</strong> <br/>
+                                        <a class="button" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
+                                    </p>
+                                    <p class="more-info align-right">
+                                        <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
+                                        {{stat}}<br/></span>
+                                    </p>
+                                    <p class="keywords align-right">
+                                        <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>    
 </div>

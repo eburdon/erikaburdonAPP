@@ -36,12 +36,21 @@
         max-width: 250px;
     }
 
+    .card-divider {
+        background-color: $eb-base-light;
+    }
+
     .item-block {
         margin-bottom: 2em;
+        margin-right: 4em;
+
+        .headline {
+            h4, p {
+                text-align:center;
+            }
+        }
 
         .item-block-content {
-            border-left: 3px solid $eb-base-light;
-
             .grid-block {
                 padding-left: 1em;
             }
@@ -52,6 +61,7 @@
 
             .button {
                 background-color: whitesmoke;
+                margin-top: 1em;
 
                 &:hover {
                     background-color: $eb-accent;

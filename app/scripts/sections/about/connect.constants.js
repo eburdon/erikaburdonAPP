@@ -17,7 +17,7 @@
                 ICON: 'fa-linkedin ',
                 USERNAME: 'eburdon',
                 LINK: 'https://www.linkedin.com/in/eburdon',
-                LINK_TEXT: 'View Profile',
+                LINK_TEXT: 'Visit Profile',
                 KEYWORDS: ['Employment', 'Volunteering', 'Education'],
             },
             GITHUB: {
