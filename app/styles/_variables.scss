@@ -27,19 +27,9 @@ $eb-text-color: #000501;
 $eb-accent:     #99D19C;
 $eb-border:     #73AB84;
 
-/* Response text size mappings
-
-$name: (
-    null: 15px,   - default
-    480px: 16px,  - firt breakpoint (foundation)
-    640px: 17px,
-    1024px: 19px  - last breakpoint
-);
-*/
-
 $p-font-sizes: (
-    null: 12px,
-    480px: 12px,
-    640px: 13px,
-    1024px: 14px
+    null: 13px,
+    480px: 13px,
+    640px: 14px,
+    1024px: 15px
 );

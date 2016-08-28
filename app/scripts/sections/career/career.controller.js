@@ -8,6 +8,7 @@
     EbCareerController.$inject = []
 
     function EbCareerController() {
-        console.log('Hello career');
+
+    	var vm = this;
     }
 })();

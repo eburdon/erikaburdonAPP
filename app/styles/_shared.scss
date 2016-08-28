@@ -22,3 +22,33 @@ h1, h2, h3, h4, h5, h6, p {
 p {
     @include font-size($p-font-sizes);
 }
+
+
+.page {
+    background-color: whitesmoke;
+
+    p, h1, h2, h3, h4, h5, h6 {
+        color: $eb-text-color;
+    }
+
+    .nav-bar {
+        background-color: $eb-base-blue;
+        min-height: 4em;
+
+        * {
+            background-color: $eb-base-blue;
+        }
+
+        h4, a {
+            color: whitesmoke;
+            font-weight: 700;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .brand-name {
+            margin-left: 4em;
+        }
+    }
+}

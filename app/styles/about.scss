@@ -5,44 +5,35 @@
 @import 'mixins';
 
 .about-page {
-    * {
-        background-color: whitesmoke;
-    }
-
-    p, h1, h2, h3, h4, h5, h6 {
-        color: $eb-text-color;
-    }
-
-    .nav-bar {
-        background-color: $eb-base-blue;
-
-        * {
-            background-color: $eb-base-blue;
-        }
-
-        min-height: 4em;
-
-        h4, a {
-            color: whitesmoke;
-            font-weight: 700;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        .brand-name {
-            margin-left: 4em;
-        }
-    }
-
     .about-page-content {
         padding-left:4em;
         max-width: 100%;
         overflow-x:hidden;
     }
 
+    .title-block {
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
     .connect-title {
         margin-bottom: 2em;
+    }
+
+    .about-image {
+        vertical-align: right;
+        height: 250px;
+        width: 250px;
+        border-radius: 30% 0;
+    }
+
+    .university-image {
+        padding-top: 2em;
+        max-width: 250px;
     }
 
     .item-block {
@@ -67,12 +58,5 @@
                 }
             }
         }
-    }
-
-    .about-image {
-        vertical-align: right;
-        height: 250px;
-        width: 250px;
-        border-radius: 30% 0;
     }
 }

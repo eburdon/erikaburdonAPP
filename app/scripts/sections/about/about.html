@@ -17,13 +17,13 @@
         <div class="grid-block vertical">
 
             <div class="grid-block">
-                <div class="grid-content">
+                <div class="title-block grid-content">
                     <h1>About Me</h1>
                 </div>
             </div>
 
-            <div class="grid-block">
-                <div class="grid-content medium-12 large-9">
+            <div class="grid-block v-align">
+                <div class="text-content grid-content medium-12 large-9 align-middle">
                     <p>
                         You may have guessed my name by now. Expected to graduate in April 2017 from the University of Victoria in Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities, and returned to Canada to graduate, adopt a dog, and change the world!
                     </p>
@@ -38,10 +38,11 @@
                 </div>
 
                 <div class="grid-content medium-12 large-3">
-                <p style="text-align:center;">
-                    
-                    <img class="about-image" ng-show="aboutVM.githubImage" src="{{aboutVM.githubImage}}"/>
-                </p>
+                    <p style="text-align:center;">
+                        <img class="about-image" ng-show="aboutVM.githubImage" src="{{aboutVM.githubImage}}"/>
+
+                        <img class="university-image" src="images/icons/uvic-full-logo.png"/>
+                    </p>
                 </div>
             </div>
         </div>
