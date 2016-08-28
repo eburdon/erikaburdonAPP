@@ -1,16 +1,66 @@
-.page-section {
-    margin: 2rem;
-    padding: 2rem;
-}
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'shared';
+@import 'variables';
 
-.facebook-file-dropbox {
-    border: 3px dashed black;
-    margin: 2rem;
-    padding: 2rem;
-}
+.facebook-page {
 
-.facebook-file-explainbox {
-    border: 3px solid black;
-    margin: 2rem;
-    padding: 2rem;
+    * {
+        background-color: whitesmoke;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        color: $eb-text-color;
+    }
+
+    .nav-bar {
+        background-color: $eb-base-blue;
+
+        * {
+            background-color: $eb-base-blue;
+        }
+
+        min-height: 4em;
+
+        h4, a {
+            color: whitesmoke;
+            font-weight: 700;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .brand-name {
+            margin-left: 4em;
+        }
+    }
+
+    .facebook-file-dropbox {
+        border: 3px dashed $eb-base-blue;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    .facebook-file-explainbox {
+        border: 3px solid $eb-base-blue;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    .page-content {
+        overflow-x: hidden;
+
+        .main-content {
+            margin-left: 4em;
+        }
+    }
+
+    .title-block {
+        margin-top: 3em;
+        margin-bottom: 2em;
+
+        .active-title {
+            margin-left: 4em;
+        }
+    }
 }

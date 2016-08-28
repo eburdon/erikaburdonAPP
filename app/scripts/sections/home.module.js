@@ -1,10 +1,7 @@
 'use strict';
 
 angular
-    .module('home', [
-        'helper.factory',
-        'header',
-    ])
+    .module('home', ['helper.factory'])
     .config(function($stateProvider) {
         $stateProvider
             .state('eb.home', {

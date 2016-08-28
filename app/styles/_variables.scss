@@ -1,25 +1,3 @@
-/* App-wide*/
-$button-outline:                    white;
-$home-blue:                         #1C6BA0;
-$app-font-family:                   'Lora', serif;
-
-/* Home Page */
-$quick-connect-home-font-family:    'Montserrat', sans-serif;
-$header-home-font-family:           'Abril Fatface', cursive;
-
-$home-light-blue-green:             #C5E3BF;
-$home-gray-green:                   #F0F0F0;
-
-/* Connect Page */
-$header-connect-font-family:       'Lobster', cursive;
-
-$linkedin-blue:                     #069;
-$twitter-blue:                      #55acee;
-$googleplus-red:                    #d73d32;
-$facebook-blue:                     rgb(58, 87, 149);
-$soundcloud-orange:                 rgb(255, 85, 0);
-$spotify-green:                     #2ebd59;
-
 /* 5 color Palette*/
 $eb-base-blue:  #79C7C5;
 $eb-base-light: #ADE1E5;
@@ -27,6 +5,7 @@ $eb-text-color: #000501;
 $eb-accent:     #99D19C;
 $eb-border:     #73AB84;
 
+/* Responsive font-sizing */
 $p-font-sizes: (
     null: 13px,
     480px: 13px,

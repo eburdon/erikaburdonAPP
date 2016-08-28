@@ -1,10 +1,7 @@
 'use strict';
 
 angular
-    .module('facebook', [
-        'header',
-        'ngFileUpload'
-    ])
+    .module('facebook', ['ngFileUpload'])
     .config(function($stateProvider) {
         $stateProvider
             .state('eb.facebook', {
