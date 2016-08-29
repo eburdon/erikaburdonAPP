@@ -15,6 +15,11 @@
             vm.constants = connectConstants;
             vm.socialItems = {};
 
+            $(document).ready(function(){
+                $(this).scrollTop(0);
+                document.title = "Erika Burdon | About";
+            });
+
             activate();
 
             function activate() {

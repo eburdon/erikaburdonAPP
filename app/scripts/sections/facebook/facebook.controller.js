@@ -26,6 +26,7 @@
                 // scroll to top of page on load
                 $(document).ready(function(){
                     $(this).scrollTop(0);
+                    document.title = "Erika Burdon | Facebook Data Analysis";
                 });
             }
 
