@@ -7,8 +7,10 @@ $eb-border:     #73AB84;
 
 /* Responsive font-sizing */
 $p-font-sizes: (
-    null: 13px,
-    480px: 13px,
-    640px: 14px,
-    1024px: 15px
+    null: 16px,
+    480px: 16px,
+    640px: 17px,
+    1024px: 18px
 );
+
+$eb-font-family: 'Titillium Web', sans-serif;

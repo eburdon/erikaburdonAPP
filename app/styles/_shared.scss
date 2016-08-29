@@ -1,6 +1,15 @@
 @import 'mixins';
 @import 'variables';
 
+h1, h2, h3, h4, h5, h6, p {
+    color: $eb-text-color;
+    font-family: $eb-font-family;
+}
+
+p {
+    @include font-size($p-font-sizes);
+}
+
 .button {
     min-height: 2em;
     min-width: 6em;
@@ -19,15 +28,6 @@
         color: $eb-text-color;
     }
 }
-
-h1, h2, h3, h4, h5, h6, p {
-    color: $eb-text-color;
-}
-
-p {
-    @include font-size($p-font-sizes);
-}
-
 
 .page {
     background-color: whitesmoke;
