@@ -6,10 +6,10 @@
         .module('workspace')
         .controller('EbWorkspaceController', EbWorkspaceController);
 
-        EbWorkspaceController.$inject = ['$http', '$log', 'settings']
+        EbWorkspaceController.$inject = []
 
-        function EbWorkspaceController($http, $log, settings) {
-
+        function EbWorkspaceController() {
+            
             var vm = this;
         }
 })();

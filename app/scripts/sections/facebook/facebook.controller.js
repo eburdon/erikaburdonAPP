@@ -16,7 +16,7 @@
             vm.tryImage = tryImage;
 
             $scope.dropboxMessage = "This project was available from July 31 - August 12 as a demonstration / proof of concept. It will be improved in the future - Check back for updates, or download the source code and try it yourself!"
-            $scope.outboxMessage = "Ready when you are, Captain.";
+            $scope.outboxMessage = "Upload a file to start.";
 
             activate();
 
@@ -26,6 +26,7 @@
                 // scroll to top of page on load
                 $(document).ready(function(){
                     $(this).scrollTop(0);
+                    document.title = "Erika Burdon | Facebook Data Analysis";
                 });
             }
 

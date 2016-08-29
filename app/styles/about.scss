@@ -1,0 +1,68 @@
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'shared';
+@import 'variables';
+@import 'mixins';
+
+.about-page {
+    .about-page-content {
+        padding-left:4em;
+        max-width: 100%;
+        overflow-x:hidden;
+    }
+
+    .title-block {
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+
+    .connect-title {
+        margin-bottom: 2em;
+    }
+
+    .about-image {
+        vertical-align: right;
+        height: 250px;
+        width: 250px;
+        border-radius: 30% 0;
+    }
+
+    .university-image {
+        padding-top: 2em;
+        max-width: 250px;
+    }
+
+    .card-divider {
+        background-color: $eb-base-light;
+    }
+
+    .item-block {
+        margin-bottom: 2em;
+        margin-right: 4em;
+
+        .headline {
+            h4, p {
+                text-align:center;
+            }
+        }
+
+        .item-block-content {
+            .grid-block {
+                padding-left: 1em;
+            }
+
+            p {
+                margin-right: 1em;
+            }
+
+            .button {
+                background-color: whitesmoke;
+                margin-top: 1em;
+
+                &:hover {
+                    background-color: $eb-accent;
+                }
+            }
+        }
+    }
+}

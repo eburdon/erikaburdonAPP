@@ -3,52 +3,18 @@
     'use strict';
 
     angular
-    .module('home')
-    .controller('EbHomeController', EbHomeController);
+        .module('home')
+        .controller('EbHomeController', EbHomeController);
 
-    EbHomeController.$inject = ['helperFactory'];
+        EbHomeController.$inject = [];
 
-    function EbHomeController(helperFactory) {
+        function EbHomeController() {
 
-        var TAGLINES = [
-            'BIG IDEAS',
-            'MUSIC',
-            'SOFTWARE ENGINEERING',
-            'CAMPING',
-            'SCALABILITY',
-            'DESIGN',
-        ];
+            var vm = this;
 
-        var vm = this;
-
-        vm.offset = 0;
-        vm.tagline = TAGLINES[vm.offset];
-
-        vm.exchangeTagline = exchangeTagline;
-
-        vm.whatsInteresting = 'This page was built using Foundation for Apps grid Framework. I tried a couple of fancy CSS tricks, but that\'s it. This button is also a directive you\'ll find throughout the site.'
-
-        activate();
-
-        ////////
-
-        function activate() {
-            // scroll to top of page on load
             $(document).ready(function(){
                 $(this).scrollTop(0);
+                document.title = "Erika Burdon";
             });
-
-            helperFactory
-                .getGitHubInformation()
-                .then(function(githubInfo) { vm.githubImage = githubInfo.avatar_url; });
-        }
-
-        function exchangeTagline() {
-            vm.offset += 1;
-
-            if (vm.offset === TAGLINES.length) { vm.offset = 0; }
-
-            vm.tagline = TAGLINES[vm.offset];
-        }
-    };
+        };
 })();

@@ -1,0 +1,92 @@
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'shared';
+@import 'variables';
+@import 'mixins';
+
+.projects-page {
+
+    * {
+        background-color: whitesmoke;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        color: $eb-text-color;
+    }
+
+    .nav-bar {
+        background-color: $eb-base-blue;
+
+        * {
+            background-color: $eb-base-blue;
+        }
+
+        min-height: 4em;
+
+        h4, a {
+            color: whitesmoke;
+            font-weight: 700;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .brand-name {
+            margin-left: 4em;
+        }
+    }
+
+    .projects-title {
+        width: 100%;
+        margin-top: 3em;
+        margin-bottom: 2em;
+
+        p, h1 {
+            margin: 0;
+            padding: 0;
+            color: $eb-text-color;
+        }
+
+        h1 {
+            line-height: 75%;
+        }
+
+        p {
+            font-size: 0.75em;
+        }
+
+        .active-title {
+            margin-left: 4em;
+        }
+    }
+
+    .projects-image-header {
+        img {
+            max-height: 20em;
+            margin-bottom:5em;
+        }
+    }
+
+    .project-cards {
+        .card {
+            max-width: 30em;
+            margin: 2em;
+
+            .card-divider {
+                background-color: $eb-base-light;
+            }
+
+            .active-header {
+                font-weight: 700;
+                text-decoration: underline;
+                background-color: $eb-base-light;
+                float: right;
+            }
+
+            .card-section {
+                background-color: whitesmoke;
+                height: 100%;
+            }
+        }
+    }
+}

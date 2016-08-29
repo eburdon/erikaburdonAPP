@@ -1,0 +1,92 @@
+<div class="page about-page grid-frame vertical align-center">
+    <!-- I'm glad I know Sign Language. It's pretty handy. -->
+
+   <div class="nav-bar menu-group">
+
+        <ul class="nav-bar menu-bar brand-name">
+            <li><h4>erikaburdon</h4></li>
+        </ul>
+
+        <ul class="nav-bar menu-bar">
+            <li><a ui-sref="eb.home">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="about-page-content grid-content">
+
+        <div class="grid-block vertical">
+
+            <div class="grid-block">
+                <div class="title-block grid-content">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+
+            <div class="grid-block v-align">
+                <div class="text-content grid-content medium-12 large-9 align-middle">
+                    <p>
+                        Expected to graduate in April 2017 from the University of Victoria in Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities, and returned to Canada to graduate, adopt a dog, and change the world!
+                    </p>
+
+                    <p>
+                        I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on. In my spare time, I like to rock out to the Killers, flex my skills, or leave it all behind and go camping.
+                    </p>
+                        
+                    <p>
+                        If you have a small project or volunteer opportunities for young women and students in Science and Engineering, feel free to get in touch! I'm looking for a range of projects to contribute to - open source or private - and to help encourage women and young students to enter the field.
+                    </p>
+                </div>
+
+                <div class="grid-content medium-12 large-3">
+                    <p style="text-align:center;">
+                        <img class="about-image" ng-show="aboutVM.githubImage" src="{{aboutVM.githubImage}}"/>
+
+                        <img class="university-image" src="images/icons/uvic-full-logo.png"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-block vertical">
+
+            <div class="connect-title grid-block">
+                <div class="grid-content">
+                    <h2>Connect</h2>
+                </div>
+            </div>
+
+             <div class="grid-block">
+                <div class="item-block grid-content" ng-repeat="item in aboutVM.socialItems">
+            
+                    <div class="card">
+                        <div class="card-divider">
+                             <div class="headline grid-content">
+                                <h4>{{item.NAME}}</h4>
+                                <p><i class="icon fa fa-2x {{item.ICON}}"></i></p>
+                            </div>
+                        </div>
+            
+                        <div class="card-section">
+                            <div class="item-block-content grid-content">
+                                <div class="grid-block v-align">
+                                    <p class="align-left">
+                                        <strong>{{item.USERNAME}}</strong> <br/>
+                                        <a class="button" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
+                                    </p>
+                                    <p class="more-info align-right">
+                                        <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
+                                        {{stat}}<br/></span>
+                                    </p>
+                                    <p class="keywords align-right">
+                                        <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>    
+</div>

@@ -1,179 +1,45 @@
-<div class="home-page" id="home-page">
+<div class="page workspace-page grid-frame vertical medium-horizontal">
+    <!-- 'Whats a pirate's favorite letter?' 'Oh I know this one! "ARRRR!"' 'Nay, it's the C!' -->
 
-    <site-header></site-header>
+    <div class="header-block vertical grid-block order-2 medium-order-1 medium-6">
 
-    <div class="grid-block vertical about home-content-block">
-        <div class="about-container grid-block vertical medium-horizontal">
-            <div class="grid-block vertical medium-9">
-                <p>
-                    I'm a 4th year Software Engineering student from the University of Victoria. I love big ideas and sitting on the edge of my skill set.
-                </p>
-                <p>
-                    I'm currently working at an industry-changing startup in Vancouver, BC! In my spare time, I like to rock out to the Killers, flex my tech skills with projects, or leave it all behind and go camping.
-                </p>
-                <p>
-                    If you have a small project or volunteer opportunity, feel free to <a ui-sref="eb.connect">get in touch!</a> I'm looking for a range of projects to contribute to, and to help encourage women and young students to enter the STEM fields.
-                </p>
+        <div class="name-block grid-content v-align wrap">
+            <div class="name-title align-center text-center wrap">
+                <h1><strong>Erika Burdon</strong></h1>
+                <p><i>Perpetually searching for sleep, sanity, and more coffee.</i></p>
+                <a class="button more-button" ui-sref="eb.about">About</a>
+                <a class="button more-button" ui-sref="eb.career">Career</a>
             </div>
-            <div class="about-connect-image grid-block vertical medium-3">
-                <div class="grid-container vertical">
-                    <img ng-show="homeVm.githubImage" src="{{homeVm.githubImage}}"/>
-                </div>
+        </div>
+
+        <div class="secondary-block grid-block v-align">
+
+            <div class="grid-content project-images align-center text-center">
+
+                <img src="images/icons/angular.svg"/>
+                <img src="images/icons/grunt.png"/>
+                <img src="images/icons/yeoman.png"/>
+                <img src="images/icons/scala.png"/> <br/>
+                <img src="images/icons/AWS.png"/>
+                <img src="images/icons/facebook.png"/>
+                <img src="images/icons/python.png"/>
+                <img src="images/icons/golang.png"/> <br/>
+                <img src="images/icons/hadoop.png"/>
+                <img src="images/icons/java.png"/>
+                <img src="images/icons/android.png"/>
+                <img src="images/icons/arduino.png"/> <br/>
+
+                <a class="button project-more-button" ui-sref="eb.projects">Projects</a>
             </div>
         </div>
     </div>
 
-    <div class="grid-block separator-container">
-        <div class="separator-right" style="opacity: 1.0;"></div>
-        <div class="separator-right" style="opacity: 0.7;"></div>
-        <div class="separator-right" style="opacity: 0.5;"></div>
-        <div class="separator-right" style="opacity: 0.3;"></div>
-        <div class="separator-right" style="opacity: 0.1;"></div>
-    </div>
+    <div class="splash-block grid-block order-1 medium-order-2 vertical medium-6">
 
-    <div class="grid-content work-history home-content-block">
-        <h3>Active Projects</h3>
-        <div class="past-container">
-            <hr/>
-            <section class="block-list text-center">
-                <header>erikaburdon.ca APP + API</header>
-            </section>
-            <hr/>
-            <p>
-                <img class="angular" src="images/icons/ang_grunt_yo.png" style="height:30px;margin:0;"/>
-                <img class="scala" src="images/icons/scala.png"  style="height:25px;margin:0;"/>
-                <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
-            </p>
-            <p>
-                This is my playground! For front and back, I've kept a strong focus on good coding practicies - especially TDD. I'm also concentrating good performance (hypothetical distribution), flexibility, and maintenance. <strong>Front end:</strong> Redesign in progress. Working towards minimal, mobile-first UI styling. Built using AngularJS, uses Sass and Foundation for Apps. <strong>Back end:</strong> None implemented: previous versions were either written in Scala (hosted via EC2 instance), or written in Python on the Bottle framework. Will tinker with other languages such as Haskell, C, and Go. <strong>Hosting:</strong> FE is hosted statically using AWS S3 services, while the BE has previously run off its own instance. I hope to implement a micro-service architecture soon using Amazon Lambda.</p>
-    <!--             <p>Recent pages:
-                    <ul>
-                        <a class="button button-glass about-button-secondary" ui-sref="eb.crystal-ball">Crystal Ball</a>
-                    </ul>
-                </p> -->
-            </p>
-            <p>
-                Visit the repos:<br/>
-                <a href="https://github.com/eburdon/erikaburdonAPP">Github: erikaburdonAPP</a><br/>
-                <a href="https://github.com/eburdon/erikaburdonAPI">Github: erikaburdonAPI</a>
-            </p>
-            <hr/>
-            <section class="block-list text-center"><header>Distributed Facebook Analysis: Implementing a Microservice Architecture</header></section>
-            <hr/>
-            <p>
-                <img class="angular" src="images/icons/facebook.png" style="height:30px;margin:0;"/>
-                <img class="android" src="images/icons/AWS.png"  style="height:25px;margin:0;"/>
-                <img class="angular" src="images/icons/python.png" style="height:30px;margin:0;"/>
-                <img class="angular" src="images/icons/golang.png" style="height:30px;margin:0;"/>
-                <img class="angular" src="images/icons/hadoop-history.png" style="height:30px;margin:0;"/>
-            </p>
-            <p>Any user can download their personal Facebook data from the settings page. Using this data, this project is a distributed, open-source tool that can analyze a user's Facebook habits based on the messages they've sent to friends.</p>
-            <p>The first iteration of this project implemented MapReduce to analyze message history. Written in Go, this distributes and parallelizes processing of their message data since the day they joined Facebook. Data is stored in-memory using an efficient Prefix Trie. The final output is a pie chart of their most active hours.</p>
-
-            <p>The second iteration is a proof of concept that implements a server-based microservice architecture. Users upload their file via this web interface, which triggers pre-processing on an EC2 instance, followed by MapReduce on an EMR cluster, and finally post-processing on the same EC2 instance to generate a png graph. This graph is displayed in-context on the upload page.</p>
-
-            <p>The third iteration hopes to implement a serverless microservice using Amazon Lambda to trigger the EC2 processing and EMR analysis independently.</p>
-
-            <p>There's lots of future work to be done, including: a) more fine-grained analysis such as most active day of the week, month, per year, etc..., b) exploring other data provided in the data set, c) adding fault tolerance.</p>
-
-            <a class="button button-glass about-button-secondary" ui-sref="eb.facebook">Facebook Project Page</a>
-
-            <p>Visit the repo: <br/>
-                <a href="https://github.com/eburdon/FacebookDataAnalysis">Github: FacebookDataAnalysis</a>
-            </p>
-            <hr/>
-            <section class="block-list text-center"><header>Frequent Itemset Mining at Low support levels</header></section>
-            <hr/>
-            <p>
-                <img class="angular" src="images/icons/java.png" style="height:30px;margin:0;"/>
-                <img class="angular" src="images/icons/hadoop-history.png" style="height:30px;margin:0;"/>
-            </p>
-            <p>
-                Continued work on data mining and software engineering research already done in this field. Tried to improve performance for a new algorithm, a variant of the existing Apriori algorithm standard for calculating frequently co-occurring items in transactions. The new algorithm is an improvement by requiring a 1% support level instead of 5%. This change returns more useful items in a reccommendation system.
-            </p>
-
-            <p>
-                I tried to improve phase input partitioning by implementing a custom CombineInputFormat, RecordReader, RecordWriter, and OutputFormat. If successful, the solution would merge files generated from each map cluster (potentially exponentially larger than others) into one, then resplit evenly onto the next map cluster. This would evenly distribute the workload between servers and improve performance while maintaining a total order.
-            </p>
-            
-            <p>
-                Data set: Retail.dat. Written in: Java. Supporting Framework: Apache Hadoop
-            </p>
-            
-            <p>This is a private repo.</p>
-            <hr/>
-            <section class="block-list text-center"><header>erikaburdon.ca Android App</header></section>
-            <hr/>
-            <p>
-                <img class="android" src="images/icons/android.png"  style="height:25px;margin:0;"/>
-            </p>
-            <p>
-                Creating a simple Android app that will use a CRUD endpoint to manipulate data. This data will be available real-time on this site.
-            </p>
-            <p>This is a private repo (for now).</p>
-            <hr/>
-            <section class="block-list text-center"><header>Arduino Madness</header></section>
-            <hr/>
-            <p>
-                <img class="angular" src="images/icons/arduino.png" style="height:30px;margin:0;"/>
-            </p>
-            <p>Tinkering with the Arduino Starter Kit and other sensors to build small embedded systems that use the microprocessor. I hope to expand this into a smart-mirror project.</p>
-        </div>
-    </div>
-
-    <div class="separator-container">
-        <div class="separator-right" style="opacity: 1.0;"></div>
-        <div class="separator-right" style="opacity: 0.7;"></div>
-        <div class="separator-right" style="opacity: 0.5;"></div>
-        <div class="separator-right" style="opacity: 0.3;"></div>
-        <div class="separator-right" style="opacity: 0.1;"></div>
-    </div>
-
-    <div class="grid-content work-history home-content-block">
-        <h3>A Brief History...</h3>
-        <div class="grid-block wh-item wh-skio medium-horizontal small-vertical">
-            <div class="grid-block vertical medium-3">
-                <div class="grid-container"><img src="images/icons/skio-music-logo.png" /></div>
-                <div class="grid-container"><img src="images/icons/skio-rising-tier.png" /></div>
-                <div class="grid-container">
-                    <a class="button button-glass about-button-secondary" href="https://app.skiomusic.com/" target="_blank">Platform</a>
-                </div>
-                <div class="grid-container">
-                    <a class="button button-glass about-button-secondary" href="https://skiomusic.com/" target="_blank">Corporate Site</a>
-                </div>
-            </div>
-
-            <div class="grid-block vertical medium-9">
-                <p class="wh-title">SKIO Music | <b>Software Developer</b></p>
-                <p class="wh-dates">April 2015 - Present <br> Canada<p>
-                <p class="quote">
-                    <i class="fa fa-quote-left"></i> At SKIO we believe in simplicity and creativity. So, we’ve made it easier to collaborate with anyone, anywhere, and anytime you like. Share music with artists and producers from around the world; find inspiration in their sounds and let them bring yours to new markets and genres. <i class="fa fa-quote-right"></i>
-                </p>
-                <p>
-                    At SKIO, I took on a full-stack software development role with tasks such as data mangement (with AWS, Postgres, and scalability considerations), unit testing and continuous integration, and contributing to a robust transactional email framework. I started here as a co-op student, but was brought on full time while finishing my degree in Software Engineering.
-                </p>
-            </div>
-        </div>
-        <div class="grid-block wh-item wh-tud medium-horizontal small-vertical">
-            <div class="grid-block vertical medium-3">
-                <div class="grid-container"><img src="images/icons/tud-logo.png" /></div>
-                <div class="grid-container"><img src="images/icons/emoflon-logo.png" /></div>
-                <div class="grid-container">
-                    <a class="button button-glass about-button-secondary" href="http://www.emoflon.org/emoflon/" target="_blank">eMoflon Research</a>
-                </div>
-                <div class="grid-container">
-                    <a class="button button-glass about-button-secondary" href="http://www.tu-darmstadt.de/" target="_blank">TU Darmstadt</a>
-                </div>
-            </div>
-            <div class="grid-block vertical medium-9">
-                <p class="wh-title">Technische Universitaet Darmstadt | <b>Junior Developer</b></p>
-                <p class="wh-dates">October 2013 - April 2014 <br> Germany<p>
-                <p class="quote">
-                    <i class="fa fa-quote-left"></i> eMoflon is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating  EMF-compliant Java code from your model. <i class="fa fa-quote-right"></i>
-                </p>
-                <p>
-                    TUD offered me my first international experience, and I was brought on as a co-op student to assist a team of graduate students on their research project. Their tool addresses topics such as Story Driven Modeling (SDM) and Triple Graph Grammars (TGGs). I contributed by drafting a 7-part tutorial handbook, extending Eclipse plug-ins that worked with the tool, and co-hosting a workshop (English only). Everything's published online, and you can find my work on their research page.
-                </p>
+        <div class="grid-content v-align">
+            <div class="tagline-title align-center text-center">
+                <h1>I love <span>BIG</span> ideas</h1>
+                <a class="contact-link" href="mailto:erikaeburdon@gmail.com">erikaeburdon@gmail.com</a>
             </div>
         </div>
     </div>

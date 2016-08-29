@@ -1,0 +1,59 @@
+.career-page {
+    .page-content {
+        overflow-x: hidden;
+    }
+
+    .title-block {
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+
+    .wh-item {
+        padding-top: 3em;
+
+        .wh-company {
+            display: inline;
+        }
+
+        .wh-images {
+            padding-left: 1em;
+            padding-right: 1em;
+
+            margin-left: 1em;
+            margin-right: 1em;
+
+            .wh-image {
+                margin-bottom: 2em;
+                text-align: center;
+
+                img {
+                    max-width: 75%;
+                }
+            }
+
+            .secondary-image {
+                img {
+                    max-width: 50%;
+                }
+            }
+        }
+
+        .wh-action {
+            text-align: center;
+
+            a {
+                width: 150px;
+            }
+        }
+
+        .wh-content {
+            margin-left: 1em;
+            
+            p {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+    }
+
+}
