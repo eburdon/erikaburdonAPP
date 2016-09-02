@@ -49,6 +49,7 @@
 
         h1 {
             line-height: 75%;
+            display:inline-block;
         }
 
         p {
@@ -57,6 +58,12 @@
 
         .active-title {
             margin-left: 4em;
+
+            .button {
+                background-color: whitesmoke;
+                float: right;
+                display: inline;
+            }
         }
     }
 
