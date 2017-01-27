@@ -36,6 +36,10 @@
         background-color: $eb-base-light;
     }
 
+    .github-image-content p {
+        text-align:center;
+    }
+
     .item-block {
         margin-bottom: 2em;
         margin-right: 4em;
@@ -56,12 +60,8 @@
             }
 
             .button {
-                background-color: whitesmoke;
+                background-color: white;
                 margin-top: 1em;
-
-                &:hover {
-                    background-color: $eb-accent;
-                }
             }
         }
     }

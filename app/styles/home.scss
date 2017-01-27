@@ -29,6 +29,7 @@
 
             .name-title {
                 width: 100%;
+                h1 { color: black; }
             }
 
             .more-button {
@@ -45,22 +46,22 @@
 
             background-color: $eb-base-light;
 
-            
-                img {
-                    height: 40px;
-                    margin: 0.75em;
-                }
+            img {
+                height: 40px;
+                margin: 0.75em;
+            }
 
-                .button {
-                    margin-top: 1em;
-                }
+            .button {
+                margin-top: 1em;
+                background-color: #B9D8ED;
+            }
         }
     }
 
     .splash-block {
-        background-image: url('https://source.unsplash.com/HGzfUfk65uo'); 
+        background-image: url('https://source.unsplash.com/uZxT3njDQYc'); 
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
 
         h1 {
             color: white;
@@ -70,19 +71,10 @@
             }
         }
 
-        .contact-link {
-            color: $eb-base-light;
-            margin: 2em;
-            text-align: right;
-
-            &:hover {
-                text-decoration:none;
-                color: whitesmoke;
-            }
-        }
-
-        .tagline-title {
-            width: 100%;
+        a {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 }

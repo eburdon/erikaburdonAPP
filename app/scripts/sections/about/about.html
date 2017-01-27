@@ -37,10 +37,9 @@
                     </p>
                 </div>
 
-                <div class="grid-content medium-12 large-3">
-                    <p style="text-align:center;">
+                <div class="grid-content medium-12 large-3 github-image-content">
+                    <p>
                         <img class="about-image" ng-show="aboutVM.githubImage" src="{{aboutVM.githubImage}}"/>
-
                         <img class="university-image" src="images/icons/uvic-full-logo.png"/>
                     </p>
                 </div>
@@ -51,7 +50,7 @@
 
             <div class="connect-title grid-block">
                 <div class="grid-content">
-                    <h2>Connect</h2>
+                    <h2>Contact</h2>
                 </div>
             </div>
 
@@ -71,7 +70,7 @@
                                 <div class="grid-block v-align">
                                     <p class="align-left">
                                         <strong>{{item.USERNAME}}</strong> <br/>
-                                        <a class="button" href="{{item.LINK}}" target="_blank">{{item.LINK_TEXT}}</a>
+                                        <a class="button" href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">{{item.LINK_TEXT}}</a>
                                     </p>
                                     <p class="more-info align-right">
                                         <span ng-if="item.STATS" ng-repeat="stat in item.STATS">

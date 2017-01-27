@@ -1,13 +1,15 @@
 @import 'mixins';
 @import 'variables';
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     color: $eb-text-color;
     font-family: $eb-font-family;
 }
 
 p {
     @include font-size($p-font-sizes);
+    color: $eb-paragraph-color;
+    font-family: $eb-font-family;
 }
 
 .button {
@@ -15,7 +17,7 @@ p {
     min-width: 6em;
     border-radius: 10px;
     border: 1px solid $eb-border;
-    background-color: $eb-accent;
+    background-color: white;
     color: $eb-text-color;
 
     &:hover {
@@ -30,18 +32,22 @@ p {
 }
 
 .page {
-    background-color: whitesmoke;
+    background-color: white;
 
-    p, h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
         color: $eb-text-color;
     }
 
+    p {
+        color: $eb-paragraph-color;
+    }
+
     .nav-bar {
-        background-color: $eb-base-blue;
+        background-color: $eb-base-light;
         min-height: 4em;
 
         * {
-            background-color: $eb-base-blue;
+            background-color: $eb-base-light;
         }
 
         h4, a {
@@ -49,7 +55,7 @@ p {
             font-weight: 700;
             &:hover {
                 text-decoration: none;
-                background-color: $eb-base-blue;
+                background-color: $eb-base-light;
             }
         }
 

@@ -6,9 +6,9 @@
         .module('about')
         .controller('EbAboutController', EbAboutController);
 
-        EbAboutController.$inject = ['settings', 'helperFactory', 'connectConstants', 'socialService'];
+        EbAboutController.$inject = ['helperFactory', 'connectConstants', 'socialService'];
 
-        function EbAboutController(settings, helperFactory, connectConstants, socialService) {
+        function EbAboutController(helperFactory, connectConstants, socialService) {
 
             var vm = this;
 

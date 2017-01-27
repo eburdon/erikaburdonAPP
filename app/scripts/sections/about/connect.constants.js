@@ -31,7 +31,7 @@
                 USERNAME: '@OneEaredMusic',
                 LINK: 'https://twitter.com/OneEaredMusic',
                 LINK_TEXT: 'Tweet',
-                STATS: ['201 Tweets', '48 Followers', '193 Following '],
+                STATS: ['280 Tweets', '59 Followers', '224 Following '],
             },
         });
 })();
