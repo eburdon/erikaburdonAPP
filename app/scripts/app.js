@@ -69,7 +69,7 @@ angular
     /*
      * Execute app.
      */
-    .run(function($rootScope) {
+    .run(function($rootScope, $window, $location) {
         // Dump template errors
         $rootScope.$on('$stateChangeError', console.log.bind(console));
 
@@ -83,4 +83,17 @@ angular
         function(event, unfoundState, unfoundStateParams, fromState, fromParams, error){
           console.log('$stateNotFound', unfoundState, unfoundStateParams, fromState, fromParams, error);
         });
+
+        /* jshint ignore:start */
+        $rootScope.$on('$stateChangeSuccess', function(event) {
+            console.log('Sending tracking event', $location.path());
+
+            if (!$window.ga) {
+                console.log('Cannot find Google Analytics Tracking Object');
+                return;
+            }
+
+            $window.ga('send', 'pageview', $location.path());
+        });
+        /* jshint ignore:end */
     });
