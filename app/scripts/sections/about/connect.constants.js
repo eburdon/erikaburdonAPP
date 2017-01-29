@@ -2,6 +2,7 @@
 
     'use strict';
 
+    // This file composes default values for the social services
     angular
         .module('about')
         .constant('connectConstants', {
@@ -31,7 +32,7 @@
                 USERNAME: '@OneEaredMusic',
                 LINK: 'https://twitter.com/OneEaredMusic',
                 LINK_TEXT: 'Tweet',
-                STATS: ['280 Tweets', '59 Followers', '224 Following '],
+                STATS: ['285 Tweets', '58 Followers', '225 Following '],
             },
         });
 })();

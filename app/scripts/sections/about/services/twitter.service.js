@@ -10,6 +10,10 @@
 
         twitterService.$inject = ['$q', '$base64', 'helperFactory', 'settings'];
 
+        // TODO: MOVE TWITTER SERVICE TO BACKEND
+        // Twitter API does not support CORS request (sent from browser)
+        // The following only works on chromium-browser running with
+        // --disable-web-security --user-data-dir
         function twitterService($q, $base64, helperFactory, settings) {
 
             var authorizationResult = false;
