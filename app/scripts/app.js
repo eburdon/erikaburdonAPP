@@ -84,16 +84,12 @@ angular
           console.log('$stateNotFound', unfoundState, unfoundStateParams, fromState, fromParams, error);
         });
 
-        /* jshint ignore:start */
         $rootScope.$on('$stateChangeSuccess', function(event) {
-            console.log('Sending tracking event', $location.path());
-
             if (!$window.ga) {
-                console.log('Cannot find Google Analytics Tracking Object');
+                console.log('Cannot find Google Analytics Object');
                 return;
             }
 
             $window.ga('send', 'pageview', $location.path());
         });
-        /* jshint ignore:end */
     });

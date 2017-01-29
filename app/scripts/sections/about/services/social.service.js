@@ -7,11 +7,12 @@
         ])
         .factory('socialService', socialService);
 
-        socialService.$inject = ['$q', 'helperFactory'];
+        socialService.$inject = ['$q', 'helperFactory', 'twitterService'];
 
-        function socialService($q, helperFactory) {
+        function socialService($q, helperFactory, twitterService) {
 
             var service = {
+                getGitHubInformation: getGitHubInformation,
                 createSocialObject: createSocialObject,
             };
 
@@ -20,10 +21,10 @@
             ////////
 
             function createSocialObject(network) {
-
                 var builder,
                     networkBuilders = {
-                        'GitHub': triggerGitHubBuild
+                        'GitHub': triggerGitHubBuild,
+                        'Twitter': triggerTwitterBuild
                     }
 
                 builder = networkBuilders[network];
@@ -33,13 +34,27 @@
                 return builder();
             }
 
+            /////// GITHUB
+
+            function getGitHubInformation() {
+                var GitHubUsername = 'eburdon';
+                var deferred = $q.defer()
+
+                var url = 'https://api.github.com/users/' + GitHubUsername;
+
+                helperFactory.getRequest(url).then(function(data) {
+                    deferred.resolve(data)
+                });
+
+                return deferred.promise;
+            }
+
             function triggerGitHubBuild() {
                 var promise, dataPromise;
 
                 promise = $q.defer();
 
-                dataPromise = helperFactory
-                    .getGitHubInformation()
+                dataPromise = getGitHubInformation()
                     .then(function(data) { 
                         var what = buildGitHubObject(data);
                         promise.resolve();
@@ -50,8 +65,7 @@
             }
 
             function buildGitHubObject(data) {
-
-                var GITHUB = {
+                return {
                     USERNAME: data.name,
                     LINK: data.html_url,
                     STATS: [
@@ -60,8 +74,35 @@
                         data.followers + ' Followers',
                     ],
                 };
+            }
 
-                return GITHUB;
+            /////// TWITTER
+
+            function triggerTwitterBuild() {
+                var promise, dataPromise;
+
+                promise = $q.defer();
+
+                dataPromise = twitterService
+                .getTwitterInformation()
+                .then(function(data) {
+                    var what = buildTwitterObject(data);
+                    promise.resolve();
+                    return what;
+                });
+
+                return dataPromise;
+            }
+
+            function buildTwitterObject(data) {
+                return {
+                    USERNAME: '@' + data.screen_name,
+                    STATS: [
+                        data.statuses_count + ' Tweets',
+                        data.followers_count + ' Followers',
+                        data.friends_count + ' Following'
+                    ]
+                }
             }
         };
 })();

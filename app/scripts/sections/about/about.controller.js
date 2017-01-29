@@ -23,14 +23,18 @@
             activate();
 
             function activate() {
-
                 angular.copy(vm.constants, vm.socialItems);
 
-                helperFactory
+                socialService
+                    .createSocialObject('Twitter')
+                    .then(function(result) { angular.extend(vm.socialItems.TWITTER, result)});
+
+                socialService
                     .getGitHubInformation()
                     .then(function(githubInfo) { vm.githubImage = githubInfo.avatar_url; });        
-            
-                socialService.createSocialObject('GitHub')
+
+                socialService
+                    .createSocialObject('GitHub')
                     .then(function(result) { angular.extend(vm.socialItems.GITHUB, result)});
             }
         }
