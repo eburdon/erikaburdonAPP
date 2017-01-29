@@ -69,7 +69,7 @@ angular
     /*
      * Execute app.
      */
-    .run(function($rootScope) {
+    .run(function($rootScope, $window, $location) {
         // Dump template errors
         $rootScope.$on('$stateChangeError', console.log.bind(console));
 
@@ -82,5 +82,14 @@ angular
         $rootScope.$on('$stateNotFound',
         function(event, unfoundState, unfoundStateParams, fromState, fromParams, error){
           console.log('$stateNotFound', unfoundState, unfoundStateParams, fromState, fromParams, error);
+        });
+
+        $rootScope.$on('$stateChangeSuccess', function(event) {
+            if (!$window.ga) {
+                console.log('Cannot find Google Analytics Object');
+                return;
+            }
+
+            $window.ga('send', 'pageview', $location.path());
         });
     });
