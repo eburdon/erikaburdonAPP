@@ -1,0 +1,16 @@
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'shared';
+@import 'variables';
+
+.simple-home {
+	
+}
+
+.simple-home .splash-block { 
+    background-image:url('https://source.unsplash.com/GYumuBnTqKc/500x500');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
