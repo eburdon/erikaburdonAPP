@@ -4,47 +4,67 @@
 @import 'variables';
 
 .simple-home {
-	.element {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-	.email {
-		margin: auto;
-		color: #ADAFBC;
-	}
-}
+    background-color: $body-background;
+    overflow-y: hidden;
 
-.simple-home .splash-block { 
-    background-image:url('https://source.unsplash.com/GYumuBnTqKc/600x600');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    // height:600px;
-    height: 120px;
-    z-index:10;
-    // width: 500px;
-    // height: 500px;
-}
+    p {
+        color: $body-font-color;
+    }
 
-.simple-home .color-block {
-	// mobile first design
-	background-color: #9B776A;
-	// height:150px;
-	height: 50px;
-	width:100%;
-	margin-top: 30px;
-}
+    .element {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
 
-.simple-home .businesscard-block {
-	h1 {
-		margin:auto;
-		margin-bottom: 1rem;
-	}
-	margin-top: 2rem;
-}
+        @include breakpoint(medium) {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    .email {
+        margin: auto;
+        color: $subheader-font-color;
+    }
 
-.simple-home .page-link {
-	font-size: 24px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+    .splash-block { 
+        background-image:url('https://source.unsplash.com/HAKTHWgeDWE/400x400');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 120px;
+        z-index:10;
+
+        @include breakpoint(medium) {
+            height:400px;
+        }
+    }
+
+    .color-block {
+        background-color: $primary-color;
+        height: 50px;
+        width:100%;
+        margin-top: 30px;
+
+        @include breakpoint(medium) {
+            height:125px;
+        }
+    }
+
+    .businesscard-block {
+        h1 {
+            margin:auto;
+            margin-bottom: 1rem;
+            color: $header-font-color;
+        }
+        
+        p {
+            font-size: 18px;
+            width: 100%;
+        }
+    }
+
+    .page-link {
+        font-size: 24px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }

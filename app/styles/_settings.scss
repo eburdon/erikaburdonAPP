@@ -90,15 +90,15 @@
 // $font-weight-bold: bold;
 
 // We use these to control various global styles
-// $body-background: #fff;
-// $body-font-color: #222;
+$body-background: #f2f9ff;
+$body-font-color: #192224;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
-// $primary-color: #00558b;
+$primary-color: #69A1A9;
 // $secondary-color: #f1f1f1;
 // $alert-color: #F04124;
 // $info-color: #A0D3E8;
@@ -139,7 +139,7 @@ $breakpoint-classes: (small medium large);
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
-// $header-font-color: #222;
+$header-font-color: #192224;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -163,7 +163,7 @@ $breakpoint-classes: (small medium large);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
-// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-color: #ADAFBC;
 // $subheader-font-weight: $font-weight-normal;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;

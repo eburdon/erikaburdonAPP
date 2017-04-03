@@ -2,13 +2,13 @@
 @import 'variables';
 
 h1, h2, h3, h4, h5, h6 {
-    color: $eb-text-color;
+    color: $header-font-color;
     font-family: $eb-font-family;
 }
 
 p {
     @include font-size($p-font-sizes);
-    color: $eb-paragraph-color;
+    color: $body-font-color;
     font-family: $eb-font-family;
 }
 
@@ -32,29 +32,31 @@ p {
 }
 
 .page {
-    background-color: white;
-
     h1, h2, h3, h4, h5, h6 {
-        color: $eb-text-color;
+        color: $header-font-color;
     }
 
     p {
-        color: $eb-paragraph-color;
+        color: $body-font-color;
     }
 
     .nav-bar {
-        background-color: $eb-base-light;
-        min-height: 4em;
-
+        background-color: $primary-color;
         * {
-            background-color: $eb-base-light;
+            background-color: $primary-color;
+        }
+
+        a {
+            font-size: 14px;
         }
 
         h4, a {
             color: whitesmoke;
             font-weight: 700;
+
             &:hover {
                 text-decoration: none;
+                font-size: 14px;
                 background-color: $eb-base-light;
             }
         }

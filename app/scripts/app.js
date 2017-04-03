@@ -14,6 +14,7 @@ angular
         'ngTouch',
         'about',
         'career',
+        'contact',
         'home',
         'projects',
         'facebook',

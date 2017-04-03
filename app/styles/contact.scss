@@ -1,0 +1,19 @@
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'shared';
+@import 'variables';
+
+.contact-page {
+	background-color: $body-background;
+    overflow-y: hidden;
+
+    .social-block {
+    	margin-left: 2rem;
+    }
+
+    .social-details {
+		span {
+			margin-right: 1rem;
+		}
+	}
+}
