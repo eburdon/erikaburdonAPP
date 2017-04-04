@@ -86,9 +86,8 @@
                     </p>
                 </div>
             </div>
-        </div>
 
-        <div class="project-cards grid-block align-center">
+
             <div class="card">
                 <img src="images/thumbnails/distributed.png"/>
 
@@ -117,7 +116,7 @@
                 </div>
             </div>
 
-           <div class="card">
+            <div class="card">
                 <img src="images/thumbnails/frequent.png"/>
 
                 <div class="card-divider">
@@ -156,12 +155,6 @@
                 </div>
             </div>
 
-        </div>
-
-        <div class="project-cards grid-block align-center">
-
-            
-
             <div class="card">
                 <img src="images/thumbnails/evolution_hub.png"/>
                 <div class="card-divider">
@@ -196,26 +189,153 @@
                         Tinkering with the Arduino Starter Kit and other sensors to build small embedded systems that use the microprocessor. I plan to extend this into a custom smart-mirror project to include more hardware work.
                     </p>
                 </div>
-            </div>      
+            </div>              
+        </div>
+
+        <div class="project-cards grid-block align-center">
+            <!-- <div class="card">
+                <img src="images/thumbnails/distributed.png"/>
+
+                <div class="card-divider">
+                    Data Mining
+                </div>
+
+                <div class="card-section">
+                    <h4>Big Data / MapReduce analysis: Implementing a Microservice</h4>
+                    <p>
+                        Any user can download their personal Facebook information from the settings page. Using some of this data, this project analyzes their message habits and their top 3 messenger friends.
+                    </p>
+                    <p>
+                        The first iteration of this project implemented MapReduce to analyze message history. Written in Go, this distributes and parallelizes processing of their data since the day they joined Facebook. Data is stored in-memory using an efficient Prefix Trie. The final output is a pie chart of their most active hours.
+                    </p>
+                    <p>
+                        The second iteration is proof-of-concept that implements a server-based microservice architecture. Users upload their file via the front-end, which triggers pre-processing on an EC2 instance, followed by MapReduce on an EMR cluster, and finally post-processing on the same EC2 instance to generate a png graph. This graph is displayed in-context on the upload page.
+                    </p>
+                    <p>
+                        Finally, the third iteration hopes to implement a serverless microservice using Amazon Lambda to trigger the EC2 processing and EMR analysis.
+                    </p>
+                    <p>
+                        <a class="button" ui-sref="eb.facebook">Project Page</a>
+                        <a class="button" target="_blank" href="https://github.com/eburdon/FacebookDataAnalysis" rel="noopener noreferrer">Repository</a>
+                    </p>
+                </div>
+            </div> -->
+
+           <!-- <div class="card">
+                <img src="images/thumbnails/frequent.png"/>
+
+                <div class="card-divider">
+                    Data Analysis and Distributed Computing
+                </div>
+
+                <div class="card-section">
+                    <h4>Frequent Itemset Mining with 1% support</h4>
+                    <p>
+                        I continued work on data mining and software engineering research already done in this field. I tried to improve the performance of a new algorithm, a variant of the existing Apriori algorithm standard for calculating frequently co-occurring items in transactions. The new algorithm is an improvement by requiring a 1% support level instead of 5%. Ultimately, this change returns significantly more useful results for use in, for example, a reccommentation system.
+                    </p>
+                    <p>
+                        My changes included implementing a custom RecordReader, RecordWriter, CombineInputFormat, and custom OutputFormat to merge the results for each Mapping phase into one file to be evenly resplit onto several mappers (while maintaining a global ordering), instead of having several mappers excute on wildly different file sizes. This was done in Java using the Apache Hadoop framework. This project and repository are private.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/thumbnails/word_of_day.png"/>
+                <div class="card-divider">
+                    Python GUI and Automatic Scripting Program
+                </div>
+
+                <div class="card-section">
+                    <h4>Word-of-the-day Email Parser</h4>
+                    <p>
+                        To increase exposure to German while living abroad, I subscribed to a mailing list that sent up to 2 emails per day. The message included a new vocabulary word, its translation, and example sentence in both German and English.
+                    </p>
+                    <p>
+                        I wrote a script to parse each email into a text file to study later, then delete the email from my inbox. Result included a Python GUI to do things such as: enter email login information, select either POP3 or IMAP access to the inbox, and save file location.
+                    </p>
+                    <p>
+                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/TransparentLanguage_EmailParser">Project Repository</a>
+                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/TransparentLanguage_EmailParser/wiki/Screenshots">Tutorial (Screenshots)</a>
+                    </p>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="project-cards grid-block align-center">
+
+            
+
+            <!-- <div class="card">
+                <img src="images/thumbnails/evolution_hub.png"/>
+                <div class="card-divider">
+                    Software Evolution Challenge: Research Platform
+                </div>
+
+                <div class="card-section">
+                    <h4>The Evolution of Python</h4>
+                    <p>
+                        As part of a research effort, students needed to create an automatic tool, script, or method to investigate a code base to see how it evolved over time. Each product needed to present a textual description and visual result of its findings.
+                    </p>
+                    <p>
+                        In addition to analyzing the evolution of Python, my team built a single-page Angular app to unify each team's research into one cohesive tool. It also provided a single place to find resources such as papers and lectures related to the topic. User are able to search for any of the 10 tools - either by codebase or language - and execute them from the app. The complete results would be displayed in-browser.
+                    </p>
+                    <p>
+                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/EvolutionHub">Project Repository</a>
+                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/EvolutionHub/wiki/A-screenshot-demonstration">Tutorial (Screenshots)</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/thumbnails/mirror.png"/>
+
+                <div class="card-divider">
+                    Arduino Madness / Smart Mirror
+                </div>
+
+                <div class="card-section">
+                    <h4>Exploring Microcontrollers</h4>
+                    <p>
+                        Tinkering with the Arduino Starter Kit and other sensors to build small embedded systems that use the microprocessor. I plan to extend this into a custom smart-mirror project to include more hardware work.
+                    </p>
+                </div>
+            </div>   -->    
         </div>
 </div>
 
         <div class="grid-content small-12 medium-2">
             <h4>LANGUAGES</h4>
-            <ul>
+            <ul style="list-style: none">
                 <li>Java</li>
-                <li>C</li>
+                <li>C / C++</li>
                 <li>Go</li>
                 <li>JavaScript</li>
-                <li>...</li>
+                <li>Python</li>
+            </ul>
+
+            <hr/>
+
+            <h4>FRAMEWORKS</h4>
+            <ul style="list-style: none">
+                <li>Angular</li>
+                <li>Sass</li>
+                <li>Hadoop</li>
             </ul>
 
             <hr/>
 
             <h4>OTHER EXPERIENCES</h4>
-            <ul>
+            <ul style="list-style: none">
                 <li>Embedded Systems</li>
                 <li>Real Time Operating Systems</li>
+                <li>AWS <ul style="list-style: none">
+                    <li><em>S3</em></li>
+                    <li><em>EMR</em></li>
+                    <li><em>DynamoDB</em></li>
+                    <li><em>ElasticBeanstalk </em></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 

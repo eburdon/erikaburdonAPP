@@ -45,8 +45,6 @@
                 angular.copy(vm.weblinks.BLOGS, vm.bloglinks);
                 angular.copy(vm.weblinks.YOUTUBE, vm.youtubelinks);
                 angular.copy(vm.weblinks.STACKEXCHANGE, vm.stacklinks);
-
-                console.log(vm.youtubelinks);
             }
         };
 })();
