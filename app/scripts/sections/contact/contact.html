@@ -14,47 +14,55 @@
     </div>
 
     <div class="grid-block vertical medium-horizontal">
-        <div class="grid-block small-12 medium-6 vertical">
-            <div class="connect-title grid-content">
-                <h2>Contact</h2>
-            </div>
 
-            <div class="grid-block vertical social-block">
-                 <div class="item-block grid-block vertical" ng-repeat="item in contactVM.socialItems" style="font-color:black">
-                    <div class="grid-block vertical social-details">
-                        <p>
-                            <span><i class="icon fa fa-1x {{item.ICON}}"></i></span>
-                            <span><strong>{{item.NAME}}</strong></span>
-                            <span><strong>{{item.USERNAME}}</strong></span>
-                            <span><a href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">{{item.LINK_TEXT}}</a></span>
-                        </p>
-                        <p style="font-style: italic; font-size: 14px;"> 
-                            <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
-                            {{stat}}</span>
-                            <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}</span>
-                        </p>
-                    </div>
-                </div>
+        <div class="grid-block small-12 medium-6 vertical">
+            <div class="grid-content title"><h2>CONTACT</h2></div>
+
+             <div class="grid-block vertical block-content" ng-repeat="item in contactVM.socialItems">
+                <p>
+                    <span><i class="icon fa fa-1x {{item.ICON}}"></i></span>
+                    <span><strong>{{item.NAME}}</strong></span>
+                    <span><strong>{{item.USERNAME}}</strong></span>
+                    <span><a href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">{{item.LINK_TEXT}}</a></span>
+                </p>
+                <p style="font-style: italic; font-size: 14px;"> 
+                    <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
+                    {{stat}}</span>
+                    <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}</span>
+                </p>
             </div>
         </div>
 
-        <div class="grid-content small-12 medium-6">
-            <div class="connect-title grid-content">
-                <h2>Around the Web</h2>
+        <div class="grid-content small-12 medium-6 vertical">
+            <div class="grid-content title"><h2>AROUND THE WEB</h2></div>
+
+            <div class="grid-block vertical block-content">
+                <p><i class="fa fa-youtube fa-2x" aria-hidden="true"></i> YOUTUBE</p>
+                <p ng-repeat="item in contactVM.youtubelinks">
+                    <strong>{{item.SERIES}}</strong> | Host: {{item.HOST}} <br/>
+                    <a href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">{{item.TITLE}}</a>
+                </p>
+
+                <hr/>
+
+                <p><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i> STACK EXCHANGE</p>
+                <p ng-repeat="item in contactVM.stacklinks">
+                    <strong>{{item.NAME}} </strong> {{item.POINTS}} Points <br/>
+                    <a href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">Developer Profile</a>
+                </p>
+
+                <hr/>
+
+                <div ng-repeat="item in contactVM.bloglinks">
+                    <p>
+                        <i class="fa fa-square" aria-hidden="true"></i>
+                        BLOG: <a href="{{item.link}}" target="_blank" rel="noopener noreferrer">{{item.NAME}}</a>
+                    </p>
+                    <p ng-if="item.POSTS" ng-repeat="post in item.POSTS">
+                        <a href="{{post.LINK}}" target="_blank" rel="noopener noreferrer">{{post.TITLE}}</a>
+                    </p>
+                </div>
             </div>
-
-            <p><i class="fa fa-youtube fa-2x" aria-hidden="true"></i> YOUTUBE</p>
-            <p>Girls Talk Code</p>
-
-            <p><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i> STACK OVERFLOW</p>
-            <p>71 Points | <a href="">developer profile</a></p>
-
-            <p><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i> STACK CODE REVIEW</p>
-            <p>103 Points | <a href="">developer profile</a></p>
-
-            <p><i class="fa fa-square" aria-hidden="true"></i>
-            DEV.TO</p>
-            <p><a href="">What Does It Mean to be a Software Engineer?</a></p>
-        </div>    
+        </div>  
     </div>
 </div>

@@ -1,27 +1,31 @@
-<div class="page projects-page grid-frame vertical align-center">
+<div class="grid-block vertical page projects-page align-center">
     <!-- A SQL statement walks into a bar, walks up to two tables and says "Can I join you?" -->
     
     <div class="nav-bar menu-group">
-
         <ul class="nav-bar menu-bar brand-name">
-            <li><h4>erikaburdon</h4></li>
+            <li><h4>ERIKA BURDON</h4></li>
         </ul>
 
         <ul class="nav-bar menu-bar">
             <li><a ui-sref="eb.home">Home</a></li>
+            <li><a ui-sref="eb.about">About</a></li>
+            <li><a ui-sref="eb.career">Career</a></li>
+            <li><a ui-sref="eb.contact">Contact</a></li>
         </ul>
     </div>
 
-    <div class="grid-content">
-        <div class="projects-title grid-block vertical">
-            <div class="active-title grid-content">
-                <p>ea9f6b7: fixed that particular bug</p>
-                <h1>Projects</h1>
-                <a class="button" href="https://github.com/eburdon" target="_blank" rel="noopener noreferrer">See me on GitHub</a>
-                <a class="button" href="https://eburdon.github.io" target="_blank" rel="noopener noreferrer">Visit my blog</a>
-            </div>
+    <div class="projects-title grid-block small-12 vertical">
+        <div class="active-title grid-content">
+            <p>ea9f6b7: fixed that particular bug</p>
+            <h1>Projects</h1>
+            <a class="float-right" style="margin-right: 6em;" href="{{projectsVM.github.LINK}}" target="_blank" rel="noopener noreferrer"><i class="fa fa-5x fa-github-square"></i></a>
+            <a class="float-right" style="margin-right: 6em;" href="{{projectsVM.linkedin.LINK}}" target="_blank" rel="noopener noreferrer"><i class="fa fa-5x fa-linkedin-square"></i></a>
         </div>
+    </div>
 
+    <div class="grid-block">
+    
+    <div class="grid-content medium-10 small-12">
         <div class="project-cards grid-block align-center">
             <div class="card">
                 <img src="images/thumbnails/webapp.png"/>
@@ -32,7 +36,7 @@
                 <div class="card-section">
                     <h4>APP and API</h4>
                     <p>
-                        This is my playground! I've kept a focus on iteration and good coding standards. Front end is minimal UI and mobile focused. Built using AngularJS, Sass, and Foundation for Apps. Back end has switched from Scala onto Python/Bottle, depending on the active project. I hope to play with Haskell, C, and Go. I'm also using several AWS services to host the data and tools.
+                        <strong>This is my playground! </strong>I've kept a focus on iteration and good coding standards. Front-end is minimal UI and mobile focused. Built using AngularJS, Sass, and Foundation for Apps. Back-end has switched from Scala onto Python/Bottle, depending on the active project. I hope to play with Haskell, C, and Go. I'm also using several AWS services to host the data and tools. Every couple of months, I come back to clean up some code smells.
                     </p>
                     <p>
                         <a class="button" target="_blank" href="https://github.com/eburdon/erikaburdonAPP" rel="noopener noreferrer">App Repository</a>
@@ -60,10 +64,36 @@
             </div>
 
             <div class="card">
+                <!-- <img src="images/thumbnails/distributed.png"/> -->
+
+                <div class="card-divider">
+                    Research and Development <span class="active-header">Active</span>
+                </div>
+
+                <div class="card-section">
+                    <h4>Personal Blog</h4>
+                    <p>
+                        This space is a mix of technical tutorials I've created when the ones I could find on the topic just weren't good enough, and of research series of things that interest me.
+                    </p>
+                    <p>
+                        Upcoming: <ul>
+                            <li><strong>MPI Tutorial</strong></li>
+                            <li><strong>Series:</strong> Differences between self-taught developer, computer scientists, and Software Engineer.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <a class="button" target="_blank" href="https://eburdon.github.io" rel="noopener noreferrer">Blog</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-cards grid-block align-center">
+            <div class="card">
                 <img src="images/thumbnails/distributed.png"/>
 
                 <div class="card-divider">
-                    Facebook Usage Analyzer
+                    Data Mining
                 </div>
 
                 <div class="card-section">
@@ -86,9 +116,6 @@
                     </p>
                 </div>
             </div>
-        </div>
-
-        <div class="project-cards grid-block align-center">
 
            <div class="card">
                 <img src="images/thumbnails/frequent.png"/>
@@ -104,27 +131,6 @@
                     </p>
                     <p>
                         My changes included implementing a custom RecordReader, RecordWriter, CombineInputFormat, and custom OutputFormat to merge the results for each Mapping phase into one file to be evenly resplit onto several mappers (while maintaining a global ordering), instead of having several mappers excute on wildly different file sizes. This was done in Java using the Apache Hadoop framework. This project and repository are private.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/thumbnails/evolution_hub.png"/>
-                <div class="card-divider">
-                    Software Evolution Challenge: Research Platform
-                </div>
-
-                <div class="card-section">
-                    <h4>The Evolution of Python</h4>
-                    <p>
-                        As part of a research effort, students needed to create an automatic tool, script, or method to investigate a code base to see how it evolved over time. Each product needed to present a textual description and visual result of its findings.
-                    </p>
-                    <p>
-                        In addition to analyzing the evolution of Python, my team built a single-page Angular app to unify each team's research into one cohesive tool. It also provided a single place to find resources such as papers and lectures related to the topic. User are able to search for any of the 10 tools - either by codebase or language - and execute them from the app. The complete results would be displayed in-browser.
-                    </p>
-                    <p>
-                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/EvolutionHub">Project Repository</a>
-                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/EvolutionHub/wiki/A-screenshot-demonstration">Tutorial (Screenshots)</a>
                     </p>
                 </div>
             </div>
@@ -149,9 +155,33 @@
                     </p>
                 </div>
             </div>
+
         </div>
 
         <div class="project-cards grid-block align-center">
+
+            
+
+            <div class="card">
+                <img src="images/thumbnails/evolution_hub.png"/>
+                <div class="card-divider">
+                    Software Evolution Challenge: Research Platform
+                </div>
+
+                <div class="card-section">
+                    <h4>The Evolution of Python</h4>
+                    <p>
+                        As part of a research effort, students needed to create an automatic tool, script, or method to investigate a code base to see how it evolved over time. Each product needed to present a textual description and visual result of its findings.
+                    </p>
+                    <p>
+                        In addition to analyzing the evolution of Python, my team built a single-page Angular app to unify each team's research into one cohesive tool. It also provided a single place to find resources such as papers and lectures related to the topic. User are able to search for any of the 10 tools - either by codebase or language - and execute them from the app. The complete results would be displayed in-browser.
+                    </p>
+                    <p>
+                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/EvolutionHub">Project Repository</a>
+                        <a class="button" target="_blank"  rel="noopener noreferrer" href="https://github.com/eburdon/EvolutionHub/wiki/A-screenshot-demonstration">Tutorial (Screenshots)</a>
+                    </p>
+                </div>
+            </div>
 
             <div class="card">
                 <img src="images/thumbnails/mirror.png"/>
@@ -167,6 +197,26 @@
                     </p>
                 </div>
             </div>      
+        </div>
+</div>
+
+        <div class="grid-content small-12 medium-2">
+            <h4>LANGUAGES</h4>
+            <ul>
+                <li>Java</li>
+                <li>C</li>
+                <li>Go</li>
+                <li>JavaScript</li>
+                <li>...</li>
+            </ul>
+
+            <hr/>
+
+            <h4>OTHER EXPERIENCES</h4>
+            <ul>
+                <li>Embedded Systems</li>
+                <li>Real Time Operating Systems</li>
+            </ul>
         </div>
 
     </div>

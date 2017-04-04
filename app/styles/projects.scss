@@ -5,34 +5,18 @@
 @import 'mixins';
 
 .projects-page {
-
+    background-color: $body-background;
     * {
-        background-color: white;
+        background-color: $body-background;
     }
 
-    h2, h3, h4, h5, h6 {
-        color: $eb-text-color;
-    }
+    // h2, h3, h4, h5, h6 {
+    //     color: $eb-text-color;
+    // }
 
-    p, h1 {
-        color: black;
-    }
-
-    .nav-bar {
-        min-height: 4em;
-
-        h4, a {
-            color: whitesmoke;
-            font-weight: 700;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        .brand-name {
-            margin-left: 4em;
-        }
-    }
+    // p, h1 {
+    //     color: black;
+    // }
 
     .projects-title {
         width: 100%;
@@ -64,7 +48,6 @@
             margin-left: 4em;
 
             .button {
-                background-color: white;
                 float: right;
                 display: inline;
             }
@@ -95,11 +78,7 @@
             }
 
             .card-section {
-                // background-color: white;
                 height: 100%;
-                // p {
-                    // color: black;
-                // }
             }
         }
     }

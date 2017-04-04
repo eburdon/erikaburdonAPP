@@ -5,11 +5,13 @@
     angular.module('career')
         .controller('EbCareerController', EbCareerController);
 
-    EbCareerController.$inject = []
+    EbCareerController.$inject = ['connectConstants']
 
-    function EbCareerController() {
+    function EbCareerController(connectConstants) {
 
     	var vm = this;
+
+        vm.linkedin = connectConstants.LINKED_IN;
 
     	$(document).ready(function(){
             $(this).scrollTop(0);

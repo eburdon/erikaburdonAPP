@@ -1,4 +1,4 @@
-<div class="page about-page grid-frame vertical align-center">
+<div class="grid-block vertical page about-page align-center">
     <!-- I'm glad I know Sign Language. It's pretty handy. -->
 
    <div class="nav-bar menu-group">
@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="about-page-content grid-content">
+    <div class="about-page-content">
         <div class="grid-block vertical">
             <div class="grid-block">
                 <div class="title-block grid-content">
@@ -25,15 +25,19 @@
             <div class="grid-block v-align">
                 <div class="text-content grid-content medium-12 large-9 align-middle">
                     <p>
-                        Expected to graduate in April 2017 from the University of Victoria in Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities, and returned to Canada to graduate, adopt a dog, and change the world!
+                        Graduating April 2017 from the University of Victoria with a Bachelor of Software Engineering, I'm currently working full time at an industry-changing startup in Vancouver, B.C. I'm a little bit front-end, a whole of lot back-end, and have worn a couple of different hats throughout the deployment and system architecture pipelines.
                     </p>
 
                     <p>
-                        I love sitting on the edge of my skill set. If you visit my <a ui-sref="eb.projects">Projects</a> page, you can see the latest things I've been working on. In my spare time, I like to rock out to the Killers, flex my skills, or leave it all behind and go camping.
+                        I started in computer science by attending various robot and coding events as a young girl. I've since worked internationally in Germany for a research team at one of the leading Universities and returned to Canada to graduate, adopt a dog, and change the world!
+                    </p>
+
+                    <p>
+                        I love sitting on the edge of my skill set. Check out my <a ui-sref="eb.projects">Projects</a> page to see the latest things I've been working on. In my spare time, I like to work on those, rock out to the Killers, or leave it all behind and go camping in the sun.
                     </p>
                         
                     <p>
-                        If you have a small project or volunteer opportunities for young women and students in Science and Engineering, feel free to get in touch! I'm looking for a range of projects to contribute to - open source or private - and to help encourage women and young students to enter the field.
+                        If you have a small project or volunteer opportunities to encourage young women and students enter Science and Engineering, feel free to get in touch! I'm always looking for a range of projects to contribute to.
                     </p>
                 </div>
 
@@ -44,48 +48,6 @@
                     </p>
                 </div>
             </div>
-        </div>
-
-        <div class="grid-block vertical">
-
-            <div class="connect-title grid-block">
-                <div class="grid-content">
-                    <h2>Contact</h2>
-                </div>
-            </div>
-
-             <div class="grid-block">
-                <div class="item-block grid-content" ng-repeat="item in aboutVM.socialItems">
-            
-                    <div class="card">
-                        <div class="card-divider">
-                             <div class="headline grid-content">
-                                <h4>{{item.NAME}}</h4>
-                                <p><i class="icon fa fa-2x {{item.ICON}}"></i></p>
-                            </div>
-                        </div>
-            
-                        <div class="card-section">
-                            <div class="item-block-content grid-content">
-                                <div class="grid-block v-align">
-                                    <p class="align-left">
-                                        <strong>{{item.USERNAME}}</strong> <br/>
-                                        <a class="button" href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">{{item.LINK_TEXT}}</a>
-                                    </p>
-                                    <p class="more-info align-right">
-                                        <span ng-if="item.STATS" ng-repeat="stat in item.STATS">
-                                        {{stat}}<br/></span>
-                                    </p>
-                                    <p class="keywords align-right">
-                                        <span ng-if="item.KEYWORDS" ng-repeat="keyword in item.KEYWORDS">{{keyword}}<br/></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>    
 </div>

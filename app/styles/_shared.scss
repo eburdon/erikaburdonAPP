@@ -15,20 +15,9 @@ p {
 .button {
     min-height: 2em;
     min-width: 6em;
-    border-radius: 10px;
-    border: 1px solid $eb-border;
-    background-color: white;
-    color: $eb-text-color;
-
-    &:hover {
-        text-decoration: none;
-        background-color: $eb-accent;
-    }
-
-    &:active, &:visited {
-        text-decoration: none;
-        color: $eb-text-color;
-    }
+    border: 1px solid $body-font-color;
+    background-color: $body-background;
+    color: $body-font-color;
 }
 
 .page {
