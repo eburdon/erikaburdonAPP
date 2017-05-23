@@ -86,11 +86,17 @@ angular
         });
 
         $rootScope.$on('$stateChangeSuccess', function(event) {
-            if (!$window.ga) {
-                console.log('Cannot find Google Analytics Object');
-                return;
-            }
+            // if (!$window.ga) {
+            //    console.log('Cannot find Google Analytics Object');
+            // }
 
-            $window.ga('send', 'pageview', $location.path());
+            ga(function(tracker) {
+              console.log(tracker.get('clientId'));
+            });
+
+            ga('set', 'page', '/new-page.html');
+            ga('send', 'pageview');
+
+            // $window.ga('send', 'pageview', $location.path());
         });
     });

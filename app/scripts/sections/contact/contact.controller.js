@@ -28,6 +28,15 @@
             activate();
 
             function activate() {
+                ga('send', 'pageview');
+                console.log('PAGEVIEW SENT');
+
+                var clientId;
+                ga(function(tracker) {
+                    tracker.get('clientId');
+                });
+                console.log(clientId);
+
                 angular.copy(vm.constants, vm.socialItems);
 
                 socialService
