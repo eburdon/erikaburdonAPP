@@ -20,6 +20,19 @@ p {
     color: $body-font-color;
 }
 
+.soft-button {
+    border-radius:5px;
+    border:2px solid #28AFB0;
+    background:white;
+    color:#37392E;
+    font-family: 'Roboto Condensed', sans-serif;
+    &:hover, &:visited, &:active {
+        text-decoration: none;
+        background:white;
+        color:#37392E;
+    }
+}
+
 .page {
     h1, h2, h3, h4, h5, h6 {
         color: $header-font-color;
@@ -31,6 +44,7 @@ p {
 
     .nav-bar {
         background-color: $primary-color;
+        opacity: 0.9;
         * {
             background-color: $primary-color;
         }

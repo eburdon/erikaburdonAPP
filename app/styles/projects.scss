@@ -10,14 +10,6 @@
         background-color: $body-background;
     }
 
-    // h2, h3, h4, h5, h6 {
-    //     color: $eb-text-color;
-    // }
-
-    // p, h1 {
-    //     color: black;
-    // }
-
     .projects-title {
         width: 100%;
         margin-top: 3em;
@@ -32,7 +24,7 @@
         h1 {
             margin: 0;
             padding: 0;
-            color: black;
+            color: $primary-color;
         }
 
         h1 {
@@ -67,13 +59,14 @@
             margin: 2em;
 
             .card-divider {
-                background-color: $eb-base-light;
+                font-family: 'Roboto Condensed', sans-serif;
+                background-color: $secondary-color;
             }
 
             .active-header {
                 font-weight: 700;
                 text-decoration: underline;
-                background-color: $eb-base-light;
+                background-color: $secondary-color;
                 float: right;
             }
 

@@ -65,4 +65,12 @@
             }
         }
     }
+
+    .polaroid {
+        border: 1px solid $eb-paragraph-color;
+        border-radius: 4px;
+        padding: 5px;
+        width: 300px;
+        transform: rotate(-7deg);
+    }
 }

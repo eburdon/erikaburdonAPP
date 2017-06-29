@@ -13,7 +13,7 @@
         </ul>
     </div>
 
-    <div class="grid-block vertical medium-horizontal">
+    <div class="grid-block vertical medium-horizontal" style="margin-top: 3rem;">
 
         <div class="grid-block small-12 medium-6 vertical">
             <div class="grid-content title"><h2>CONTACT</h2></div>
@@ -40,7 +40,7 @@
                 <p><i class="fa fa-youtube fa-2x" aria-hidden="true"></i> YOUTUBE</p>
                 <p ng-repeat="item in contactVM.youtubelinks">
                     <strong>{{item.SERIES}}</strong> | Host: {{item.HOST}} <br/>
-                    <a href="{{item.LINK}}" target="_blank" rel="noopener noreferrer">{{item.TITLE}}</a>
+                    <a href="{{item.LINK}}" target="_blank" rel="noopener noreferrer"><img src={{item.IMAGE}} style="width:100px;margin-right: 1rem;"/>{{item.TITLE}}</a>
                 </p>
 
                 <hr/>

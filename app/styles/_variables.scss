@@ -1,17 +1,18 @@
 /* 5 color Palette*/
+
 $eb-base-blue:  #ADAFBC;
-$eb-base-light: #B9D8ED;
+$eb-base-light: #006BA6;
 $eb-text-color: #AB4903;
-$eb-accent:     #F9FBF6;
+$eb-accent:     #006BA6;
 $eb-border:     #9B776A;
-$eb-paragraph-color: black;
+$eb-paragraph-color: #37392E;
 
 /* Responsive font-sizing */
 $p-font-sizes: (
     null: 16px,
     480px: 16px,
     640px: 17px,
-    1024px: 18px
+    1024px: 20px
 );
 
-$eb-font-family: 'Titillium Web', sans-serif;
+$eb-font-family: 'Raleway', sans-serif;

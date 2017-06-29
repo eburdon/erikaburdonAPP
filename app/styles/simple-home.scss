@@ -11,21 +11,22 @@
         color: $body-font-color;
     }
 
-    .element {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-
-        @include breakpoint(medium) {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-    }
+    // .element {
+    //     // margin-top: 1rem;
+    //     // margin-bottom: 1rem;
+    //
+    //     @include breakpoint(medium) {
+    //         margin-top: 0.5rem;
+    //         margin-bottom: 0.5rem;
+    //     }
+    // }
+    
     .email {
         margin: auto;
         color: $subheader-font-color;
     }
 
-    .splash-block { 
+    .splash-block {
         background-image:url('https://source.unsplash.com/HAKTHWgeDWE/400x400');
         background-repeat: no-repeat;
         background-size: contain;
@@ -52,10 +53,10 @@
     .businesscard-block {
         h1 {
             margin:auto;
-            margin-bottom: 1rem;
+            // margin-bottom: 1rem;
             color: $header-font-color;
         }
-        
+
         p {
             font-size: 18px;
             width: 100%;

@@ -90,16 +90,16 @@
 // $font-weight-bold: bold;
 
 // We use these to control various global styles
-$body-background: #f2f9ff;
-$body-font-color: #192224;
+$body-background: white;
+$body-font-color: #37392E;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
-$primary-color: #69A1A9;
-// $secondary-color: #f1f1f1;
+ $primary-color: #006BA6;
+ $secondary-color: #28AFB0;
 // $alert-color: #F04124;
 // $info-color: #A0D3E8;
 // $success-color: #43AC6A;
@@ -139,7 +139,7 @@ $breakpoint-classes: (small medium large);
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
-$header-font-color: #192224;
+$header-font-color: $primary-color;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;

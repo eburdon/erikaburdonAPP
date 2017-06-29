@@ -19,7 +19,7 @@
                 USERNAME: 'eburdon',
                 LINK: 'https://www.linkedin.com/in/eburdon',
                 LINK_TEXT: 'VISIT PROFILE',
-                KEYWORDS: ['Employment', 'Volunteering', 'Education'],
+                KEYWORDS: ['Employment', ' Volunteering', ' Education'],
             },
             GITHUB: {
                 NAME: 'GITHUB',
@@ -33,7 +33,7 @@
                 USERNAME: '@OneEaredMusic',
                 LINK: 'https://twitter.com/OneEaredMusic',
                 LINK_TEXT: 'SEND A TWEET',
-                STATS: ['313 Tweets', '66 Followers', '236 Following '],
+                STATS: ['344 Tweets', '97 Followers', '254 Following '],
             },
         })
         .constant('webLinks', {
@@ -64,7 +64,8 @@
                     SERIES: 'Girls Talk Code',
                     HOST: 'Kristen Leake',
                     LINK: 'https://www.youtube.com/watch?v=TiJ2qNiyKtg&feature=youtu.be',
-                    TITLE: 'How To Overcome the Fear of Pursuing Software Engineering'
+                    TITLE: 'How To Overcome the Fear of Pursuing Software Engineering',
+                    IMAGE: './images/youtube_screen.jpg'
                 }
             },
             STACKEXCHANGE : {
