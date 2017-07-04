@@ -91,15 +91,15 @@
 
 // We use these to control various global styles
 $body-background: white;
-$body-font-color: #37392E;
+$body-font-color: #37392E; // $eb-paragraph-color
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
- $primary-color: #006BA6;
- $secondary-color: #28AFB0;
+ $primary-color: #006BA6;   // $eb-base-blue
+// $secondary-color: #28AFB0; // $eb-blue-accent
 // $alert-color: #F04124;
 // $info-color: #A0D3E8;
 // $success-color: #43AC6A;

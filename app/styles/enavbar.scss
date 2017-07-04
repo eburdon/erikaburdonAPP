@@ -1,0 +1,29 @@
+@import 'variables';
+
+.enav-bar, .nav-bar {
+    background-color: $eb-base-blue;
+    opacity: 0.9;
+    * {
+        background-color: $eb-base-blue;
+    }
+}
+
+.enav-bar .nav-bar {
+    a {
+        font-size: 14px;
+    }
+
+    h4, a {
+        font-family: $eb-header-family;
+        color: $eb-white;
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .brand-name {
+        margin-left: 4em;
+    }
+}

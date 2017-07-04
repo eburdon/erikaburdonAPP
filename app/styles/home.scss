@@ -1,0 +1,45 @@
+@import 'settings';
+@import 'foundation-apps/scss/foundation';
+@import 'shared';
+@import 'variables';
+
+.home {
+    background-color: $eb-base-blue;
+    overflow-y: hidden;
+    
+    .header {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .leading-image {
+        border-radius: 100px;
+        margin-bottom: 1rem;    
+    }
+
+    .name {
+        color: $eb-white;
+    }
+
+    .email {
+        margin: auto;
+        color: $eb-accent-blue;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .soundclip {
+        color: $eb-accent-blue;
+    }
+
+    .bio-container {
+        background-color: $eb-base-blue;
+        z-index: 2;
+    }
+
+    .bio {
+        background-color: $eb-white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 2rem;
+    }
+}

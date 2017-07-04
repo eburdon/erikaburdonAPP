@@ -2,68 +2,38 @@
 @import 'variables';
 
 h1, h2, h3, h4, h5, h6 {
-    color: $header-font-color;
-    font-family: $eb-font-family;
+    color: $eb-header-color;
+    font-family: $eb-header-family;
 }
 
 p {
     @include font-size($p-font-sizes);
-    color: $body-font-color;
+    color: $eb-text-color;
     font-family: $eb-font-family;
 }
 
+span {
+    color: $eb-text-color;
+    font-family: $eb-font-family;    
+}
+
+// critical button styling
 .button {
     min-height: 2em;
     min-width: 6em;
-    border: 1px solid $body-font-color;
-    background-color: $body-background;
-    color: $body-font-color;
-}
-
-.soft-button {
-    border-radius:5px;
-    border:2px solid #28AFB0;
-    background:white;
-    color:#37392E;
+    border: 1px solid $eb-text-color;
+    background-color: $eb-white;
+    color: $eb-text-color;
     font-family: 'Roboto Condensed', sans-serif;
     &:hover, &:visited, &:active {
         text-decoration: none;
-        background:white;
-        color:#37392E;
+        background:$eb-white;
+        color: $eb-text-color;
     }
 }
 
-.page {
-    h1, h2, h3, h4, h5, h6 {
-        color: $header-font-color;
-    }
-
-    p {
-        color: $body-font-color;
-    }
-
-    .nav-bar {
-        background-color: $primary-color;
-        opacity: 0.9;
-        * {
-            background-color: $primary-color;
-        }
-
-        a {
-            font-size: 14px;
-        }
-
-        h4, a {
-            color: whitesmoke;
-            font-weight: 700;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        .brand-name {
-            margin-left: 4em;
-        }
-    }
+// extended styling
+.soft-button {
+    border-radius:5px;
+    border:2px solid $eb-base-light;
 }
