@@ -82,7 +82,7 @@
                 console.log('The twitter feature is deprecated. Using defaults...');
                 return new Promise(function(resolve, reject) {
                     return resolve();
-                })
+                });
                 // var promise, dataPromise;
 
                 // promise = $q.defer();
