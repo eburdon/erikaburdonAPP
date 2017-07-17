@@ -90,9 +90,9 @@ angular
             //    console.log('Cannot find Google Analytics Object');
             // }
 
-            ga(function(tracker) {
-              console.log(tracker.get('clientId'));
-            });
+            // ga(function(tracker) {
+            //   console.log(tracker.get('clientId'));
+            // });
 
             ga('set', 'page', '/new-page.html');
             ga('send', 'pageview');

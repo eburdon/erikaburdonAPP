@@ -79,19 +79,23 @@
             /////// TWITTER
 
             function triggerTwitterBuild() {
-                var promise, dataPromise;
+                console.log('The twitter feature is deprecated. Using defaults...');
+                return new Promise(function(resolve, reject) {
+                    return resolve();
+                })
+                // var promise, dataPromise;
 
-                promise = $q.defer();
+                // promise = $q.defer();
 
-                dataPromise = twitterService
-                .getTwitterInformation()
-                .then(function(data) {
-                    var what = buildTwitterObject(data);
-                    promise.resolve();
-                    return what;
-                });
+                // dataPromise = twitterService
+                // .getTwitterInformation()
+                // .then(function(data) {
+                //     var what = buildTwitterObject(data);
+                //     promise.resolve();
+                //     return what;
+                // });
 
-                return dataPromise;
+                // return dataPromise;
             }
 
             function buildTwitterObject(data) {

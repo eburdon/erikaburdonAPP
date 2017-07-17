@@ -21,9 +21,11 @@
             function getRequest(url) {
                 var deferred = $q.defer();
 
-                $http.get(url).success(function(data) {
-                    deferred.resolve(data);
-                }).error(function(error) {
+                $http.get(url).then(function(data) {
+                    // console.log(data);
+                    deferred.resolve(data.data);
+                }, function(error) {
+                    // console.log(error);
                     deferred.reject(error);
                 });
                 return deferred.promise;
@@ -32,9 +34,9 @@
             function makeConfiguredRequest(config) {
                 var deferred = $q.defer();
 
-                $http(config).success(function(data) {
+                $http.get(config).then(function(data) {
                     deferred.resolve(data);
-                }).error(function(error) {
+                }, function(error) {
                     deferred.reject(error);
                 });
                 return deferred.promise;
