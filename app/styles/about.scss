@@ -67,11 +67,23 @@
         }
     }
 
+    .polaroid-left {
+        transform: rotate(-7deg);
+    }
+
+    .polaroid-right {
+        transform: rotate(+7deg);
+    }
+
     .polaroid {
         border: 1px solid $eb-text-color;
         border-radius: 4px;
         padding: 5px;
         width: 300px;
-        transform: rotate(-7deg);
+    }
+
+    .polaroid-container {
+        padding:1.5rem;
+        display: inline-block;
     }
 }
