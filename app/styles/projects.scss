@@ -5,9 +5,10 @@
 @import 'mixins';
 
 .projects-page {
-    background-color: $body-background;
+    background: white;
+    background-color: white;
     * {
-        background-color: $body-background;
+        background-color: white;
     }
 
     .projects-title {
