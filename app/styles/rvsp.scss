@@ -1,0 +1,196 @@
+.header {
+  height: 500px;
+  position: relative;
+}
+
+.header_image_content {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/wedding/pinkroses.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header_image_overlay {
+  width: 40%;
+  height: 25%;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 25%;
+  right: 0;
+  bottom: 0;
+  background: rgba(89,89,89,0.3);
+  border: 5px solid white;
+  color: white;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.navbar {
+  padding: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(0, 37, 96, 0.9);
+}
+
+a:visited, a:link, a:hover, a:active {
+  text-decoration: none;
+  color: rgba(86,229,178,0.9);
+}
+
+a.dark_link:visited, a.dark_link:link, a.dark_link:hover, a.dark_link:active {
+  text-decoration: underline;
+  color: rgba(0, 37, 96, 0.9);
+}
+
+.nav_button {
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.section_block {
+  padding: 2em 1em;
+}
+
+.text_input {
+  display: block;
+  margin: 0.5em;
+}
+
+.map_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left_rvsp {
+  max-width: 45%;
+}
+
+.item_wrapper {
+  display: inline-flex;
+}
+
+.location_wrapper {
+  background: white;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 1em;
+}
+
+.break {
+  background: rgba(86,229,178,0.9);
+  height: 25px;
+}
+
+.extra_top_margin {
+  margin-top: 2em;
+}
+
+.credits {
+  height: 250px;
+}
+
+ul li {
+  margin: 0.5em;
+}
+
+/*
+Credit for custom radio buttons:
+https://kyusuf.com/post/completely-css-custom-checkbox-radio-buttons-and-select-boxes
+*/
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 2em;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+  background: #2aa1c0;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #0e647d;
+}
+
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.portrait_image, .landscape_image{
+  max-width: 25em;
+  display: inline-flex;
+  margin: auto;
+}
+
+.collage_container {
+  padding: 2em;
+}

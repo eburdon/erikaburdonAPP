@@ -18,6 +18,8 @@ angular
         'home',
         'projects',
         'facebook',
+        'wedding',
+        'rvsp',
         'workspace'
     ])
 
@@ -47,7 +49,6 @@ angular
             var $state = $injector.get('$state');
             var string = $location.path();
 
-            // handle empty hashbang
             if (string === '') {
                 $state.go('eb.home');
             } else {
@@ -86,17 +87,7 @@ angular
         });
 
         $rootScope.$on('$stateChangeSuccess', function(event) {
-            // if (!$window.ga) {
-            //    console.log('Cannot find Google Analytics Object');
-            // }
-
-            // ga(function(tracker) {
-            //   console.log(tracker.get('clientId'));
-            // });
-
             ga('set', 'page', '/new-page.html');
             ga('send', 'pageview');
-
-            // $window.ga('send', 'pageview', $location.path());
         });
     });

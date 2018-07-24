@@ -1,0 +1,52 @@
+.page_content {
+  display: block
+}
+
+.content_wrapper {
+  position: relative;
+}
+
+.image_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/wedding/whiterose.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top:0;
+  left: 0;
+}
+
+.image_overlay {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay_content {
+  background: rgba(89,89,89,0.3);
+  margin-top: 30rem;
+}
+
+.input_content {
+  margin-left: 25%;
+  padding: 1em;
+}
+
+.input_title {
+  margin: 0;
+}
+
+.input_code {
+  height: 2em;
+}
+
+h1 {
+  color: black;
+}
